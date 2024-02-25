@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro'; 
+import { getCollection } from "astro:content";
+import BlogItem from "../components/BlogItem.astro";
+import { Image } from "astro:assets"
+const allBlogs = await getCollection('blogs', ({ data }) => {
+  return data.isDraft !== true;
+})
+allBlogs.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
+import Lightbulb from "../images/lightbulb.svg";
+
+---
+
+<Layout title="Blog" description="This is the description of the page" >
+	<main slot="main">
+        <div class="icon-container">
+        <Image class="icon-lightbulb" src={Lightbulb} alt="lightbulb" /><h1>THOUGHTS ON THE WEB</h1>
+    </div>
+        <ul class="blog-list"> 
+            {
+              allBlogs.map((blog) => (
+              <BlogItem url={`/blogs/${blog.slug}/`} title={blog.data.title} category={blog.data.category} description={blog.data.description} image={blog.data.thumbnail} alt={blog.data.alt} />
+              ))
+            }
+          </ul>
+	</main>
+</Layout>
+
+<style>
+main {
+	width: 100%;
+}
+
+.blog-list {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.icon-lightbulb {
+    width: 64px;
+    height: 64px;
+
+}
+</style>

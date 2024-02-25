@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blogs');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+import Layout from '../../layouts/Layout.astro';
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+import { Image } from 'astro:assets';
+
+---
+
+<Layout title="Blog" description="This is a blog post">
+	<main class="main" slot="main">
+        <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} />
+        <ul class="blog-metadata-list">
+          <li class="blog-metadata-item"><p class="blog-metadata"><strong>Last Updated:</strong><br />{entry.data.pubDate}</p></li>
+          <li class="blog-metadata-item"><p class="blog-metadata"><strong>Written By:</strong><br />{entry.data.author}</p></li>
+        </ul>
+        <div class="container">
+          <Content />
+          </div>
+	</main>
+
+</Layout>
+<style lang="scss">
+  .main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .container {
+    padding: 1rem;
+    max-width: 600px;
+
+
+    h1 {
+      font-size: 1.25rem;}
+  }
+
+  .main-image {
+    max-width: 100svw;
+    height: 100%;
+
+  }
+
+  .blog-metadata-list{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .blog-metadata-item {
+    list-style-type: none;
+    display:inline-block;
+    padding:1rem;
+
+    &:first-child {
+      padding-left:0;
+    }
+
+  }
+
+  .blog-metadata {
+    text-align:center;
+    font-size: .75rem;
+  }
+</style>

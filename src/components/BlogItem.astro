@@ -1,0 +1,94 @@
+---
+interface Props {
+  url: string;
+  title: string;
+  category: string;
+  description: string;
+  image: object;
+  alt: string;
+}
+
+const { url, title, category, description, image, alt } = Astro.props;
+
+import Button from "./Button.astro";
+---
+
+<li class="blog-list-item">
+  <article class="blog-container" )>
+    <img src={(image as { src: string }).src} alt={alt} />
+    <span class="blog-category">{category}</span>
+    <div class="blog-text-container">
+      <h1 class="blog-list-title">{title}</h1>
+      <p>{description}</p>
+      <Button
+        className="secondary-button"
+        buttonLink={url}
+        buttonCTA="Read More"
+      />
+    </div>
+  </article>
+
+  <style lang="scss">
+    .button {
+      font-size: 0.75rem;
+      float: right;
+      margin: 1rem;
+    }
+
+    .blog-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .blog-list-item {
+      list-style-type: none;
+      margin: 1rem;
+      background: #eee;
+      z-index: 5;
+
+      transition: all 0.25s ease-in;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      &:hover {
+        transition: all 0.25s ease-in;
+        border: 1px solid #02aab0;
+      }
+    }
+
+    .blog-list-title {
+      font-size: 1.25rem;
+      max-width: 75%;
+    }
+
+    .blog-item-link {
+      height: 100%;
+      color: var(--primaryTextColour);
+      text-decoration: none;
+      &:visited,
+      &:active {
+        color: var(--primaryTextColour);
+      }
+    }
+
+    .blog-category {
+      top: 1rem;
+      left: 1rem;
+      padding: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      position: absolute;
+      background-color: white;
+      border-radius: 0.5rem;
+      font-size: 0.6rem;
+    }
+    .blog-text-container {
+      padding: 1rem;
+    }
+  </style>
+</li>

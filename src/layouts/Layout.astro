@@ -1,0 +1,134 @@
+---
+interface Props {
+  	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+
+const headerHeight = "64px";
+const desktopBreakPoint = "1440px";
+const tabletBreakPoint = "768px";
+const primaryTextColour = "#555"
+const primaryBackgroundColour = "#eee"
+
+
+import "../css/normalize.css"
+import Footer from "../components/Footer.astro"
+import Header from "../components/Header.astro"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" initial-scale="1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" as="style" rel="preload">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<slot name="main" />
+		<Footer 
+			name="footer"
+			footerText="Hand-coded by Jackie Ho, powered by Astro Build!"
+			copyrightText="All Rights Reserved" 
+		/>
+	</body>
+	
+</html>
+<style lang="scss" is:global define:vars={{
+	headerHeight, 
+	desktopBreakPoint, 
+	tabletBreakPoint, 
+	primaryBackgroundColour,
+	primaryTextColour
+	}}> 
+	
+	html {
+		font-family: "Dosis", system-ui, sans-serif;
+		scroll-behavior: smooth;
+		line-height: 1.25;
+	}
+
+	h1, h2, h3, h4, h5, h6, p {
+		font-family: "Dosis", system-ui, sans-serif;
+		padding: 0;
+		color: var(--primaryTextColour);
+		line-height: 125%;
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+	a, a:visited {
+		color: var(--primaryTextColour);
+	}
+
+	body {
+        background-color: var(--primaryBackgroundColour);
+		color: var(--primaryTextColour);
+		padding: 1rem;
+	}
+
+	header{
+		height: var(--headerHeight);
+	}
+
+	main {
+
+	}
+
+	footer {
+
+	}
+
+	.primary-button{
+        background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
+        margin-top: 1.5rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 1rem #eee;
+        border-radius: 1rem;
+                
+
+          &:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+    }
+
+    .secondary-button{
+        border-radius: 54px;
+        border: 1px solid var(--primaryTextColour);
+        color: #222;
+        background: transparent;
+        &:hover {
+            border: 1px solid #02AAB0;
+            color: #02AAB0;
+
+          }
+      
+    }
+	@media only screen and (min-width: 768px) {
+	body {
+		max-width: var(--desktopBreakPoint);
+		max-height: 100lvh;
+		margin: auto;
+	}
+
+	
+	}
+
+</style>

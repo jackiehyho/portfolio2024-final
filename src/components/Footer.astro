@@ -1,0 +1,41 @@
+---
+const { footerText, copyrightText } = Astro.props;
+
+import SocialMedia from "./SocialMedia.astro"
+
+---
+
+<footer class="container-footer">
+<SocialMedia />
+    <p id="footer-copyright">
+       {footerText}
+    </p>
+<p id="footer-copyright">
+   {copyrightText} &copy; <span id="currentYear" />
+</p>
+</footer>
+<style>
+	footer {
+        border-top: 0.25px solid #eee;
+        color:var(--primaryTextColor);
+        padding: 1rem;
+        text-align: center;
+    }
+    .footer-social{
+            padding: 0;
+    }
+
+</style>
+<script>
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+        let currentYear = new Date().getFullYear();
+        let yearDisplay = document.getElementById('currentYear');
+        if (yearDisplay) {
+            yearDisplay.textContent = currentYear.toString();
+        }
+    })
+</script>
+
