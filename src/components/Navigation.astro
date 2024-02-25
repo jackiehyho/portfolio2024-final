@@ -6,17 +6,17 @@
 <nav id="mobileMenu" class="mobile-menu" role="navigation">
   <ul class="nav-list">
     <li class="nav-list-item">
-      <a
+      <a id="nav-home-URL"
         class="nav-list-link"
         href="/"
         aria-label="Link to Homepage & Portfolio">Work</a>
     </li>
     <li class="nav-list-item">
-      <a class="nav-list-link" href="/blog" aria-label="Link to Blog">Blog</a>
+      <a id="nav-blog-url" class="nav-list-link" href="/blog" aria-label="Link to Blog">Blog</a>
     </li>
     <li class="nav-list-item">
-      <a class="nav-list-link" href="https://www.linkedin.com/in/jackiehyho/"
-        >Find Me on LinkedIn</a>
+      <a id="nav-linkedin-url" class="nav-list-link" href="https://www.linkedin.com/in/jackiehyho/"
+        >Let's Connect</a>
     </li>
   </ul>
 </nav>
@@ -27,30 +27,29 @@
     menuToggle.onclick = function () {
       var nav = document.getElementById("mobileMenu");
       var button = document.getElementById("menuToggle");
-
+      var logo = document.getElementById("logo");
+      var linkedin = document.getElementById("nav-linkedin-url");
       if (nav && !nav.classList.contains("mobile-nav-active")) {
         nav.classList.add("mobile-nav-active");
         if (button) {
           button.classList.add("mobile-button-active");
-        }
-
-        if (button) {
           button.textContent = "X";
         }
+        
+
+    
       } else {
         if (nav) {
           nav.classList.remove("mobile-nav-active");
         }
         if (button) {
           button.classList.remove("mobile-button-active");
+          button.textContent = "Menu";
         }
-        var logo = document.getElementById("logo");
         if (logo) {
           logo.classList.remove("logo-colour-alt");
         }
-        if (button) {
-          button.textContent = "Menu";
-        }
+
       }
     };
   }
