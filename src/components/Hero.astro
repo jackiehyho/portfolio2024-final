@@ -83,6 +83,7 @@ import myImage from "../images/Hero.png";
     .hero-image {
       width: 200px;
       height: 200px;
+      loading: eager;
       @media only screen and (min-width: 375px) {
         width: 250px;
         height: 250px;
@@ -91,16 +92,15 @@ import myImage from "../images/Hero.png";
   }
 
   .arrow-container {
-    grid-column: 3 / 5;
-    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
     justify-self: center;
     align-self: top;
+    rotate: -45deg;
     .arrow-image {
-      width: 32px;
-      height: 32px;
-      stroke-dasharray: 6;
-      stroke-dashoffset: 0;
-      animation: dash 1s linear;
+      width: 64px;
+      height: 64px;
+
     }
   }
 
@@ -131,7 +131,7 @@ import myImage from "../images/Hero.png";
     padding: 0;
     margin: 0;
     font-weight: 100;
-    font-size: 1.25rem;
+    font-size: 1rem;
     grid-column: 1 / 5;
     grid-row: 2 / 7;
     justify-self: center;
@@ -225,13 +225,14 @@ import myImage from "../images/Hero.png";
       grid-row: 4 / 5;
       justify-self: center;
       align-self: top;
+      
       .arrow-image {
         width: 128px;
         height: 128px;
         stroke-dasharray: 6;
         stroke-dashoffset: 0;
         animation: dash 1s linear;
-        rotate: -90deg;
+        rotate: -45deg;
       }
     }
 
