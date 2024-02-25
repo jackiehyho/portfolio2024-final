@@ -7,11 +7,9 @@ import SocialMedia from "./SocialMedia.astro"
 
 <footer class="container-footer">
 <SocialMedia />
-    <p id="footer-copyright">
-       {footerText}
-    </p>
-<p id="footer-copyright">
-   {copyrightText} &copy; <span id="currentYear" />
+
+<p id="footer-copyright"><small>
+    {footerText}<br />{copyrightText} &copy; <span id="currentYear" /></small>
 </p>
 </footer>
 <style>
