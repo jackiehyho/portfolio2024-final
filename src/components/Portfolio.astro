@@ -16,16 +16,18 @@ import Button from "./Button.astro";
 
 <li class="portfolio-list-item">
   <article class="portfolio-container" )>
-    <img src={(image as { src: string }).src} alt={alt} />
+    <img class="portfolio-thumbnail" src={(image as { src: string }).src} alt={alt} />
     <span class="portfolio-category">{category}</span>
     <div class="portfolio-text-container">
       <h1 class="portfolio-list-title">{title}</h1>
       <p>{description}</p>
+      <div class="portfolio-button-container">
       <Button
         className="secondary-button"
         buttonLink={url}
-        buttonCTA="Read More"
+        buttonCTA="Learn More"
       />
+    </div>
     </div>
   </article>
   </li>
@@ -35,8 +37,7 @@ import Button from "./Button.astro";
 
     .portfolio-container {
       position: relative;
-      width: 100%;
-      height: 100%;
+
     }
     .portfolio-list-item {
       list-style-type: none;
@@ -79,14 +80,12 @@ import Button from "./Button.astro";
         width: 100%;
         display: flex;
         justify-content: right;
-        float:right;
 
     }
 
     .button {
       font-size: 0.75rem;
         text-align: right;
-        border: 1px solid var(--primaryTextColour);
     }
 
     .portfolio-category {
