@@ -1,6 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import { getCollection } from "astro:content";
+
+import Portfolio from "../components/Portfolio.astro";
+
+const allWork = await getCollection("portfolio", ({ data }) => {
+  return data.isDraft !== true;
+});
+allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
 ---
 
 <Layout
@@ -30,12 +38,36 @@ import Hero from "../components/Hero.astro";
           </div>
         </div>
       </section> 
+
+      <section id="work" class="work-section">
+        <h2>WORK</h2>
+        <p>This is a description</p>
+        <div class="work-container">
+          <ul class="portfolio-list">
+            {
+              allWork.map((blog) => (
+                <Portfolio
+                  url={`/portfolio/${blog.slug}/`}
+                  title={blog.data.title}
+                  image={blog.data.thumbnail}                   
+                  alt={blog.data.alt}
+                  category={blog.data.category}
+                  description={blog.data.description}
+                />
+              ))
+            }
+          </ul>
+        </div>
+      </section>
   </main>
 
 
 </Layout>
 
 <style lang="scss">
+  main {
+	width: 100%;
+}
   .about-section {
     background-color: #eee;
     margin-top: 2rem;
@@ -104,13 +136,18 @@ import Hero from "../components/Hero.astro";
   }
 
   .work-container {
-    display: flex;
-    flex-direction: column;
+   
   }
 
   .portfolio-list {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
   .button {
     font-size: 0.5rem;
