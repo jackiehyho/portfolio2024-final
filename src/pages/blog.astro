@@ -19,7 +19,13 @@ import Lightbulb from "../images/lightbulb.svg";
         <ul class="blog-list"> 
             {
               allBlogs.map((blog) => (
-              <BlogItem url={`/blogs/${blog.slug}/`} title={blog.data.title} category={blog.data.category} description={blog.data.description} image={blog.data.thumbnail} alt={blog.data.alt} />
+              <BlogItem 
+              url={`/blogs/${blog.slug}/`} 
+              title={blog.data.title} 
+              category={blog.data.category} 
+              description={blog.data.description} 
+              image={blog.data.thumbnail} 
+              alt={blog.data.alt} />
               ))
             }
           </ul>
