@@ -16,6 +16,7 @@ const primaryBackgroundColour = "#eee"
 import "../css/normalize.css"
 import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro"
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -38,6 +39,7 @@ import Header from "../components/Header.astro"
 		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" as="style" rel="preload">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
@@ -45,7 +47,7 @@ import Header from "../components/Header.astro"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 		<Header />
-		<slot name="main" />
+		<slot  name="main"  />
 		<Footer 
 			name="footer"
 			footerText="Hand-coded by Jackie Ho, powered by Astro Build!"
