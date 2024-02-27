@@ -2,7 +2,7 @@
 title: Why Choose Astro?
 pubDate: 2024-01-09
 isDraft: false
-description: This is the description
+description: Astro is a web framework that allows you to create content-rich web experiences.
 author: Jackie Ho
 category: Front-End Frameworks
 thumbnail: "../../images/blogs/astro-as-a-front-end-framework/astro.png"
@@ -11,18 +11,13 @@ alt: goodbye
 
 # KEY TAKEAWAYS
 
-Bacon ipsum dolor amet tenderloin cupim rump pancetta venison pork chop spare ribs fatback salami pastrami meatball. Ham tail meatball tongue pork chop shankle pig swine chislic sirloin. Bacon pancetta shankle, alcatra chuck drumstick capicola hamburger tri-tip salami sausage strip steak buffalo. Short loin burgdoggen pork loin hamburger andouille capicola ham hock. Boudin drumstick jerky burgdoggen sirloin tenderloin pancetta turducken tongue turkey bacon corned beef andouille. Bacon turducken leberkas beef.
+- JavaScript is removed by default 
+- Static HTML Generator
+- Server-side Rendering
+- Higher chance of visibility and ranking for Search Engines
+- Island Architecture design pattern
+- Builds on the technique of Partial or Selective Hydration 
 
-## Context Matters
+## What is Astro?
+Astro is a web framework that allows you to create content-rich web experiences. It pioneered and popularized a front-end architecture called islands. Islands architecture organizes application code into small self-contained modules based on features or parts of the application. It also by default strips away all the initial JavaScript that may slow a page load and reintroduces it later to allow the web experience to be lightning fast and search engine friendly.
 
-Bacon ipsum dolor amet tenderloin cupim rump pancetta venison pork chop spare ribs fatback salami pastrami meatball. Ham tail meatball tongue pork chop shankle pig swine chislic sirloin. Bacon pancetta shankle, alcatra chuck drumstick capicola hamburger tri-tip salami sausage strip steak buffalo. Short loin burgdoggen pork loin hamburger andouille capicola ham hock. Boudin drumstick jerky burgdoggen sirloin tenderloin pancetta turducken tongue turkey bacon corned beef andouille. Bacon turducken leberkas beef.
-
-Bacon ipsum dolor amet tenderloin cupim rump pancetta venison pork chop spare ribs fatback salami pastrami meatball. Ham tail meatball tongue pork chop shankle pig swine chislic sirloin. Bacon pancetta shankle, alcatra chuck drumstick capicola hamburger tri-tip salami sausage strip steak buffalo. Short loin burgdoggen pork loin hamburger andouille capicola ham hock. Boudin drumstick jerky burgdoggen sirloin tenderloin pancetta turducken tongue turkey bacon corned beef andouille. Bacon turducken leberkas beef.
-
-## Why Choose Astro As A Front-End Framework?
-
-Bacon ipsum dolor amet tenderloin cupim rump pancetta venison pork chop spare ribs fatback salami pastrami meatball. Ham tail meatball tongue pork chop shankle pig swine chislic sirloin. Bacon pancetta shankle, alcatra chuck drumstick capicola hamburger tri-tip salami sausage strip steak buffalo. Short loin burgdoggen pork loin hamburger andouille capicola ham hock. Boudin drumstick jerky burgdoggen sirloin tenderloin pancetta turducken tongue turkey bacon corned beef andouille. Bacon turducken leberkas beef.
-
-Bacon ipsum dolor amet tenderloin cupim rump pancetta venison pork chop spare ribs fatback salami pastrami meatball. Ham tail meatball tongue pork chop shankle pig swine chislic sirloin. Bacon pancetta shankle, alcatra chuck drumstick capicola hamburger tri-tip salami sausage strip steak buffalo. Short loin burgdoggen pork loin hamburger andouille capicola ham hock. Boudin drumstick jerky burgdoggen sirloin tenderloin pancetta turducken tongue turkey bacon corned beef andouille. Bacon turducken leberkas beef.
-
-## Why Choose Astro As A Front-End Framework?
