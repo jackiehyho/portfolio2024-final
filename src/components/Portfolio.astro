@@ -6,11 +6,12 @@ interface Props {
   description: string;
   image: object;
   alt: string;
+  technology: string;
 }
-const {title, category, description, image, alt } = Astro.props;
+// const {title, category, description, image, alt } = Astro.props;
 
-//const { url, title, category, description, image, alt } = Astro.props;
-// import Button from "./Button.astro";
+const { url, title, category, description, image, alt, technology } = Astro.props;
+import Button from "./Button.astro";
 ---
 
 <li class="portfolio-list-item">
@@ -20,11 +21,11 @@ const {title, category, description, image, alt } = Astro.props;
     <div class="portfolio-text-container">
       <h1 class="portfolio-list-title">{title}</h1>
       <p>{description}</p>
-      <!-- <Button
+      <Button
         className="secondary-button"
         buttonLink={url}
         buttonCTA="Read More"
-      /> -->
+      />
     </div>
   </article>
   </li>
@@ -78,13 +79,14 @@ const {title, category, description, image, alt } = Astro.props;
         width: 100%;
         display: flex;
         justify-content: right;
+        float:right;
+
     }
 
     .button {
       font-size: 0.75rem;
         text-align: right;
         border: 1px solid var(--primaryTextColour);
-
     }
 
     .portfolio-category {

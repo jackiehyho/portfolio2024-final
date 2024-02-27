@@ -26,7 +26,9 @@ const portfolioCollection = defineCollection({
     author: z.string(),
     thumbnail: image(),
     alt: z.string(),
-    category: z.string()
+    category: z.string(),
+    technology: z.string()
+
   })
 });
 

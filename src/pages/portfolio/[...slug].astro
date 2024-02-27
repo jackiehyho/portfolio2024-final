@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blogs');
-  return blogEntries.map(entry => ({
+  const portfolioEntries = await getCollection('portfolio');
+  return  portfolioEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
 }
@@ -12,23 +12,24 @@ import Layout from '../../layouts/Layout.astro';
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 
 ---
 
-<Layout title="Blog" description="This is a blog post">
+<Layout title={entry.data.title} description={entry.data.description}>
 	<main class="main" slot="main">
-        <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} />
-        <ul class="blog-metadata-list">
-          <li class="blog-metadata-item"><p class="blog-metadata"><strong>Last Updated:</strong><br />{entry.data.pubDate}</p></li>
-          <li class="blog-metadata-item"><p class="blog-metadata"><strong>Written By:</strong><br />{entry.data.author}</p></li>
-        </ul>
+        <!-- <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} /> -->
+
         <div class="container">
           <Content />
+          <ul class="blog-metadata-list">
+            <li class="blog-metadata-item"><p class="blog-metadata"><strong>Last Updated:</strong><br />{entry.data.pubDate}</p></li>
+            <li class="blog-metadata-item"><p class="blog-metadata"><strong>Built By:</strong><br />{entry.data.author}</p></li>
+            <li class="blog-metadata-item"><p class="blog-metadata"><strong>Technology:</strong><br />{entry.data.technology}</p></li>
+          </ul>
           </div>
 	</main>
 
-</Layout>
 <style lang="scss">
   .main {
     display:flex;
@@ -39,7 +40,7 @@ import { Image } from 'astro:assets';
 
   .container {
     padding: 1rem;
-    max-width: 600px;
+    width: 100%;
 
 
     h1 {
