@@ -16,7 +16,7 @@ import { Image } from 'astro:assets';
 
 ---
 
-<Layout title="Blog" description="This is a blog post">
+<Layout title={entry.data.title} description={entry.data.description}>
 	<main class="main" slot="main">
         <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} />
         <ul class="blog-metadata-list">

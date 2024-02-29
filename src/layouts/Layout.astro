@@ -74,14 +74,24 @@ import { ViewTransitions } from "astro:transitions";
 		font-family: "Dosis", system-ui, sans-serif;
 		padding: 0;
 		color: var(--primaryTextColour);
-		line-height: 125%;
 		&:first-child {
 			margin: 0;
 		}
 	}
 
+	p {
+		line-height: 150%;
+
+	}
+
 	a, a:visited {
 		color: var(--primaryTextColour);
+		transition: all 0.25s ease-in;
+
+		&:hover {
+			color: #02AAB0;
+			transition: color 0.25s ease-in;
+		}
 	}
 
 	body {

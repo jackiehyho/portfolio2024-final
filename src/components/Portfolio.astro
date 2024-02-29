@@ -10,7 +10,7 @@ interface Props {
 }
 // const {title, category, description, image, alt } = Astro.props;
 
-const { url, title, category, description, image, alt, technology } = Astro.props;
+const { url, title, category, description, image, alt } = Astro.props;
 import Button from "./Button.astro";
 ---
 
@@ -19,7 +19,7 @@ import Button from "./Button.astro";
     <img class="portfolio-thumbnail" src={(image as { src: string }).src} alt={alt} />
     <span class="portfolio-category">{category}</span>
     <div class="portfolio-text-container">
-      <h1 class="portfolio-list-title">{title}</h1>
+      <h1 class="portfolio-item-title">{title}</h1>
       <p>{description}</p>
       <div class="portfolio-button-container">
       <Button
@@ -59,7 +59,9 @@ import Button from "./Button.astro";
     }
 
     .portfolio-item-title {
-      font-size: .75rem;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+
     }
     .portfolio-thumbnail {
       width: 100%;
