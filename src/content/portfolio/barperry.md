@@ -2,7 +2,7 @@
 title: Bar Perry Photography
 pubDate: 2015-07-00
 projectDuration: 1 Week
-isDraft: false
+isDraft: true
 description: Creating a brand identity for a local photographer.
 author: Jackie Ho
 category: Brand & Identity
@@ -45,23 +45,7 @@ It is important to find a balance between business needs, customer perception an
 
 
 
-## 02 EXECUTION
-### Initial Concepts
-#### Symbol Logo
-#### Monogram Logo
-#### Combination Logo
 
-### Key Learnings
-- Logos are used to watermark photography prints 
-
-## Revisions
-
-## 03 FINALIZING THE DELIVERABLES
-
-
-### Helping clients visualize potential uses
-
-- Logos are used to watermark photography prints 
 
 
 
