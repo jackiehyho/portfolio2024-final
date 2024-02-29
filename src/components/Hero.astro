@@ -2,11 +2,10 @@
 interface Props {
   primaryCTA: string;
   primaryLink: string;
-  secondaryCTA: string;
-  secondaryLink: string;
+
 }
 
-const { primaryCTA, primaryLink, secondaryCTA, secondaryLink } = Astro.props;
+const { primaryCTA, primaryLink } = Astro.props;
 import Button from "../components/Button.astro";
 import Arrow from "../images/arrow-with-scribble.svg";
 import { Image } from "astro:assets";
