@@ -60,7 +60,7 @@ After reviewing all of our notes, we synthesized the research to prescribed a so
 A lo-fidelity diagram was created in sketch to help guide users through what was required to make a booking request. A Hi-fidelity prototype was also created to help the rental department visualize the art direction and conceptual website.
 
 ## 03 EXECUTION
-Once the concept had been approved, we created a design production list to outline the assets that we need to create for the rest of the pages. 
+Once the concept had been approved, we created UI mockups on key template pages only for approval due to timeline and resource availability.
 
 ### Staging the website
 A staging site was provided by IT to facilitate testing and provide a space for us to make our updates.
@@ -68,9 +68,8 @@ A staging site was provided by IT to facilitate testing and provide a space for 
 ### Producing Design Assets
 After creating the rest of the mockups, we extracted a list of images and sizes to be produced by our designer.
 
-
 ## 04 APPROVALS & FINAL REVISIONS 
-We created a presentation deck and sat down with the rental department to go through the pages one by one. 
+We sat down with the rental department to go through the new website page by page as well as give them the opportunity to further explore after the presentation. 
 
 ### Setting Up Google Tag Manager for Analytics and Event Tracking
 Google tag manager was placed with Universal Analytics and event tracking KPIs into analytics. 
