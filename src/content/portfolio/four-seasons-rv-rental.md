@@ -14,10 +14,8 @@ technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Googl
  # Summary
 [Four Seasons RV Rental](https://fourseasonsrvrentals.ca/) was the economy rental divison of Fraserway RV. A rebrand was requested to unify the Four Seasons RV Rental Brand with Fraserway RV. A replatform was also determined to be a business need as it became a major bottleneck for content updates. No additional budgets were supplied as this was to be done in-house on top of day-to-day operations. This led to an opportunity to revisit the entire brand and website. A WordPress website was then created to resolve this problem and have been successfully integrated into the business. 
 
-<div align="center">
-<img src="/src/images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-Hero.webp" alt="Four Seasons RV Rentals">
-</div>
 
+![Four Seasons RV Rental](../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-Hero.webp)
 
 
 ## 01 UNDERSTANDING THE CONTEXT

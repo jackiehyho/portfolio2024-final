@@ -35,7 +35,7 @@ It is important to find a balance between business needs, customer perception an
 
 ### Concept Logos
 <div align="center">
-<img src="/src/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png" alt="Four Seasons RV Rentals">
+<img src="../src/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png" alt="Four Seasons RV Rentals">
 </div>
 
 Using the pinterest board as reference, I categorized the reference logos into logo styles. From there, I used the notes that I took on their preferences and created a variety of logo styles in my sketch book before translating into illustrator
@@ -43,7 +43,7 @@ Using the pinterest board as reference, I categorized the reference logos into l
 I also like to visualize the logos in both light and dark applications to ensure that there's enough contrast in different contextual applications.
 
 <div align="center">
-<img src="/src/images/portfolio/bredy-landscaping/BredyLandscaping-Concepts.jpg" alt="Four Seasons RV Rentals">
+<img src="../src/images/portfolio/bredy-landscaping/BredyLandscaping-Concepts.jpg" alt="Four Seasons RV Rentals">
 </div>
 
 ### Meeting with the Client
