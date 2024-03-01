@@ -86,11 +86,11 @@ import { ViewTransitions } from "astro:transitions";
 
 	a, a:visited {
 		color: var(--primaryTextColour);
-		transition: all 0.25s ease-in;
+        transition: all 0.25s ease-in;
 
 		&:hover {
 			color: #02AAB0;
-			transition: color 0.25s ease-in;
+			transition: all 0.25s ease-in;
 		}
 	}
 
@@ -138,9 +138,12 @@ import { ViewTransitions } from "astro:transitions";
         border: 1px solid var(--primaryTextColour);
         color: #222;
         background: transparent;
+		transition: all 0.25s ease-in;
+
         &:hover {
             border: 1px solid #02AAB0;
             color: #02AAB0;
+			transition: all 0.25s ease-in;
 
           }
       
