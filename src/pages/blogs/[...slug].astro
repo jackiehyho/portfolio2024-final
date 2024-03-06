@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>
-	<main class="main" slot="main">
+	<main class="main blog-main" slot="main">
         <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} />
         <ul class="blog-metadata-list">
           <li class="blog-metadata-item"><p class="blog-metadata"><strong>Last Updated:</strong><br />{entry.data.pubDate}</p></li>
@@ -30,6 +30,9 @@ import { Image } from 'astro:assets';
 
 </Layout>
 <style lang="scss">
+
+
+
   .main {
     display:flex;
     flex-direction: column;

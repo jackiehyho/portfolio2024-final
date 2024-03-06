@@ -16,10 +16,10 @@ import { Image } from 'astro:assets';
 
 ---
 <Layout title={entry.data.title} description={entry.data.description}>
-	<main class="main" slot="main">
+	<main class="main portfolio-main" slot="main">
         <Image class="main-image" src={entry.data.thumbnail} alt={entry.data.alt} />
 
-        <div class="container">
+        <div class="portfolio-content">
           <ul class="blog-metadata-list">
             <li class="blog-metadata-item"><p class="blog-metadata"><strong>Project Duration:</strong><br />{entry.data.projectDuration}</p></li>
             <li class="blog-metadata-item"><p class="blog-metadata"><strong>Role: </strong><br />{entry.data.author}</p></li>
@@ -31,6 +31,17 @@ import { Image } from 'astro:assets';
 	</main>
 </Layout>
 <style lang="scss">
+
+  
+  .portfolio-images{
+
+  }
+
+  .main-image {
+    max-width: 100%;
+    height: auto;
+  }
+
   .main {
     display:flex;
     flex-direction: column;
@@ -42,7 +53,7 @@ import { Image } from 'astro:assets';
     color: red;
   }
 
-  .container {
+  .portfolio-content {
     padding: 1rem;
     width: 100%;
     max-width: 768px;
@@ -50,7 +61,17 @@ import { Image } from 'astro:assets';
 
     h1 {
       font-size: 1.25rem;}
+
+    p {
+      width: 100%;
+      text-align: center;
+    
+    }
+
+  
   }
+
+
 
   .main-image {
     max-width: 100svw;

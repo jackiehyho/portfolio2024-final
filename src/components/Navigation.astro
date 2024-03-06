@@ -12,7 +12,13 @@
         aria-label="Link to Homepage & Portfolio">Work</a>
     </li>
     <li class="nav-list-item">
+      <a id="nav-blog-url" class="nav-list-link" href="/about" aria-label="Link to Blog">About</a>
+    </li>
+    <li class="nav-list-item">
       <a id="nav-blog-url" class="nav-list-link" href="/blog" aria-label="Link to Blog">Blog</a>
+    </li>
+    <li class="nav-list-item">
+      <a id="nav-blog-url" class="nav-list-link" href="/services" aria-label="Link to Blog">Services</a>
     </li>
     <li class="nav-list-item">
       <a id="nav-linkedin-url" class="nav-list-link" href="https://www.linkedin.com/in/jackiehyho/"
@@ -74,6 +80,7 @@
     top: 0;
     right: 0;
     padding: 2rem;
+    z-index: 15;
   }
   .mobile-nav-active {
     display: block;
@@ -82,6 +89,7 @@
     left: 0;
     top: 0;
     position: fixed; /* Stay in place */
+    z-index: 10;
   }
   nav {
     display: none; /* Hidden by default */

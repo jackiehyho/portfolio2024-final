@@ -9,7 +9,6 @@ category: Visual Identity
 thumbnail: "../../images/portfolio/bredy-landscaping/bredyLandscaping.png"
 alt: Bredy Landscaping
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
-
 ---
  
 # Case Study Summary
@@ -34,17 +33,14 @@ It is important to find a balance between business needs, customer perception an
 ## 02 EXECUTION
 
 ### Concept Logos
-<div align="center">
-<img src="../src/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png" alt="Four Seasons RV Rentals">
-</div>
+<img class="portfolio-images" src="/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png"  alt="A bird" width="100%" height="100%">
+
 
 Using the pinterest board as reference, I categorized the reference logos into logo styles. From there, I used the notes that I took on their preferences and created a variety of logo styles in my sketch book before translating into illustrator
 
 I also like to visualize the logos in both light and dark applications to ensure that there's enough contrast in different contextual applications.
 
-<div align="center">
-<img src="../src/images/portfolio/bredy-landscaping/BredyLandscaping-Concepts.jpg" alt="Four Seasons RV Rentals">
-</div>
+<img class="portfolio-images"  src="/images/portfolio/bredy-landscaping/BredyLandscaping-Concepts.jpg" alt="A bird" width="100%" height="100%">
 
 ### Meeting with the Client
 I reduced down the logo selection and presented the client with 5 choices and allowed them to pick the one that resonated with them the best. He selected the one that is currently in use and it needed no additional refinement.
