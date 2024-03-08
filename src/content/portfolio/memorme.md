@@ -192,7 +192,8 @@ We opted to go with option #2.
 
 <summary><strong>Key Takeways & Reflection</strong></summary>
 
-Service design has been something that I had been understood and had been practicing unconsciously. For me, I always felt a certain disconnection to why services are so disjointed sometimes. This event has opened my eyes to the need of more service designers in the world to help support businesses and government entities. To help plan and organize their resources in order to improve their employee experience which indirectly improves the customer experience.
+### What did I learn?
+Service design had been something that was briefly taught in school and had enough awareness to practice it during my last job.  This event has opened my eyes to the need of more service designers in the world to help support businesses and government entities create a better brand experience through planning and organizing their resources for their employees. 
 
 ### What is Service Design in Practice?
 - Service Design is holistic and focuses on the end-to-end experience.
