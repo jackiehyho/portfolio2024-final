@@ -14,11 +14,9 @@ technology: None
 ## Project Summary
 Memories are created through moments of heightened emotion such as traumatic events or triumphs over adversity. It can be triggered through our senses, allowing us to relive experiences both good and bad. As our world becomes more digitized through time, pieces of our lives become immortalized on different social platforms until we become a shell of who we personify online.  
 
-This service is to help re-align authenticity with their personas through digital and physical consolidation and storytelling through creative and expressive mediums. 
+This service is to help re-align authenticity with their projected personas through digital and physical consolidation and storytelling through creative and expressive mediums. 
 
 *MemorMe* is a legacy preservation service created at the 2024 [Global Service Jam](http://globaljams.org/). 
-
-Service design was something I was already actively practicing without labels.
 
 
 <div class="video-container" align="center">
@@ -43,7 +41,7 @@ The theme that we had chosen as a group was **Memories**.
 
 Before we start the process, we each discussed our own interpretations of what a memory was, as well as share a personal memory with each other. 
 
-This fosters a safe environment for ideas to flow and helps build trust within the team.
+This fostered a safe environment for ideas to flow and helps build trust within the team.
 
 </details>
 <details>
@@ -110,11 +108,11 @@ Before we start any interview processes, we explain to the interviewees on the f
 2) What are we trying to do?
 3) Managing expectations by telling how long it will take to do this.
 
-After context is established, we proceed to gain consent if they agree to participate in the study. Due to limited resources and time, we opted to use a camera phone as a way to quickly gain consent from each interviewee. Videos are very useful tools as it allows you to recall information directly mentioned during the interview. It also allows data to be more objective and isn't subject to personal interpretations via note taking. 
+After context is established, we proceed to gain consent if they agree to participate in the study. In the ideal situation, we would be doing this with a formal legal consent form. Due to limited resources and time, we opted to use a camera phone as a way to quickly gain consent from each interviewee. Videos are very useful tools as it allows you to recall information directly mentioned during the interview. It also allows data to be more objective and isn't subject to personal interpretations via note taking. 
 
-With a camera phone recording, we would ask the following questions 
+With a camera phone out and recording, we would ask the following questions: 
 
-*"Do you consent to being recorded for the purposes of research, your answers is strictly for research purposes and will be be anonymous and confidential"* we then proceed to ask the following open-ended questions.
+*"Do you consent to being recorded for the purposes of research? Your answers is strictly for research purposes and will be be anonymous and confidential."* If they agree, we then proceed to ask the following open-ended questions.
 
 ### Questions we asked our Interviewees
 
@@ -131,12 +129,18 @@ With a camera phone recording, we would ask the following questions
 
 <summary><strong>02 Define</strong></summary>
 
-### Organizing & Sharing our Research
-We organize our research
+### Organizing & Distilling our Research
 
-### 
+Themes that came out of the answers were:
+- Feelings of regret and wanting to share that with others
+- Memories are life changing milestones, 
+- Memories could be traumatic or events of overcoming adversity
+- Memories are off-loaded and stored online
+- Memories can be relived but from a different perspective.
+  
 
 ### Framing the Problem
+By framing the problem concisely, we can develop solutions for this problem.
 
 ##### Who are our users?
   - Seniors
@@ -166,41 +170,38 @@ Seniors are not able to share life lessons and stories for the next generation.
 <details>
 <summary><strong>03 Develop</strong></summary>
 
-### Idea #1: A digital service
-Using a timer of 10 minutes, we collectively wrote down questions on each sticky note and hid the questions from each other. This is to help speed up question generation and prevent ourselves from peeking and getting stuck on what to write.
+Given the limited time that we have, we generated two concrete ideas for our service, a digital and a physical service.
 
+### Idea #1: A digital service
+A digital service, which allowed the user to consolidate their life into one space. We import all social media channels, cloud storage into one space. The tool allows you to sift through and build understanding around key events and periods of your life. The end result is a summarization of the user's life and can be expressed into physical forms such as a novel, comic book, Vinyl and etc.
 
 ### Idea #2: A physical service
-Using a timer of 10 minutes, we collectively wrote down questions on each sticky note and hid the questions from each other. This is to help speed up question generation and prevent ourselves from peeking and getting stuck on what to write.
+An external service provided to senior homes to help seniors build their life story so that their legacy can be remembered by family and friends.
 
+We opted to go with option #2.
 </details>
 <details>
 
 
 <summary><strong>04 Deliver</strong></summary>
 
-## Show, Don't tell
-Showing a protoype allows others to experience the service and provides more clarity to the idea than just presenting a deck.  
-
-## Learning by Doing, Not Talking 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Zg0DkyFDdhQ?si=XPb8i1M1_qVDa4DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </details>
 <details>
 
 <summary><strong>Key Takeways & Reflection</strong></summary>
 
+Service design has been something that I had been understood and had been practicing unconsciously. For me, I always felt a certain disconnection to why services are so disjointed sometimes. This event has opened my eyes to the need of more service designers in the world to help support businesses and government entities. To help plan and organize their resources in order to improve their employee experience which indirectly improves the customer experience.
+
 ### What is Service Design in Practice?
 - Service Design is holistic and focuses on the end-to-end experience.
 - Service Design is a never ending processes.
-- Service is the responsibility of an organization
+- Service Design is the responsibility of an organization to maintain.
 
 ### Show, Don't tell
 Showing a protoype allows others to experience the service and provides more clarity to the idea than just presenting a deck.  
 
 ### Learn by Doing, Not Talking 
 You get better by actively practicing and not just talk about it.  
-
-
-
 </details>
