@@ -193,7 +193,7 @@ We opted to go with option #2.
 <summary><strong>Key Takeways & Reflection</strong></summary>
 
 ### What did I learn?
-Service design had been something that was briefly taught in school and had enough awareness to practice it during my last job.  This event has opened my eyes to the need of more service designers in the world to help support businesses and government entities create a better brand experience through planning and organizing their resources for their employees. 
+This event has opened my eyes to the need of more service designers in the world to help support businesses and government entities create a better brand experience through planning and organizing their resources for their employees. 
 
 ### What is Service Design in Practice?
 - Service Design is holistic and focuses on the end-to-end experience.
