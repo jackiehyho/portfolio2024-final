@@ -185,7 +185,8 @@ We opted to go with option #2.
 
 <summary><strong>04 Deliver</strong></summary>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Zg0DkyFDdhQ?si=XPb8i1M1_qVDa4DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+## Creating a Story
+Storytelling through Bodystorming  service is a powerful way
 
 </details>
 <details>
