@@ -1,5 +1,5 @@
 ---
-title: CampFyre
+title: CampFyre App
 pubDate: 2024-01-09
 projectDuration: 1 Week
 isDraft: false
@@ -8,5 +8,5 @@ author: Jackie Ho
 category: UX/UI
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
-technology: 
+technology: hello
 ---

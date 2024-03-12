@@ -3,7 +3,7 @@ interface Props {
   	title: string;
 	description: string;
 }
-
+export PAGE_PASSWORD;
 const { title, description } = Astro.props;
 
 const headerHeight = "64px";
@@ -11,7 +11,7 @@ const desktopBreakPoint = "1440px";
 const tabletBreakPoint = "768px";
 const primaryTextColour = "#555"
 const primaryBackgroundColour = "#eee"
-
+const PAGE_PASSWORD = "thepass"
 
 import "../css/normalize.css"
 import Footer from "../components/Footer.astro"

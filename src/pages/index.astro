@@ -4,11 +4,14 @@ import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 
 import Portfolio from "../components/Portfolio.astro";
-
+import Locked from "../components/Locked.astro";
+import Fraserway from "../images/blogs/astro-as-a-front-end-framework/placeholder.png"
 const allWork = await getCollection("portfolio", ({ data }) => {
   return data.isDraft !== true;
 });
 allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
+
+const PASSWORD = "password";
 ---
 
 <Layout
@@ -42,6 +45,16 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
         <p></p>
         <div class="work-container">
           <ul class="portfolio-list">
+            <Locked
+            url=`/fraserway`
+            title="Fraserway RV"
+            image={Fraserway}    
+            alt=""
+            category="UX, Visual & Service Design"
+            description="Example work that I have done"
+            technology=""
+          />
+
             {
               allWork.map((blog) => (
                 <Portfolio

@@ -27,7 +27,10 @@ const {  buttonCTA, buttonLink, className, ...rest } = Astro.props;
 
     }
 
-
+    button:disabled,
+    button[disabled]{
+    background-color:red;
+    }
     .button:hover {
         background-position: right center; /* change the direction of the change here */
         text-decoration: none;    }

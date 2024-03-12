@@ -1,0 +1,121 @@
+---
+interface Props {
+  url: string;
+  title: string;
+  category: string;
+  description: string;
+  image: object;
+  alt: string;
+  technology: string;
+}
+// const {title, category, description, image, alt } = Astro.props;
+
+const { title, category, description, image, alt } = Astro.props;
+import Button from "./Button.astro";
+
+
+
+---
+
+<li class="portfolio-list-item">
+  <article class="portfolio-container" )>
+    <img class="portfolio-thumbnail" src={(image as { src: string }).src} alt={alt} />
+    <span class="portfolio-category">{category}</span>
+    <div class="portfolio-text-container">
+      <h1 class="portfolio-item-title">{title}</h1>
+      <p>{description}</p>
+      <div class="portfolio-button-container">
+        <Button
+          className="secondary-button"
+          buttonLink="/fraserway"
+          buttonCTA="PASSWORD PROTECTED"
+        />
+      </div>
+  </article>
+  </li>
+
+  <style lang="scss">
+
+
+    .portfolio-container {
+      position: relative;
+
+    }
+    .portfolio-list-item {
+      padding: 0;
+      list-style-type: none;
+      margin-bottom: 2rem;
+      background: #eee;
+      z-index: 5;
+      transition: all 0.25s ease-in;
+      border: 1px solid #ccc;
+      border-radius: 1rem;
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow:
+          10px 10px 30px #bebebe,
+          -10px -10px 30px #ffffff;
+        transition: all 0.25s ease-in;
+        border: none;
+      }
+    }
+
+    .portfolio-item-title {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+
+    }
+    .portfolio-thumbnail {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+    .portfolio-item-link {
+      height: 100%;
+      color: var(--primaryTextColour);
+      text-decoration: none;
+      &:visited,
+      &:active {
+        color: var(--primaryTextColour);
+      }
+    }
+
+    .portfolio-button-container{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+
+    }
+
+    .button {
+      font-size: 0.75rem;
+        text-align: right;
+    }
+
+    .portfolio-category {
+      top: 1rem;
+      left: 1rem;
+      padding: 0.5rem;
+      text-transform: uppercase;
+      font-weight: 800;
+      position: absolute;
+      background-color: white;
+      border-radius: 0.5rem;
+      font-size: 0.6rem;
+    }
+    .portfolio-text-container {
+      padding: 1rem;
+    }
+
+
+    @media (min-width: 768px) {
+      .portfolio-list-item {
+        max-width: 30%;
+
+        margin: 1rem;
+      }
+    }
+
+    
+  </style>
+</li>
