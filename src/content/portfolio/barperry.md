@@ -2,7 +2,7 @@
 title: Bar Perry Photography
 pubDate: 2015-07-00
 projectDuration: 1 Week
-isDraft: false
+isDraft: true
 description: Creating a brand identity for a local photographer.
 author: Jackie Ho
 category: Brand Identity

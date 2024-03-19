@@ -7,7 +7,7 @@ description: A legacy preserving service for seniors.
 author: Service Designer
 category: Service Design
 thumbnail: "../../images/portfolio/memorme/Memorme.png"
-alt: Bredy Landscaping
+alt: Memorme Service Design
 technology: None
 isLocked: false
 cta: Learn more

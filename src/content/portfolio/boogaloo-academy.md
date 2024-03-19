@@ -7,7 +7,7 @@ description: Marketing Campaign Design
 author: Jackie Ho
 category: Campaign Design
 thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
-alt: Bar Perry Photography
+alt: Boogaloo Academy
 technology: Illustrator
 isLocked: false
 cta: Learn more

@@ -4,8 +4,8 @@ import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 
 import Portfolio from "../components/Portfolio.astro";
-import Locked from "../components/Locked.astro";
-import Fraserway from "../images/portfolio/fraserway/fraserway-logo.png"
+// import Locked from "../components/Locked.astro";
+// import Fraserway from "../images/portfolio/fraserway/fraserway-logo.png"
 let allWork = await getCollection("portfolio", ({ data }) => {
   return data.isDraft !== true;
 });

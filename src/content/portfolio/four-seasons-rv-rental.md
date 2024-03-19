@@ -12,7 +12,7 @@ alt: Four Seasons RV Rental by Fraserway
 technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
 isLocked: false
 cta: Learn more
-deliverables: [Logo, Website]
+deliverables: [Art Direction, Website]
 
 ---
  # Summary

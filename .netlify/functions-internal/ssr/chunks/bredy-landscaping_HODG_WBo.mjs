@@ -1,0 +1,25 @@
+const id = "bredy-landscaping.md";
+						const collection = "portfolio";
+						const slug = "bredy-landscaping";
+						const body = " \r\n# Case Study Summary\r\nGarth approached me in need of a logo for his landscaping business. A visual identity package was created for Bredy Landscaping that included logos, fonts, colours, hats, uniforms and vehicle decals. The project was a success and the client is happy with what he had received.\r\n\r\n## SCOPE OF WORK\r\n\r\nThe scope of work ended up being the following:\r\n- Exported Logos\r\n- Visual Identity Guidelines\r\n\r\n## 01 DISCOVERY\r\n### Client Interview\r\nWe sat down at a local cafe to have a conversation about what he was looking in a logo. \r\n\r\nSome example questions that I would ask would be: \r\n- What are you using the logos for this project?\r\n- What are some words that best describe the logo that you're looking for?\r\n- What type of clients are you trying to attract for your business?\r\n- What are some services that you provide for your customers?\r\n\r\nIt is important to find a balance between business needs, customer perception and client preferences for an identity to empower the business. \r\n\r\n### Exploring through Pinterest\r\n\r\nPinterest is a great platform to see lots of logos in one space. I typed in a couple keywords that we had talked about during the interview and use them to return a list of visuals to browse through. \r\n\r\nI created a board to save the logos that visually resonated with Garth so I can use that as a reference later on when I design their conceptual logos. \r\n\r\nAs we went through each one, I also asked questions to understand why they liked it so I can note it down. These words will also help inform the logo creation process later on.\r\n\r\nI really enjoyed using this method as it involved the client to be collaborative with the work and adds a sense of ownership when we co-design.\r\n\r\n## 02 EXECUTION\r\n\r\n### Concept Logos\r\n<img class=\"portfolio-images\" src=\"/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png\"  alt=\"A bird\" width=\"100%\" height=\"100%\">\r\n\r\n\r\nUsing the pinterest board as reference, I categorized the reference logos into logo styles. From there, I used the notes that I took and created a variety of logo styles in my sketch book before translating into illustrator.\r\n\r\nI also like to visualize the logos in both light and dark applications to ensure that there's enough contrast in different contextual applications.\r\n\r\n<img class=\"portfolio-images\"  src=\"/images/portfolio/bredy-landscaping/BredyLandscaping-Concepts.jpg\" alt=\"A bird\" width=\"100%\" height=\"100%\">\r\n\r\n### Meeting with the Client\r\nI picked the top 5 designs that I felt best resonated with Garth from our previous conversations and allowed them to pick the one that resonated with them the best. He selected the one that is currently in use and he felt that it needed no additional refinement.\r\n\r\n## 03 DELIVERY\r\nAfter the logo was approved by Garth, I finalized logo by outlining the text so that it wouldn't have missing font issues in future print scenarios. I also created a simple visual guideline, which included colours HEX codes, fonts used and what not to do with the logo. \r\n\r\nExported all logo variations:\r\n- colour \r\n- reverse colour \r\n- true white \r\n- true black \r\n- greyscale \r\n- reverse greyscale\r\n- icon only \r\n\r\nAlso exported in the following file formats:\r\n- JPG\r\n- PNG\r\n- SVG\r\n- PDF\r\n- EPS\r\n\r\nso it can be readily available to use for any application. WebP at this point was not supported by all browsers. \r\n\r\nThe client was satisfied with the result and requested website work afterwards.\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
+						const data = {title:"Bredy Landscaping",isDraft:false,pubDate:"Fri Jun 30 2017",projectDuration:"2 Weeks",description:"Creating a brand identity for a landscaping businesses.",author:"Jackie Ho",thumbnail:
+						new Proxy({"src":"/_astro/bredyLandscaping.C221WK95.png","width":600,"height":400,"format":"png","fsPath":"C:/Users/jacki/OneDrive/Documents/GitHub/portfolio2024-final/src/images/portfolio/bredy-landscaping/bredyLandscaping.png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/jacki/OneDrive/Documents/GitHub/portfolio2024-final/src/images/portfolio/bredy-landscaping/bredyLandscaping.png";
+							}
+							
+							return target[name];
+						}
+					})
+					,alt:"Bredy Landscaping",category:"Brand Identity",technology:"Adobe Illustrator, Adobe InDesign, Adobe Photoshop",isLocked:false,cta:"Learn more",deliverables:["Logo"]};
+						const _internal = {
+							type: 'content',
+							filePath: "C:/Users/jacki/OneDrive/Documents/GitHub/portfolio2024-final/src/content/portfolio/bredy-landscaping.md",
+							rawData: undefined,
+						};
+
+export { _internal, body, collection, data, id, slug };

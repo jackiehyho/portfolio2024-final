@@ -2,7 +2,7 @@
 title: Fraserway RV
 pubDate: 2015-07-00
 projectDuration: 1 Week
-isDraft: false
+isDraft: true
 description: Marketing Campaign Design
 author: Jackie Ho
 category: Campaign Design
