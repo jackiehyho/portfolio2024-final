@@ -9,6 +9,10 @@ category: Service Design
 thumbnail: "../../images/portfolio/memorme/Memorme.png"
 alt: Bredy Landscaping
 technology: None
+isLocked: false
+cta: Learn more
+deliverables: [Video]
+
 ---
 
 ## Project Summary
@@ -20,7 +24,7 @@ This service is to help re-align authenticity with their projected personas thro
 
 
 <div class="video-container" align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Zg0DkyFDdhQ?si=XPb8i1M1_qVDa4DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16/9" width="100%" src="https://www.youtube.com/embed/Zg0DkyFDdhQ?si=XPb8i1M1_qVDa4DM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <strong>Team Members:</strong> Ahana Roy, Jackie Ho, JoeMaricel Dayrit, Mor Karen & Teddy Prosser.
 

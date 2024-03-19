@@ -9,6 +9,9 @@ category: 3D Interaction
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
 technology: Spline
+isLocked: false
+cta: Learn more
+deliverables: [Logo, Website]
 
 ---
 

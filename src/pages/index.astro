@@ -5,11 +5,17 @@ import { getCollection } from "astro:content";
 
 import Portfolio from "../components/Portfolio.astro";
 import Locked from "../components/Locked.astro";
-import Fraserway from "../images/blogs/astro-as-a-front-end-framework/placeholder.png"
-const allWork = await getCollection("portfolio", ({ data }) => {
+import Fraserway from "../images/portfolio/fraserway/fraserway-logo.png"
+let allWork = await getCollection("portfolio", ({ data }) => {
   return data.isDraft !== true;
 });
+
 allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
+
+
+
+
+
 
 ---
 
@@ -28,8 +34,11 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
           </div>
           <div class="about-description-container">
             <p class="about-description">
-              A creative professional with over 10 years of <a href="/experiences">experiences</a> in digital
+              A design professional with <a href="/experiences">over 10 years of experiences</a> in digital
               marketing, design, web development & project management.
+            </p>
+            <p class="about-description">
+              I am specialized in digital strategy, front-end web development and service design. 
             </p>
             <p class="about-description">
               Outside of work, I'm a part-time serial hobbyist, full-time foodie,
@@ -41,7 +50,20 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
 
       <section id="work" class="work-section">
         <h2>WORK</h2>
-        <p></p>
+        <ul id="button-list" class="filter-buttons">
+          <button class="filter-button active" onclick="filterPortfolio('All')">All</button>
+
+          {
+              
+            allWork
+              .map((blog) => blog.data.category)
+              .filter((category, index, self) => self.indexOf(category) === index)
+              .sort()
+              .map((category) => (
+                <button class="filter-button" onclick={`filterPortfolio('${category}')`}>{category}</button>
+              ))
+          }
+        </ul>
         <div class="work-container">
           <ul class="portfolio-list">
             <!-- <Locked
@@ -55,30 +77,113 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
           /> -->
 
             {
-              allWork.map((blog) => (
-                <Portfolio
-                  url={`/portfolio/${blog.slug}/`}
-                  title={blog.data.title}
-                  image={blog.data.thumbnail}                   
-                  alt={blog.data.alt}
-                  category={blog.data.category}
-                  description={blog.data.description}
-                  technology={blog.data.technology}
-                />
-              ))
+              
+                allWork.map((blog) => (
+                  <Portfolio
+                    url={`/portfolio/${blog.slug}/`}
+                    title={blog.data.title}
+                    image={blog.data.thumbnail}                   
+                    alt={blog.data.alt}
+                    category={blog.data.category}
+                    description={blog.data.description}
+                    technology={blog.data.technology}
+                    cta = {blog.data.cta}
+                    deliverables = {blog.data.deliverables}
+                  />
+                ))
             }
           </ul>
         </div>
       </section>
   </main>
-
-
 </Layout>
+<script is:inline>
+      function filterPortfolio(category) {
+        // Logic to filter portfolio based on category
+        let portfolioItems = document.querySelectorAll('.portfolio-list-item'); 
+        let portfolioCategory = document.querySelectorAll('.portfolio-category'); 
+        reset();
+        for (let i = 0; i < portfolioItems.length; i++) {
+          let item = portfolioItems[i];
+          let cat = portfolioCategory[i];
+          console.log(cat);
+
+          if (category === cat.textContent)  {
+            console.log(category)
+            console.log(cat.textContent);
+          }
+
+          else if (category === "All") {
+            item.style.display = "block";
+          } 
+
+          else {
+            item.style.display = "none";
+          }
+        }
+      }
+
+      function reset() {
+        let portfolioItems = document.querySelectorAll('.portfolio-list-item'); 
+        for (let i = 0; i < portfolioItems.length; i++) {
+          let item = portfolioItems[i];
+          item.style.display = "block";
+        }
+      }
+
+
+
+   // Get the container element
+var btnContainer = document.getElementById("button-list");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("filter-button");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
 
 <style lang="scss">
-  main {
-	width: 100%;
-}
+
+main {
+      width: 100%;
+    }
+    .filter-buttons{
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .filter-button{
+      margin: .25rem;
+      font-size: 0.75rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .about-section {
+      background-color: #eee;
+      margin-top: 2rem;
+    }
+
+    .section-header {
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 2rem;
+      color: var(--primaryTextColour);
+    }
+
+    .about-description {
+      font-size: 1rem;
+    }
+
   .about-section {
     background-color: #eee;
     margin-top: 2rem;
@@ -92,6 +197,10 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
     font-size: 2rem;
     color: var(--primaryTextColour);
   }
+
+  .active {	
+  background:black;
+color:white;  }
 
   .about-description {
     font-size: 1rem;
@@ -166,6 +275,12 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
   }
 
   @media only screen and (min-width: 768px) {
+
+    .filter-button{
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+
     .about-section {
       margin-top: 4rem;
       display: grid;

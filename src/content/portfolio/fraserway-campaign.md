@@ -1,17 +1,17 @@
 ---
-title: Bar Perry Photography
-pubDate: 2015-07-00
+title: Fraserway RV
+pubDate: 2023-04-01
 projectDuration: 1 Week
 isDraft: false
-description: Creating a brand identity for a local photographer.
+description: Building a Customer Journey Map for Sales.
 author: Jackie Ho
-category: Brand Identity
-thumbnail: "../../images/portfolio/bar-perry/BarPerry.png"
+category: Service Design
+thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
 alt: Bar Perry Photography
 technology: Illustrator
 isLocked: true
-cta: PASSWORD LOCKED
-deliverables: [Logo]
+cta: Password locked
+deliverables: [Customer Journey Map, Service Blueprint]
 
 ---
  

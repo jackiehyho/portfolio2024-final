@@ -5,10 +5,14 @@ projectDuration: 2 Weeks
 isDraft: false
 description: Creating a brand identity for a landscaping businesses.
 author: Jackie Ho
-category: Visual Identity
+category: Brand Identity
 thumbnail: "../../images/portfolio/bredy-landscaping/bredyLandscaping.png"
 alt: Bredy Landscaping
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
+isLocked: false
+cta: Learn more
+deliverables: [Logo]
+
 ---
  
 # Case Study Summary

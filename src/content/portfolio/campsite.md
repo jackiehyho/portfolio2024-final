@@ -5,10 +5,14 @@ projectDuration: 1 Week
 isDraft: false
 description: Exploring 3D interaction on the web.
 author: Jackie Ho
-category: 3D Interaction
+category: Web Development
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
 technology: Spline, Lighthouse, Astro
+isLocked: false
+cta: Learn more
+deliverables: [Demo]
+
 ---
 
 # Exploring 3D Case Study

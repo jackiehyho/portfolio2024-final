@@ -28,7 +28,10 @@ const portfolioCollection = defineCollection({
     thumbnail: image(),
     alt: z.string(),
     category: z.string(),
-    technology: z.string()
+    technology: z.string(),
+    isLocked: z.boolean(),
+    cta: z.string(),
+    deliverables: z.array(z.string())
 
   })
 });

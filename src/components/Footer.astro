@@ -3,6 +3,7 @@ const { footerText, copyrightText } = Astro.props;
 
 import SocialMedia from "./SocialMedia.astro"
 
+
 ---
 
 <footer class="container-footer">
@@ -24,16 +25,14 @@ import SocialMedia from "./SocialMedia.astro"
     }
 
 </style>
-<script>
+<script is:inline>
+let yearDisplay = document.getElementById('currentYear');
+
+let currentYear = new Date().getFullYear();
+if (yearDisplay) {
+    yearDisplay.textContent = currentYear.toString();
+}
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-        let currentYear = new Date().getFullYear();
-        let yearDisplay = document.getElementById('currentYear');
-        if (yearDisplay) {
-            yearDisplay.textContent = currentYear.toString();
-        }
-    })
 </script>
 

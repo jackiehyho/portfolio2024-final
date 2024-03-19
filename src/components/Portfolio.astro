@@ -7,10 +7,13 @@ interface Props {
   image: object;
   alt: string;
   technology: string;
+  cta: string;
+  deliverables: Array<string>;
 }
 // const {title, category, description, image, alt } = Astro.props;
 
-const { url, title, category, description, image, alt } = Astro.props;
+const { url, title, category, description, image, alt, cta, deliverables } = Astro.props;
+import type { arrayOutputType } from "astro/zod";
 import Button from "./Button.astro";
 
 
@@ -22,13 +25,19 @@ import Button from "./Button.astro";
     <img class="portfolio-thumbnail" src={(image as { src: string }).src} alt={alt} />
     <span class="portfolio-category">{category}</span>
     <div class="portfolio-text-container">
+      <ul class="portfolio-deliverables">
+        {deliverables.map((item) => (
+          <li class="portfolio-deliverable">{item}</li>
+        ))}
+      </ul>
       <h1 class="portfolio-item-title">{title}</h1>
       <p>{description}</p>
+ 
       <div class="portfolio-button-container">
       <Button
         className="secondary-button"
         buttonLink={url}
-        buttonCTA="Learn More"
+        buttonCTA={cta}
       />
     </div>
     </div>
@@ -41,6 +50,23 @@ import Button from "./Button.astro";
     .portfolio-container {
       position: relative;
 
+    }
+
+    .portfolio-deliverables {
+      text-transform: uppercase;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      .portfolio-deliverable {
+        background-color: var(--primaryTextColour);
+        color: white;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        font-size: 0.6rem;
+      }
     }
     .portfolio-list-item {
       padding: 0;

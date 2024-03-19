@@ -6,10 +6,13 @@ projectDuration: Jun 2019 - July 2019 (1.5 Month)
 isDraft: false
 description: Re-brand & re-platforming of Four Seasons RV Rental
 author: Art Director & Web Developer
-category: Re-platform
+category: Web Development
 thumbnail: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals.png"
 alt: Four Seasons RV Rental by Fraserway
 technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
+isLocked: false
+cta: Learn more
+deliverables: [Logo, Website]
 
 ---
  # Summary

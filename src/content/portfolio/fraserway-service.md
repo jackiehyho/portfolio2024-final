@@ -1,17 +1,17 @@
 ---
-title: Bar Perry Photography
+title: Fraserway RV
 pubDate: 2015-07-00
 projectDuration: 1 Week
 isDraft: false
-description: Creating a brand identity for a local photographer.
+description: Marketing Campaign Design
 author: Jackie Ho
-category: Brand Identity
-thumbnail: "../../images/portfolio/bar-perry/BarPerry.png"
+category: Campaign Design
+thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
 alt: Bar Perry Photography
 technology: Illustrator
 isLocked: true
-cta: PASSWORD LOCKED
-deliverables: [Logo]
+cta: Password locked
+deliverables: [Email, PPC, Web Banner]
 
 ---
  

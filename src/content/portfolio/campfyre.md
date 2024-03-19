@@ -9,4 +9,8 @@ category: UX/UI
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
 technology: hello
+isLocked: false
+cta: Learn more
+deliverables: [Logo, Website]
+
 ---
