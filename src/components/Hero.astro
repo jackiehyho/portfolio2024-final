@@ -47,6 +47,12 @@ import myImage from "../images/Hero.png";
 </section>
 
 <style lang="scss">
+  picture{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
   .container-fullscreen {
     height: calc(100svh - var(--headerHeight) - 1rem);
     max-height: calc(100svh - var(--headerHeight) - 1rem);
@@ -81,6 +87,7 @@ import myImage from "../images/Hero.png";
       width: 200px;
       height: 200px;
       loading: eager;
+      vertical-align:bottom;
       @media only screen and (min-width: 375px) {
         width: 250px;
         height: 250px;
