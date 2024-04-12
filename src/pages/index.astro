@@ -48,7 +48,7 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
       <section id="work" class="work-section">
         <h2>WORK</h2>
         <ul id="button-list" class="filter-buttons">
-          <button aria="button" class="filter-button active" onclick="filterPortfolio('All')">All</button>
+          <button  class="filter-button active" onclick="filterPortfolio('All')">All</button>
 
           {
               
@@ -57,7 +57,7 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
               .filter((category, index, self) => self.indexOf(category) === index)
               .sort()
               .map((category) => (
-                <button aria="button" class="filter-button" onclick={`filterPortfolio('${category}')`}>{category}</button>
+                <button class="filter-button" onclick={`filterPortfolio('${category}')`}>{category}</button>
               ))
           }
         </ul>
