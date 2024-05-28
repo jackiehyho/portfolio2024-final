@@ -14,6 +14,9 @@ cta: Learn more
 deliverables: [Demo]
 
 ---
+## Project Summary
+3D interaction adds a very novel experience that is not available currently in a lot of websites. This novelty makes the web experience more memorible, which can lead to better user retention and shareability. 
+
 
 # Exploring 3D Case Study
 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.54/build/spline-viewer.js"></script>
@@ -21,8 +24,7 @@ deliverables: [Demo]
 
 After the 3D Canvas has loaded, you can use 2 fingers or a mouse to orbit the 3D Space horizontally.
 
-## Why 3D Interaction?
-3D interaction adds a very novel experience that is not available currently in a lot of websites. This novelty makes the web experience more memorible, which can lead to better user retention and shareability . 
+
 
 ## Performance
 I originally wanted to have 3D interactive elements as a homepage hero but opted against it as it severaly affected the performance load of the website. This defeated the purpose of building this in Astro to begin with. 

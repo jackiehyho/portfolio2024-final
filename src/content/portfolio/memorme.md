@@ -42,6 +42,7 @@ The theme that we had chosen as a group was **Memories**.
 
 <details>
 <summary><strong>Group Discussion & Team Bonding</strong></summary>
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-discussion.jpeg" alt="Memorme Discussion" width="100%" height="100%"></p>
 
 Before we start the process, we each discussed our own interpretations of what a memory was, as well as share a personal memory with each other. 
 
@@ -54,7 +55,7 @@ This fostered a safe environment for ideas to flow and helps build trust within 
 At this service jam, we were introduced to utilize the Double Diamond Process, which breaks down into 4 distinct phases:
 
 <div class="image-container" text-align="center">
-<img class="portfolio-images" src="/images/portfolio/memorme/Memorme-DoubleDiamond.jpeg" alt="A bird" width="100%" height="100%">
+<p><img class="portfolio-images" src="/images/portfolio/memorme/Memorme-DoubleDiamond.jpeg" alt="A bird" width="100%" height="100%"></p>
 </div>
 
 ### Double Diamond Design Process
@@ -95,6 +96,8 @@ Testing out solutions at a smaller scale to reject solutions that will not work 
 ### 10 Minutes of Question Generation
 Using a timer of 10 minutes, we collectively wrote down questions on each sticky note and hid the questions from each other. This is to help speed up question generation and prevent ourselves from peeking and getting stuck on what to write.
 
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-brainstorm.jpg" alt="Memorme Discussion" width="100%" height="100%"></p>
+
 ### Grouping Questions by Themes
 We sorted the list of questions and determined the following to be the themes present: 
 
@@ -105,6 +108,9 @@ We sorted the list of questions and determined the following to be the themes pr
 5. Specific Memories
 
 We voted on 2 questions from each category and picked one question from each theme, broke off into smaller teams and onto the streets to gather insights from strangers. Having smaller groups help us not be as intimidating to strangers and are more likely to help us answer some of these questions.  
+
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-organizing.jpg" alt="Memorme Discussion" width="100%" height="100%"></p>
+
 
 ### Unstructured Interviews
 Before we start any interview processes, we explain to the interviewees on the following:
@@ -118,7 +124,11 @@ With a camera phone out and recording, we would ask the following questions:
 
 *"Do you consent to being recorded for the purposes of research? Your answers is strictly for research purposes and will be be anonymous and confidential."* If they agree, we then proceed to ask the following open-ended questions.
 
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-consent.jpg" alt="Memorme Discussion" width="100%" height="100%"></p>
+
 ### Questions we asked our Interviewees
+
+
 
 1) Do you use any tools or methods to help you with your memories?
 2) Do you have any trouble with remembering things?
@@ -134,6 +144,7 @@ With a camera phone out and recording, we would ask the following questions:
 <summary><strong>02 Define</strong></summary>
 
 ### Organizing & Distilling our Research
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-answers.jpg" alt="Memorme Discussion" width="100%" height="100%"></p>
 
 Themes that came out of the answers were:
 - Feelings of regret and wanting to share that with others
@@ -173,6 +184,7 @@ Seniors are not able to share life lessons and stories for the next generation.
 </details>
 <details>
 <summary><strong>03 Develop</strong></summary>
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-final.jpeg" alt="Memorme Discussion" width="100%" height="100%"></p>
 
 Given the limited time that we have, we generated two concrete ideas for our service, a digital and a physical service.
 
@@ -188,9 +200,10 @@ We opted to go with option #2.
 
 
 <summary><strong>04 Deliver</strong></summary>
+<p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-team.jpeg" alt="Memorme Discussion" width="100%" height="100%"></p>
 
 ## Creating a Story
-Storytelling through Bodystorming  service is a powerful way
+Storytelling through bodystorming service is a powerful way to quickly summerize what your service is about.
 
 </details>
 <details>
