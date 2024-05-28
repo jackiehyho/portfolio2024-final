@@ -2,7 +2,7 @@
 title: Fraserway RV Branded Items
 pubDate: 2015-07-00
 projectDuration: 2-4 Week Window
-isDraft: false
+isDraft: true
 description: Marketing Campaign Design
 author: Various Roles
 category: Marketing Design
