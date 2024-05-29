@@ -4,7 +4,7 @@ pubDate: 2024-03-04
 projectDuration: 48 Hours
 isDraft: false
 description: A legacy preserving service for seniors.
-author: Service Designer
+role: Service Designer
 category: Service Design
 thumbnail: "../../images/portfolio/memorme/Memorme.png"
 alt: Memorme Service Design

@@ -4,7 +4,7 @@ pubDate: 2015-07-00
 projectDuration: 1 Week
 isDraft: false
 description: Creating a brand identity for a local pet photographer.
-author: Jackie Ho
+role: Graphic Designer
 category: Brand Identity
 thumbnail: "../../images/portfolio/bar-perry/BarPerry.png"
 alt: Bar Perry Photography

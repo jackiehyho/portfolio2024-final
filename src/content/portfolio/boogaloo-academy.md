@@ -4,7 +4,7 @@ pubDate: 2015-07-00
 projectDuration: 1 Week
 isDraft: true
 description: Marketing Campaign Design
-author: Jackie Ho
+role: Designer
 category: Campaign Design
 thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
 alt: Boogaloo Academy

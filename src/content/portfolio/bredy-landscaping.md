@@ -4,7 +4,7 @@ pubDate: 2017-07-01
 projectDuration: 2 Weeks
 isDraft: false
 description: Creating a brand identity for a landscaping businesses.
-author: Jackie Ho
+role: Jackie Ho
 category: Brand Identity
 thumbnail: "../../images/portfolio/bredy-landscaping/bredyLandscaping.png"
 alt: Bredy Landscaping
@@ -15,7 +15,7 @@ deliverables: [Logo]
 
 ---
  
-# Case Study Summary
+# Project Summary
 Garth approached me in need of a logo for his landscaping business. A visual identity package was created for Bredy Landscaping that included logos, fonts, colours, hats, uniforms and vehicle decals. The project was a success and the client is happy with what he had received.
 
 ## SCOPE OF WORK
@@ -24,7 +24,9 @@ The scope of work ended up being the following:
 - Exported Logos
 - Visual Identity Guidelines
 
-## 01 DISCOVERY
+<details>
+<summary><strong>01 DISCOVERY</strong></summary>
+
 ### Client Interview
 We sat down at a local cafe to have a conversation about what he was looking in a logo. 
 
@@ -45,8 +47,9 @@ I created a board to save the logos that visually resonated with Garth so I can 
 As we went through each one, I also asked questions to understand why they liked it so I can note it down. These words will also help inform the logo creation process later on.
 
 I really enjoyed using this method as it involved the client to be collaborative with the work and adds a sense of ownership when we co-design.
-
-## 02 EXECUTION
+</details>
+<details>
+<summary><strong>02 EXECUTION</strong></summary>
 
 ### Concept Logos
 <img class="portfolio-images" src="/images/portfolio/bredy-landscaping/BredyLandscaping-Pinterest.png"  alt="A bird" width="100%" height="100%">
@@ -60,9 +63,11 @@ I also like to visualize the logos in both light and dark applications to ensure
 
 ### Meeting with the Client
 I picked the top 5 designs that I felt best resonated with Garth from our previous conversations and allowed them to pick the one that resonated with them the best. He selected the one that is currently in use and he felt that it needed no additional refinement.
+</details>
 
-## 03 DELIVERY
-After the logo was approved by Garth, I finalized logo by outlining the text so that it wouldn't have missing font issues in future print scenarios. I also created a simple visual guideline, which included colours HEX codes, fonts used and what not to do with the logo. 
+<details>
+<summary><strong>03 DELIVERY</strong></summary>
+<p>After the logo was approved by Garth, I finalized logo by outlining the text so that it wouldn't have missing font issues in future print scenarios. I also created a simple visual guideline, which included colours HEX codes, fonts used and what not to do with the logo.</p> 
 
 Exported all logo variations:
 - colour 
@@ -82,10 +87,8 @@ Also exported in the following file formats:
 
 so it can be readily available to use for any application. WebP at this point was not supported by all browsers. 
 
-The client was satisfied with the result and requested website work afterwards.
+The client was satisfied with the result and requested website work afterwards.</p>
 
-
-
-
+</details>
 
 

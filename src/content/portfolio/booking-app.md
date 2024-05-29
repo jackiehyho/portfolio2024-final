@@ -4,7 +4,7 @@ pubDate: 2024-01-09
 projectDuration: 1 Week
 isDraft: true
 description: Exploring 3D interaction on the web.
-author: Jackie Ho
+role: Developer
 category: 3D Interaction
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite

@@ -24,7 +24,7 @@ const portfolioCollection = defineCollection({
     pubDate: z.date().transform((str) => new Date(str).toDateString()),
     projectDuration: z.string(),
     description: z.string(),
-    author: z.string(),
+    role: z.string(),
     thumbnail: image(),
     alt: z.string(),
     category: z.string(),

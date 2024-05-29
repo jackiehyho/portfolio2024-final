@@ -4,7 +4,7 @@ pubDate: 2015-07-00
 projectDuration: 2-4 Week Window
 isDraft: true
 description: Marketing Campaign Design
-author: Various Roles
+role: Various Roles
 category: Marketing Design
 thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
 alt: Fraserway RV Branded Items
@@ -16,7 +16,7 @@ deliverables: [Manuals, Videos, Swag, Signage]
 ---
  
 # Project Summary
-A visual identity package was created for Bar Perry that included logos, fonts, colours and stationary. The project was a success and the client is happy with what he had received.
+A collection of some of the projects I've done to support the business.
 
 ## Example Work
 <details>
