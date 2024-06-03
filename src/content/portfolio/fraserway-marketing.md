@@ -3,7 +3,7 @@ title: Fraserway RV Branded Items
 pubDate: 2015-07-01
 projectDuration: 2-4 Week Window
 isDraft: false
-description: Marketing Campaign Design
+description: Fraserway Branded Collateral
 role: Various Roles
 category: Marketing Design
 thumbnail: "../../images/portfolio/fraserway/fraserway-logo.png"
