@@ -41,7 +41,7 @@ A collection of some of the projects I've done to support the business.
 
 
 <details>
-<summary><strong>Chair & Mat</strong></summary>
+<summary><strong>50<sup>th</sup> Anniversary Gift Chair & Mat</strong></summary>
 <p><img class="portfolio-images" src="/images/portfolio/fraserway/chair-mat.jpg"  alt="Newsprint Ad" width="100%" height="100%"></p>
 
 ### Project Goal

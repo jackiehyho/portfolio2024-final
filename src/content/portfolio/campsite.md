@@ -5,7 +5,7 @@ projectDuration: 1 Week
 isDraft: false
 description: Exploring 3D interaction on the web.
 role: Jackie Ho
-category: Web Development
+category: Web Experiment
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
 technology: Spline, Lighthouse, Astro

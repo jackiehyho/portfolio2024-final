@@ -5,13 +5,13 @@ projectDuration: 3 days
 isDraft: false
 description: Let’s have more fun & less fuss with FannyPAX
 role: Product Manager
-category: Mobile App
+category: User Interface
 thumbnail: "../../images/portfolio/fannypax/placeholder.png"
 alt: FannyPAX
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
 isLocked: false
 cta: COMING SOON
-deliverables: [UX]
+deliverables: [Mock-ups]
 
 ---
  
@@ -33,7 +33,6 @@ This is where FannyPax comes in. Our goal is to make group travel planning pain-
 - Event Voting
     - Upvote system
     - Timer Expiry
-
 - Calendar Syncing
 - Groups & Subgroups
 
