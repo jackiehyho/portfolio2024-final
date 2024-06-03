@@ -7,12 +7,12 @@ isDraft: false
 description: Re-brand & re-platforming of Four Seasons RV Rental
 role: Product Manager, Art Director & Web Developer
 category: Web Product
-thumbnail: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals.png"
+thumbnail: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals.jpg"
 alt: Four Seasons RV Rental by Fraserway
 technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
 isLocked: false
 cta: Learn more
-deliverables: [Art Direction, Website]
+deliverables: [Art Direction, Development, UX/UI]
 
 ---
  # Project Summary
