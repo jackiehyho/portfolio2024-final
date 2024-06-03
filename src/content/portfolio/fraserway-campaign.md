@@ -34,6 +34,21 @@ A visual identity package was created for Bar Perry that included logos, fonts, 
 </details>
 
 <details>
+
+<details>
+<summary><strong>Newsprint</strong></summary>
+<p><img class="portfolio-images" src="/images/portfolio/fraserway/newsprint.png"  alt="Newsprint Ad" width="100%" height="100%"></p>
+
+### Project Goal
+<p>Designing a newsprint ad that will support driving traffic to the dealership.</p> 
+
+### Project Role
+<p>Graphic Designer</p> 
+
+### Key Learnings
+<ul><li>Double check that the blacks are are set to pure black. Rich black may oversaturate the newsprint medium with ink causing it to smear all over the ad.</li></ul>
+</details>
+
 <summary><strong>Email</strong></summary>
 
 <p><div class="video-container" align="center">
