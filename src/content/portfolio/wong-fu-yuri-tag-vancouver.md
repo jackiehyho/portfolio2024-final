@@ -16,11 +16,11 @@ deliverables: [Video]
 ---
  
 # Project Summary
-Providing behind the scenes as a member of Hype Life Films and live coverage of the event at UBC.
+Providing behind the scenes and live coverage of the event at UBC as a member of Hype Life Films.
 
-<div class="video-container" align="center">
+<p><div class="video-container" align="center">
 <iframe style="aspect-ratio: 16/9" width="100%" src="https://www.youtube.com/embed/qlFWh9TmLNw?si=8LzTN0-SceloF4QI" title="YouTube video player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+</div></p>
 
 
 
