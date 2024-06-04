@@ -11,7 +11,7 @@ alt: campsite
 technology: Spline, Lighthouse, Astro
 isLocked: false
 cta: Learn more
-deliverables: [Demo]
+deliverables: [3D Demo]
 
 ---
 ## Project Summary

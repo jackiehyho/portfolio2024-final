@@ -11,7 +11,7 @@ alt: Memorme Service Design
 technology: None
 isLocked: false
 cta: Learn more
-deliverables: [Video]
+deliverables: [Video Demo]
 
 ---
 
