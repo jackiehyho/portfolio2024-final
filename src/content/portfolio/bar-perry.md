@@ -11,7 +11,7 @@ alt: Bar Perry Photography
 technology: Illustrator
 isLocked: false
 cta: Learn More
-deliverables: [Logo]
+deliverables: [Logo, Business Cards]
 
 ---
 

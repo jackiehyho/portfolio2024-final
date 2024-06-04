@@ -11,7 +11,7 @@ alt: FannyPAX
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
 isLocked: false
 cta: COMING SOON
-deliverables: [Product Management, UX/UI]
+deliverables: [Product Concept, UX/UI]
 
 ---
  
