@@ -11,6 +11,6 @@ alt: Graphic
 technology: Illustrator
 isLocked: false
 cta: Learn more
-deliverables: [Video]
+deliverables: [Logo Design]
 
 ---
