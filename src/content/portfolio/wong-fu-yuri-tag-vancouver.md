@@ -19,7 +19,7 @@ deliverables: [Video]
 Providing behind the scenes as a member of Hype Life Films and live coverage of the event at UBC.
 
 <div class="video-container" align="center">
-<iframe style="aspect-ratio: 16/9" width="100%" src="https://youtu.be/qlFWh9TmLNw?si=y_YBpfbymkwC9f4_" title="YouTube video player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe style="aspect-ratio: 16/9" width="100%" src="https://www.youtube.com/embed/qlFWh9TmLNw?si=8LzTN0-SceloF4QI" title="YouTube video player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 
