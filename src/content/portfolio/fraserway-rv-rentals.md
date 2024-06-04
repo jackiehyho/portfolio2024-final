@@ -1,14 +1,14 @@
 ---
 title: Fraserway RV Rentals
 pubDate: 2019-10-01
-projectDuration: 2-4 Week Window
+projectDuration: 1 Month
 isDraft: false
 description: Providing an RV Rental Fleet series for customers.
 role: Producer & Scriptwriter
 category: Video Production
 thumbnail: "../../images/portfolio/fraserway-rentals/FraserwayRVRentals.jpg"
 alt: Fraserway RV Branded Items
-technology: Adobe Illustrator, Adobe Photoshop, Adobe InDesign
+technology: Adobe Premiere, Microsoft Word
 isLocked: false
 cta: Learn More
 deliverables: [YouTube, Videos]
