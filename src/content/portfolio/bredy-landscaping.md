@@ -6,12 +6,12 @@ isDraft: false
 description: Creating a brand identity for a landscaping businesses.
 role: Jackie Ho
 category: Brand Identity
-thumbnail: "../../images/portfolio/bredy-landscaping/bredyLandscaping.png"
+thumbnail: "../../images/portfolio/bredy-landscaping/BredyLandscaping_Hero.jpg"
 alt: Bredy Landscaping
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
 isLocked: false
 cta: Learn more
-deliverables: [Logo]
+deliverables: [Logo, Website, Style Guide]
 
 ---
  
