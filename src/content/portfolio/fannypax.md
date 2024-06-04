@@ -5,7 +5,7 @@ projectDuration: 3 days
 isDraft: false
 description: Let’s have more fun & less fuss with FannyPAX
 role: Product Manager
-category: User Interface
+category: Product
 thumbnail: "../../images/portfolio/fannypax/placeholder.png"
 alt: FannyPAX
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
