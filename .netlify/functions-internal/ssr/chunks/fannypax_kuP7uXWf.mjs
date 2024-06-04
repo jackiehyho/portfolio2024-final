@@ -15,7 +15,7 @@ const id = "fannypax.md";
 							return target[name];
 						}
 					})
-					,alt:"FannyPAX",category:"User Interface",technology:"Adobe Illustrator, Adobe InDesign, Adobe Photoshop",isLocked:false,cta:"COMING SOON",deliverables:["Mock-ups"]};
+					,alt:"FannyPAX",category:"Product",technology:"Adobe Illustrator, Adobe InDesign, Adobe Photoshop",isLocked:false,cta:"COMING SOON",deliverables:["Product Concept","UX/UI"]};
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/jackieho/portfolio2024-final-1/src/content/portfolio/fannypax.md",

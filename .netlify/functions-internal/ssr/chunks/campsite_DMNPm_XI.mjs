@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./bar-perry_CE71F_55.mjs');
+						return import('./campsite_R6KCYPut.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

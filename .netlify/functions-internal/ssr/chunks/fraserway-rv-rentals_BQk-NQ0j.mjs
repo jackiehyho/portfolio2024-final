@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./campsite_DjfSwwkr.mjs');
+						return import('./fraserway-rv-rentals_DBgvouC8.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

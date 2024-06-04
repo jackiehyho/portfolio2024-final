@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./fraserway-marketing_QOLcF_L9.mjs');
+						return import('./bar-perry_CBqpH67H.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

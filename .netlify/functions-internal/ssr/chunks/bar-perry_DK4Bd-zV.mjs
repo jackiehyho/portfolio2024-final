@@ -15,7 +15,7 @@ const id = "bar-perry.md";
 							return target[name];
 						}
 					})
-					,alt:"Bar Perry Photography",category:"Brand Identity",technology:"Illustrator",isLocked:false,cta:"Learn More",deliverables:["Logo"]};
+					,alt:"Bar Perry Photography",category:"Brand Identity",technology:"Illustrator",isLocked:false,cta:"Learn More",deliverables:["Logo","Business Cards"]};
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/jackieho/portfolio2024-final-1/src/content/portfolio/bar-perry.md",

@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./nyevan_CpQkOFLT.mjs');
+						return import('./fannypax_b353xPB5.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

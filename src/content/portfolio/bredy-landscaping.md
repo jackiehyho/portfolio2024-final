@@ -11,7 +11,7 @@ alt: Bredy Landscaping
 technology: Adobe Illustrator, Adobe InDesign, Adobe Photoshop
 isLocked: false
 cta: Learn more
-deliverables: [Logo, Website, Style Guide]
+deliverables: [Logo, Website, UX/UI, Style Guide]
 
 ---
  

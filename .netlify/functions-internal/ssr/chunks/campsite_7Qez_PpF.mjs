@@ -15,7 +15,7 @@ const id = "campsite.md";
 							return target[name];
 						}
 					})
-					,alt:"campsite",category:"3D Interaction",technology:"Spline, Lighthouse, Astro",isLocked:false,cta:"Learn more",deliverables:["Demo"]};
+					,alt:"campsite",category:"3D Interaction",technology:"Spline, Lighthouse, Astro",isLocked:false,cta:"Learn more",deliverables:["3D Demo"]};
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/jackieho/portfolio2024-final-1/src/content/portfolio/campsite.md",

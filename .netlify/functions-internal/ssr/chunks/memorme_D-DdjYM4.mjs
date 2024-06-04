@@ -15,7 +15,7 @@ const id = "memorme.md";
 							return target[name];
 						}
 					})
-					,alt:"Memorme Service Design",category:"Service Design",technology:"None",isLocked:false,cta:"Learn more",deliverables:["Video"]};
+					,alt:"Memorme Service Design",category:"Service Design",technology:"None",isLocked:false,cta:"Learn more",deliverables:["Video Demo"]};
 						const _internal = {
 							type: 'content',
 							filePath: "/Users/jackieho/portfolio2024-final-1/src/content/portfolio/memorme.md",

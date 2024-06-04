@@ -5,7 +5,7 @@ projectDuration: 2-4 Week Window
 isDraft: false
 description: Collection of Fraserway RV Branded Designs
 role: Various Roles
-category: Marketing Design
+category: Brand Identity
 thumbnail: "../../images/portfolio/fraserway/fraserway.jpg"
 alt: Fraserway RV Branded Items
 technology: Adobe Illustrator, Adobe Photoshop, Adobe InDesign
