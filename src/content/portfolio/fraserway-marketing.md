@@ -6,7 +6,7 @@ isDraft: false
 description: Fraserway Branded Collateral
 role: Various Roles
 category: Marketing Design
-thumbnail: "../../images/portfolio/fraserway/fraserway.JPG"
+thumbnail: "../../images/portfolio/fraserway/fraserway.jpg"
 alt: Fraserway RV Branded Items
 technology: Adobe Illustrator, MJML & Adobe Photoshop
 isLocked: false
