@@ -6,7 +6,7 @@ isDraft: false
 description: Providing an RV Rental Fleet series for customers.
 role: Producer & Scriptwriter
 category: Video Production
-thumbnail: "../../images/portfolio/fraserway/fraserway.jpg"
+thumbnail: "../../images/portfolio/fraserway-rentals/FraserwayRVRentals.jpg"
 alt: Fraserway RV Branded Items
 technology: Adobe Illustrator, Adobe Photoshop, Adobe InDesign
 isLocked: false
