@@ -2,7 +2,7 @@
 title: Wong Fu & Yuri Tag Live in Vancity
 pubDate: 2015-07-00
 projectDuration: 1 Week
-isDraft: true
+isDraft: false
 description: Covering one of the original YouTubers during their tour.
 role: Videographer
 category: Video Production
