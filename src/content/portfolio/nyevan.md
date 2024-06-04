@@ -6,7 +6,7 @@ isDraft: false
 description: Celebrating a new event at the year end.
 role: Graphic Designer
 category: Brand Identity
-thumbnail: "../../images/portfolio/memorme/Memorme.png"
+thumbnail: "../../images/portfolio/fannypax/placeholder.png"
 alt: Graphic
 technology: Illustrator
 isLocked: false
