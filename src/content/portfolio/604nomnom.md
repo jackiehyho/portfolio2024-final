@@ -3,7 +3,7 @@ title: 604NomNom
 pubDate: 2012-03-01
 projectDuration: 3 Months
 isDraft: false
-description: Series.
+description: A YouTube series featuring Vancouver Restaurants.
 role: Co-Founder, Producer & Video Editor
 category: Video Production
 thumbnail: "../../images/portfolio/604nomnom/604nomnom.jpg"
