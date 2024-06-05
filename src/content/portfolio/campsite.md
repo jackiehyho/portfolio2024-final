@@ -1,17 +1,17 @@
 ---
-title: Campsite
+title: 3D Campsite Experience
 pubDate: 2024-01-09
 projectDuration: 1 Week
 isDraft: false
 description: Exploring 3D interaction on the web.
 role: Jackie Ho
-category: Web Development
+category: 3D Interaction
 thumbnail: "../../images/portfolio/campsite/campsite.jpg"
 alt: campsite
 technology: Spline, Lighthouse, Astro
 isLocked: false
 cta: Learn more
-deliverables: [Demo]
+deliverables: [3D Demo]
 
 ---
 ## Project Summary

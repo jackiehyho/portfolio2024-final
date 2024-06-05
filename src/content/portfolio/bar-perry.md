@@ -1,6 +1,6 @@
 ---
 title: Bar Perry Photography
-pubDate: 2015-07-00
+pubDate: 2024-02-01
 projectDuration: 1 Week
 isDraft: false
 description: Creating a brand identity for a local pet photographer.
@@ -11,7 +11,7 @@ alt: Bar Perry Photography
 technology: Illustrator
 isLocked: false
 cta: Learn More
-deliverables: [Logo]
+deliverables: [Logo, Business Cards]
 
 ---
 
