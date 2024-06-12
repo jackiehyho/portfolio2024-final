@@ -18,11 +18,16 @@ deliverables: [Logo, Website, UX/UI, Style Guide]
 # Project Summary
 Garth approached me in need of a logo for his landscaping business. A visual identity package was created for Bredy Landscaping that included logos, fonts, colours, hats, uniforms and vehicle decals. The project was a success and the client is happy with what he had received.
 
-## SCOPE OF WORK
+<div class="gallery js-flickity"
+  data-flickity-options='{ "wrapAround": true }'>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div>
 
-The scope of work ended up being the following:
-- Exported Logos
-- Visual Identity Guidelines
+
 
 <details>
 <summary><strong>01 DISCOVERY</strong></summary>

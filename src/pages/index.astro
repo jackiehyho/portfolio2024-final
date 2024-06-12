@@ -12,16 +12,11 @@ let allWork = await getCollection("portfolio", ({ data }) => {
 
 allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
 
-
-
-
-
-
 ---
 
 <Layout
   title="Digital Portfolio of Jackie Ho"
-  description="A digital product designer Based in Vancouver, BC"
+  description="A digital product manager Based in Vancouver, BC"
 >
   <main slot="main">
   <Hero  
@@ -34,7 +29,7 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
           </div>
           <div class="about-description-container">
             <p class="about-description">
-              A digital professional with <a href="/my-experiences">over 10 years of experiences supporting small businesses</a> with digital
+              A digital professional with <a href="/my-experiences">over 10 years of experiences supporting businesses</a> with digital
               marketing, ux design, web development & product management.
             </p>
             <p class="about-description">
