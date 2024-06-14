@@ -2,7 +2,7 @@
 title: FannyPax
 pubDate: 2015-07-01
 projectDuration: 3 days
-isDraft: false
+isDraft: true
 description: More fun & less fuss with FannyPAX!
 role: Product Manager
 category: Product
