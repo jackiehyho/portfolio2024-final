@@ -52,7 +52,7 @@ This fostered a safe environment for ideas to flow and helps build trust within 
 <details>
 <summary><strong>Design Process</strong></summary>
 
-At this service jam, we were introduced to utilize the Double Diamond Process, which breaks down into 4 distinct phases:
+At this service jam, we were to utilize the Double Diamond Process, which breaks down into 4 distinct phases:
 
 <div class="image-container" text-align="center">
 <p><img class="portfolio-images" src="/images/portfolio/memorme/Memorme-DoubleDiamond.jpeg" alt="A bird" width="100%" height="100%"></p>
@@ -126,7 +126,7 @@ With a camera phone out and recording, we would ask the following questions:
 
 <p><img class="portfolio-images" src="/images/portfolio/memorme/memorme-consent.jpg" alt="Memorme Discussion" width="100%" height="100%"></p>
 
-### Questions we asked our Interviewees
+### Some questions we asked our Interviewees
 
 
 
