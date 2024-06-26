@@ -29,17 +29,23 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
           </div>
           <div class="about-description-container">
             <p class="about-description">
-              A digital professional with <a href="/my-experiences">over 10 years of experiences supporting businesses</a> with digital
-              marketing, ux design, web development & product management.
+              Product Manager with a UX engineering background and <a href="/my-experiences">over 10 years of experiences supporting businesses</a> with design, front-end development, marketing & product management.
             </p>
             <p class="about-description">
-              Outside of work, I'm a part-time serial hobbyist, full-time foodie,
-              and world traveler.
+              Always striving to learn, quick to understand new things, connect the dots and see new possibilities in things. Extremely reliable and good at identifying the risks in new situations. 
+            </p>
+          </div>
+          <div class="about-description-container">
+            <p class="about-description">
+              Outside of work, you can find me trying out new hobbies and activities, testing new recipes in the kitchen or playing with new applications and emerging technologies. 
+            </p>
+            <p class="about-description">
+              I am a huge fan of the outdoors and love to hike and camp. I am also a huge fan of board games and escape rooms.
             </p>
           </div>
         </div>
       </section> 
-
+    
       <section id="work" class="work-section">
         <h2>FEATURED WORK</h2>
         <ul id="button-list" class="filter-buttons">
@@ -280,17 +286,13 @@ main {
 
     .about-section {
       margin-top: 4rem;
-      display: grid;
     }
     .about-content {
-      display: grid;
-      justify-content: center;
-      align-items: start;
+      display: flex;
       padding: 0;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
+      max-width: 1440px;
+      margin: auto;
+      gap: 1rem;
     }
 
     .section-header {
@@ -301,19 +303,19 @@ main {
       padding: 0;
       margin: 0;
 
-      grid-column: 2 / 4;
-      grid-row: 1 / 2;
-      text-align: center;
+      width: 40%;
+
+      text-align: right;
     }
     .about-description-container {
-      grid-column: 4 / 6;
-      grid-row: 1 / 2;
+      width: 60%;
       margin: 0;
       padding: 0;
     }
 
     .about-description {
       font-size: 1.25rem;
+
       &:first-child {
         margin: 0;
       }
