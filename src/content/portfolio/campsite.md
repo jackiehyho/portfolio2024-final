@@ -2,7 +2,7 @@
 title: 3D Campsite Experience
 pubDate: 2024-01-09
 projectDuration: 1 Week
-isDraft: false
+isDraft: true
 description: Exploring 3D interaction on the web.
 role: Jackie Ho
 category: 3D Interaction

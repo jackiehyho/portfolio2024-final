@@ -17,7 +17,40 @@ deliverables: [Logo, Website, UX/UI, Style Guide]
  
 # Project Summary
 Garth approached me in need of a logo for his landscaping business. A visual identity package was created for Bredy Landscaping that included logos, fonts, colours, hats, uniforms and vehicle decals. The project was a success and the client is happy with what he had received.
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 100%;
+  height: 600px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.image-container{
+  width: 100%;
+  text-align:center;
+}
+  </style>
 <div class="gallery js-flickity"
   data-flickity-options='{ "wrapAround": true }'>
   <div class="gallery-cell"></div>

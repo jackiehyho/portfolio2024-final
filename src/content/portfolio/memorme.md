@@ -2,7 +2,7 @@
 title: Memorme
 pubDate: 2024-03-04
 projectDuration: 48 Hours
-isDraft: false
+isDraft: true
 description: A legacy preserving service for seniors.
 role: Service Designer
 category: Service Design
