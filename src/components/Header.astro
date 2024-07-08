@@ -1,33 +1,57 @@
 ---
 import Navigation from "../components/Navigation.astro"
 import Logo from "../components/Logo.astro"
-
+import headerHeight from "../layouts/Layout.astro"
 ---
 
-<header>
+<header id="header">
     <Logo  /><Navigation />
 </header> 
+<script is:inline>
 
-<style lang="scss">
-header {
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  let currentScrollPos = window.scrollY;    
+
+  //check if this is a mobile device
+  if (this.navigator.maxTouchPoints > 0) {
+    if (prevScrollpos > currentScrollPos) {
+    document.getElementById("header").style.top = "0";
+    } 
+    else {
+        document.getElementById("header").style.top = "-80px";
+    }
+    prevScrollpos = currentScrollPos;
+    // Add background to scroll effect
+    if (window.scrollY > 80) {
+        document.getElementById("header").style.background = "rgba(255, 255, 255, 0.9)";
+    } else {
+        document.getElementById("header").style.background = "none";
+    }
+  }
+}
+</script>
+<style 	is:global define:vars={{
+		headerHeight
+	}
+	}> 
+    header {
         display: flex;
         align-items: center;
-        width: 100%;
-}
-
-
-
+        position: sticky;
+        transition: all 1s ease-in-out;
+        z-index: 10;
+        padding: 1rem;
+        max-height: var(--header-height);
+    }
 
 @media only screen and (min-width: 768px) {
     header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-
-
-}
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+        position: initial;
+    }
 }
 
 </style> 
