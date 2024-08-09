@@ -21,9 +21,7 @@ const { images, header} = Astro.props;
             <div class="image-container"  >
             <img class="portfolio-image" src={image.src} alt={image.alt} />
             </div>
-          <div class="text-container hide-caption">
-              {/* <p class="portfolio-caption"><em>{image.alt}</em></p> */}
-            </div>
+          
 
         
         </div>
@@ -115,21 +113,17 @@ const { images, header} = Astro.props;
       -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
       box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
     }
- 
+
     .sliding-transition {
       transition: all 0.5s ease-in-out;
     }
     .center-image img{
+      transition: all 0.5s ease-in-out;
       &:hover {
         width: 1200px;
         transition: all 0.5s ease-in-out;
-
-
       }
-      transition: all 0.5s ease-in-out;
- 
     }
-   
     @media only screen and (min-width: 768px) {
       .carousel-header{
         padding-bottom: 2rem;
@@ -220,9 +214,9 @@ let prevIndex: number;
 let imageWidth = images[currentIndex].getBoundingClientRect().width;
 
 portfolioImageItems[centerIndex].classList.add("center-image");
-if(portfolioTextContent[centerIndex].classList.contains("hide-caption")){
-  portfolioTextContent[centerIndex].classList.remove("hide-caption");
-  }
+// if(portfolioTextContent[centerIndex].classList.contains("hide-caption")){
+//   portfolioTextContent[centerIndex].classList.remove("hide-caption");
+//   }
 
 
 
@@ -231,7 +225,7 @@ if(portfolioImageList){
 
     portfolioImageItems[centerIndex].classList.remove("center-image");
 
-    portfolioTextContent[centerIndex].classList.add("hide-caption");
+    // portfolioTextContent[centerIndex].classList.add("hide-caption");
     prevIndex = currentIndex;
     currentIndex = (currentIndex - 1 + totalImages) % totalImages;
     centerIndex = (centerIndex - 1 + totalImages) % totalImages;
@@ -248,7 +242,7 @@ if(portfolioImageList){
 
   setTimeout(() => {
     portfolioImageList.classList.remove("sliding-transition");
-    portfolioTextContent[centerIndex].classList.remove("hide-caption");
+    // portfolioTextContent[centerIndex].classList.remove("hide-caption");
     portfolioImageItems[centerIndex].classList.add("center-image");
 
   }, 490);
@@ -259,7 +253,7 @@ if(portfolioImageList){
 
   rightArrow?.addEventListener("click", () => {
     portfolioImageItems[centerIndex].classList.remove("center-image");
-    portfolioTextContent[centerIndex].classList.add("hide-caption");
+    // portfolioTextContent[centerIndex].classList.add("hide-caption");
     prevIndex = currentIndex;
     portfolioImageList.classList.add("sliding-transition");
     currentIndex = (currentIndex + 1) % totalImages;
@@ -270,7 +264,7 @@ if(portfolioImageList){
     setTimeout(() => { 
       portfolioImageList.appendChild(portfolioImageItems[prevIndex]);
       portfolioImageList.classList.remove("sliding-transition");
-      portfolioTextContent[centerIndex].classList.remove("hide-caption");
+      // portfolioTextContent[centerIndex].classList.remove("hide-caption");
       portfolioImageItems[centerIndex].classList.add("center-image");
 
       portfolioImageList.style.transform = "";
