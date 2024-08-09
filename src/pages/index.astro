@@ -3,56 +3,74 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 
-import Portfolio from "../components/Portfolio.astro";
-// import Locked from "../components/Locked.astro";
-// import Fraserway from "../images/portfolio/fraserway/fraserway-logo.png"
+
+import Bento from "../components/Bento.astro";
+
+// Retrieves all Work from the Portfolio Collection that is not a draft
 let allWork = await getCollection("portfolio", ({ data }) => {
   return data.isDraft !== true;
 });
 
+// Sorts the work by descending date
 allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
 
+
+const jackieSpecialty = [
+  { header: "Experience Design", 
+    description: "Making sure that the customer is heard", 
+    list: ["Wireframing","Persona Development","Customer Journey Maps","Service blueprint","User Research","User Testing"]},
+  { header: "Front-End Engineer", 
+    description: "I love building websites that are blazing fast and outperform your competition.", 
+    list: ["HTML, CSS & JS","Web Performance Tracking","Service blueprint","User Research","User Testing"]},
+  { header: "Digital Marketing", 
+    description: "I specialize in helping implement marketing technologies and strategies that drive growth and engagement.", 
+    list: ["Video Marketing","Content Strategy", "Technical SEO","Product Marketing Strategy","Analytics","Custom Tracking"]}]
 ---
 
 <Layout
   title="Digital Portfolio of Jackie Ho"
-  description="A digital product manager Based in Vancouver, BC"
+  description="A digital product designer Based in Vancouver, BC"
 >
   <main slot="main">
-  <Hero  
-  primaryCTA="View Projects"
-      primaryLink="#work"></Hero>
-      <section class="about-section">
-        <div class="about-content">
-          <div class="about-header-container">
-            <h3 class="section-header">About Jackie Ho</h3>
-          </div>
-          <div class="about-description-container">
-            <p class="about-description">
-              Product Manager with a UX engineering background and <a href="/my-experiences">over 10 years of experiences supporting businesses</a> with design, front-end development, marketing & product management.
-            </p>
-            <p class="about-description">
-              Always striving to learn, quick to understand new things, connect the dots and see new possibilities in things. Extremely reliable and good at identifying the risks in new situations. 
-            </p>
-          </div>
-          <div class="about-description-container">
-            <p class="about-description">
-              Outside of work, you can find me trying out new hobbies and activities, testing new recipes in the kitchen or playing with new applications and emerging technologies. 
-            </p>
-            <p class="about-description">
-              I am a huge fan of the outdoors and love to hike and camp. I am also a huge fan of board games and escape rooms.
-            </p>
-          </div>
+    <Hero
+      header="Digital Portfolio of Jackie Ho"
+      subtext="I deliver user-centered solutions for business success."
+      title="Product Designer"
+      location="Based in Vancouver, BC"  
+      primaryCTA="View Work"
+      primaryLink="#work">
+    </Hero>
+    <section class="about-section">
+      <div class="about-content">
+        <div class="about-header-container">
+          <h3 class="section-header">About Jackie Ho</h3>
         </div>
-      </section> 
-    
-      <section id="work" class="work-section">
-        <h2>FEATURED WORK</h2>
+      
+        <div class="about-description-container">
+          <p class="about-description">
+            Product designer with over 8 years of experiences delivering variety of digital products and experiences from end-to-end. I have a wide range of skills that can help you deliver your next product and service.    
+        </p>
+          <p class="about-description">
+            Recently certified Product Manager and AWS Cloud Practitioner with a Bachelor of Arts in Design & New Media from SFU's SIAT program. I love learning and staying up-to-date with the latest trends in web technologies and design to provide pragmatic applications for your business.
+          </p>
+
+        <p class="about-description">
+          Outside of work, I fly my drone, host cooking parties, practice hot yoga and play games with friends.  
+      </p>
+        </div>
+      </div>
+    </section> 
+    <Bento />
+   
+     <!-- <section id="work" class="feature-section">
+      <h2 class="feature-work-header">FEATURED WORK</h2>
+      </section> -->
+          <!-- <section id="work" class="work-section">
+        <h2>OTHER WORK</h2>
         <ul id="button-list" class="filter-buttons">
           <button  class="filter-button active" onclick="filterPortfolio('All')">All</button>
-
           {
-              
+    
             allWork
               .map((blog) => blog.data.category)
               .filter((category, index, self) => self.indexOf(category) === index)
@@ -62,20 +80,11 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
               ))
           }
         </ul>
+
+        
         <div class="work-container">
           <ul class="portfolio-list">
-            <!-- <Locked
-            url=`/fraserway`
-            title="Fraserway RV"
-            image={Fraserway}    
-            alt=""
-            category="UX, Visual & Service Design"
-            description="Example work that I have done"
-            technology=""
-          /> -->
-
             {
-              
                 allWork.map((blog) => (
                   <Portfolio
                     url={`/portfolio/${blog.slug}/`}
@@ -92,10 +101,30 @@ allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
             }
           </ul>
         </div>
-      </section>
+      </section> -->
+     
   </main>
 </Layout>
 <script is:inline>
+  window.addEventListener("scroll", () => {
+    const aboutSection = document.querySelector(".about-section");
+    const aboutSectionTop = aboutSection?.offsetTop;
+    const workSection = document.querySelector(".work-section");
+    const bentoSectionTop = workSection?.offsetTop;
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > aboutSectionTop - windowHeight) {
+      aboutSection?.classList.add("animate");
+    }
+
+    if (scrollPosition > bentoSectionTop - windowHeight) {
+      aboutSection?.classList.add("animate");
+    }
+  });
+  
+</script>
+<!-- <script is:inline>
       function filterPortfolio(category) {
         // Logic to filter portfolio based on category
         let portfolioItems = document.querySelectorAll('.portfolio-list-item'); 
@@ -145,14 +174,12 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-</script>
+</script> -->
 
 
 <style lang="scss">
 
-main {
-      width: 100%;
-    }
+
     .filter-buttons{
       padding: 0;
       margin: 1rem 0;
@@ -173,6 +200,11 @@ main {
       margin-top: 2rem;
     }
 
+    .feature-section{
+      background-color: #eee;
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
     .section-header {
       padding: 0;
       margin: 0;
@@ -195,7 +227,7 @@ main {
     padding: 0;
     margin: 0;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2rem;
     color: var(--primaryTextColour);
   }
@@ -277,6 +309,10 @@ main {
     font-size: 0.5rem;
   }
 
+  .animate {
+    animation: appear 1s;
+  }
+
   @media only screen and (min-width: 768px) {
 
     .filter-button{
@@ -305,7 +341,7 @@ main {
 
       width: 40%;
 
-      text-align: right;
+      text-align: center;
     }
     .about-description-container {
       width: 60%;
@@ -314,7 +350,7 @@ main {
     }
 
     .about-description {
-      font-size: 1.25rem;
+      font-size: 1rem;
 
       &:first-child {
         margin: 0;
@@ -358,6 +394,26 @@ main {
     .item-1 {
       grid-column: 1 / span 2;
       color: white;
+    }
+
+    .work-section {
+      padding: 3rem;
+    }
+  }
+
+
+  @keyframes appear {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+   
+
+    100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>

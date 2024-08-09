@@ -3,6 +3,8 @@
   "compilerOptions": {
     "noUnusedLocals": false,
     "strictNullChecks": true,
-    "allowJs": true
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

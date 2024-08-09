@@ -24,15 +24,38 @@ const portfolioCollection = defineCollection({
     pubDate: z.date().transform((str) => new Date(str).toDateString()),
     projectDuration: z.string(),
     description: z.string(),
-    role: z.string(),
+    roles: z.array(z.string()),
+    team: z.array(z.object({
+      name: z.string(),
+      position: z.string()
+    })).optional(),
+    processes: z.array(z.object({
+      src: image(),
+      header: z.string(),
+      activities: z.array(z.string())
+
+    })),
     thumbnail: image(),
     alt: z.string(),
-    category: z.string(),
+    category: z.array(z.string()),
     technology: z.string(),
     isLocked: z.boolean(),
     cta: z.string(),
-    deliverables: z.array(z.string())
-
+    deliverables: z.array(z.string()),
+    carousel: z.array(z.object({
+      src: image(),
+      alt: z.string(),
+      active: z.boolean().optional()
+    })),
+    hero: image(),
+    introduction: z.string(),
+    projectGoal: z.array(z.string()),
+    productVision: z.string().optional(),
+    impact: z.array(z.object({
+      header: z.string(),
+      description: z.string(),
+      list: z.array(z.string()).optional()
+    })).optional()
   })
 });
 

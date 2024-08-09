@@ -1,0 +1,139 @@
+---
+interface Props {
+  processes: Array<{ src: string, header: string, activities: Array<{ src: string, alt: string }> }>;
+}
+
+const { processes, ...rest } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+<section class="container">
+<h2 class="container-header">Process Overview</h2>
+
+<div class="container process-container">
+    {processes.map((process) => (
+        <div class="process">
+            <Image class="process-icon" src={process.src} alt={process.header} />
+            <h4 class="process-header">{process.header}</h4>
+            <ul class="process-activity-list">
+                {process.activities.map((activity) => (
+                    <li class="process-activity-item">
+                        <small class="process-activity-text">{activity}</small>
+                    </li>
+                ))
+                }
+            </ul>
+        </div>
+        <div class="process-arrow-container">
+            <p class="process-arrow">&#8635;</p>
+        </div>
+    ))
+    }
+</div>
+</section>
+
+    <style lang="scss">
+        .process-container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            margin-top:2rem;
+        }
+        .process{
+            align-self: start;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            text-align:center;
+        }
+    .process-activity-item {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+    }
+
+    .process-activity-text{
+        font-size: 0.75rem;
+        line-height: 125%;
+    }
+    .process-activity-list {
+        padding: 0;
+        margin: 0;
+    }
+    .process-icon{
+        width: 48px;
+        height: 48px;
+
+    }
+    .process-arrow-container{
+        padding: 0;
+        margin: 0;
+    }
+    .process-arrow{
+        font-size: 3rem;
+        text-align: center;
+
+       
+    
+    }
+
+    @media only screen and (min-width: 768px) {
+        .process-container{
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap:1rem;
+
+        }
+        .process{
+            min-width: 125px;
+
+        }
+        .process-header{
+            padding-top: 1rem;
+            font-size: 1rem;
+            min-height: 40px;
+            vertical-align: middle;
+
+        }
+        .process-arrow{
+        font-size: 2rem;
+        text-align: center;
+        transition-property: transform;
+        transition-duration: 2s;
+        cursor: pointer;
+    
+
+        &:hover {
+            animation-name: rotate; 
+            animation-duration: 2s; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }   
+    
+        }
+
+
+    }
+
+
+   
+
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+    </style>
+    <script>
+        const arrow = document.querySelectorAll('.process-arrow');
+        const lastArrow = arrow[arrow.length - 1];
+        lastArrow.remove();
+    </script>

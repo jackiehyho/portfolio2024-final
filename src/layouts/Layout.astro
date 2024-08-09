@@ -5,17 +5,20 @@ interface Props {
 }
 const { title, description } = Astro.props;
 
-const headerHeight = "64px";
+//Global Variables
+const headerHeight = "80px";
 const desktopBreakPoint = "1440px";
 const tabletBreakPoint = "768px";
 const primaryTextColour = "#555"
 const primaryBackgroundColour = "#eee"
+const primaryButtonColour = "linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);"
 
 import "../css/normalize.css"
 import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro"
----
 
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -25,6 +28,8 @@ import Header from "../components/Header.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		
+
 		<!-- Google Tag Manager -->
 		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -33,33 +38,43 @@ import Header from "../components/Header.astro"
 			})(window,document,'script','dataLayer','GTM-53X4K6H');
 		</script>
 		<!-- End Google Tag Manager -->
-		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" as="style" rel="preload">
+		
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<!-- <ViewTransitions /> -->
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53X4K6H"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53X4K6H"
+			height="0" width="0" style="display:none;visibility:hidden">
+			</iframe>
+		</noscript>
+			<!-- End Google Tag Manager (noscript) -->
+
 		<Header />
 		<slot  name="main"  />
 		<Footer 
 			name="footer"
-			footerText="Hand-coded by Jackie Ho, powered by Astro Build!"
+			footerText="Hand-coded by Jackie Ho for speed and performance"
 			copyrightText="All Rights Reserved" 
 		/>
+
+
 	</body>
 	
 </html>
-<style lang="scss" is:global define:vars={{
-	headerHeight, 
-	desktopBreakPoint, 
-	tabletBreakPoint, 
-	primaryBackgroundColour,
-	primaryTextColour
-	}}> 
+<style lang="scss" 
+	is:global define:vars={
+	{
+		headerHeight, 
+		desktopBreakPoint, 
+		tabletBreakPoint, 
+		primaryBackgroundColour,
+		primaryTextColour,
+		primaryButtonColour
+	}
+	}> 
 	
 	html {
 		font-family: "Dosis", system-ui, sans-serif;
@@ -78,7 +93,6 @@ import Header from "../components/Header.astro"
 
 	p {
 		line-height: 150%;
-
 	}
 
 	a, a:visited {
@@ -94,7 +108,7 @@ import Header from "../components/Header.astro"
 	body {
         background-color: var(--primaryBackgroundColour);
 		color: var(--primaryTextColour);
-		padding: 1rem;
+		width: 100%;
 	}
 
 	header{
@@ -102,7 +116,7 @@ import Header from "../components/Header.astro"
 	}
 
 	main {
-
+		padding: 1rem;
 	}
 
 	footer {
@@ -127,7 +141,7 @@ import Header from "../components/Header.astro"
 	}
 
 	.primary-button{
-        background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
+        background-image: var(--primaryButtonColour);
         margin-top: 1.5rem;
         padding: 0.5rem 1rem;
         text-align: center;
@@ -164,11 +178,86 @@ import Header from "../components/Header.astro"
           }
       
     }
+
+	.container-header{
+		width: 100%;
+		text-align:left;
+		padding: 1rem;
+
+	}
+	.container-item-list{
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	.container-item-list-item{
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		line-height: 150%;
+	}
+
+
 	@media only screen and (min-width: 768px) {
 	body {
 		max-width: var(--desktopBreakPoint);
 		max-height: 100lvh;
 		margin: auto;
+	}
+
+	.container {
+		margin: 5rem 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.portfolio-case-study-header{
+		font-size:3rem;
+	}
+
+	.container-content{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		max-width: var(--desktopBreakPoint);
+		flex-wrap: nowrap;
+	}
+
+	
+
+	.container-subtext{
+		width: 100%;
+		text-align:left;
+	
+	}
+	.container-content{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: start;
+		padding: 0;
+		margin: 0;
+		padding-top: 2rem;
+		text-align: center;
+
+	}
+	.container-item{
+		flex: 1;
+	}
+
+	.container-item img{
+		max-width: 25%;
+
+	}
+
+	.container-item-header {
+		font-size: 2rem;
+		width: 100%;
 	}
 	}
 

@@ -1,0 +1,47 @@
+---
+
+
+const {  images, header, ...rest } = Astro.props;
+
+import { Image } from 'astro:assets';
+import { Carousel } from 'astro-bootstrap';
+import type { CarouselSlideType } from 'astro-bootstrap';
+const slides: CarouselSlideType[] = [
+  { img: '../images/portfolio/placeholder/image-1.svg', alt: 'First slide', active: true },
+  { img: '../images/portfolio/placeholder/image-1.svg', alt: 'Second slide'},
+  { img: '../images/portfolio/placeholder/image-1.svg', alt: 'Third slide'}
+];
+
+const id = 'carouselExampleBasic';
+---
+
+
+<section>
+<h2 class="carousel-header">{header}</h2>
+<Carousel {id} fade>
+  <Carousel.Indicators {id} {slides} />
+  <Carousel.Inner>
+    {
+      slides.map((slide) => (
+        <Carousel.Item active={slide.active}>
+          <img class="d-block w-100 img-fluid" loading="eager" src={slide.src} alt={slide.alt} title={slide.alt} lang="en" />
+        </Carousel.Item>
+      ))
+    }
+  </Carousel.Inner>
+  <Carousel.Controls id={id} />
+</Carousel>
+
+</section>
+<style lang="scss">
+  
+  </style>
+
+
+<script is:inline>
+// on the page load, for the first slide of the carousel, add the active class
+window.addEventListener('load', () => {
+  const firstSlide = document.querySelector('.carousel-item:first-child');
+  firstSlide?.classList.add('active');
+});
+</script>

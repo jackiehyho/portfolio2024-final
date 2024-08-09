@@ -1,7 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro"
 import Logo from "../components/Logo.astro"
-import headerHeight from "../layouts/Layout.astro"
+const HeaderHeight = "80px";
 ---
 
 <header id="header">
@@ -32,7 +32,7 @@ window.onscroll = function() {
 }
 </script>
 <style 	is:global define:vars={{
-		headerHeight
+		HeaderHeight
 	}
 	}> 
     header {

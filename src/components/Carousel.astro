@@ -1,0 +1,282 @@
+---
+interface Props {
+  images: Array<{ src: string, alt: string }>;
+  header: string;
+}
+
+const {  images, header, ...rest } = Astro.props;
+
+import { Image } from 'astro:assets';
+
+---
+<section class="container">
+  <h2 class="carousel-header portfolio-subheaders">{header}</h2>
+<div class="portfolio-gallery">
+    <button class="button-left arrow">&leftarrow;</button>
+    <div class="portfolio-image-list">
+    {images.map((image) => (
+      <div class="portfolio-image-item">
+          <div class="portfolio-content">
+  
+            <div class="image-container"  >
+            <Image class="portfolio-image" loading="eager" src={image.src} alt={image.alt} /></div>
+          <div class="text-container hide-caption">
+              {/* <p class="portfolio-caption"><em>{image.alt}</em></p> */}
+            </div>
+
+        
+        </div>
+      </div>
+    ))
+    }
+    </div>
+    <button class="button-right arrow">&rightarrow;</button>
+</div>
+</section>
+<style lang="scss">
+   .carousel-header{
+    text-align:center;
+   }
+    .portfolio-image-list{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 100svw;
+    }
+  
+    .portfolio-gallery{
+      position:relative;
+
+    }
+    .portfolio-content-container{
+      width: 100%;
+    }
+    .portfolio-image-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .portfolio-image{
+      height: 100%;
+      max-width: 100svw;
+    }
+
+    .image-container{
+      width: 100%;
+
+    }
+    .text-container{
+      padding: 1rem;
+      text-align: center;
+
+    }
+    
+    .portfolio-caption{
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+
+    }
+
+    .button-left{
+      position: absolute;
+      left: 0.5rem;
+      top: 50%;
+      z-index: 10;
+
+    }
+    .button-right{
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      z-index: 10;
+    }
+  
+    .arrow {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      cursor: pointer;
+      background: #333;
+      width: 48px;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+      box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    }
+ 
+    .sliding-transition {
+      transition: all 0.5s ease-in-out;
+    }
+    .center-image img{
+      &:hover {
+        width: 1200px;
+        transition: all 0.5s ease-in-out;
+
+
+      }
+      transition: all 0.5s ease-in-out;
+ 
+    }
+   
+    @media only screen and (min-width: 768px) {
+      .carousel-header{
+        padding-bottom: 2rem;
+      }
+      .portfolio-image{
+        padding-bottom: 1rem;
+
+      }
+      .text-container, .padding-caption{
+        padding: 0;
+        margin: 0;
+      }
+
+    .portfolio-image{
+      width: 800px;
+      &:not(:first-child):not(:last-child) {
+        &:hover{
+          width: initial;
+
+        }
+
+      } 
+
+    }
+    .hide-caption{
+      display: none;
+    }
+    .portfolio-caption{
+      font-size: 1.25rem;
+    }
+    .image-container{
+      width: 200%;
+    }
+    .portfolio-image-list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .portfolio-content{
+      padding: 0;
+      margin: 0;
+    }
+    .portfolio-gallery{
+      position:relative;
+      overflow-x:hidden;
+
+    }
+
+    .portfolio-image-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+ 
+
+    .button-left{
+      left: 0.25rem;
+    }
+    .button-right{
+      right: 0.25rem;
+    }
+  }
+
+ 
+ 
+  </style>
+
+
+<script>
+
+
+const portfolioImageList = document.querySelector(".portfolio-image-list") as HTMLElement;
+const leftArrow = document.querySelector(".button-left");
+const rightArrow = document.querySelector(".button-right");
+
+const portfolioImageItems = document.querySelectorAll(".portfolio-image-item");
+const portfolioTextContent = document.querySelectorAll(".text-container");
+
+const images = document.querySelectorAll(".portfolio-image");
+
+const totalImages = Object.keys(portfolioImageItems).length;
+let centerIndex = Math.floor(totalImages / 2); // index 2
+
+let currentIndex = 0;
+let prevIndex: number;
+let imageWidth = images[currentIndex].width;
+
+portfolioImageItems[centerIndex].classList.add("center-image");
+if(portfolioTextContent[centerIndex].classList.contains("hide-caption")){
+  portfolioTextContent[centerIndex].classList.remove("hide-caption");
+  }
+
+
+
+if(portfolioImageList){
+  leftArrow?.addEventListener("click", () => {
+
+    portfolioImageItems[centerIndex].classList.remove("center-image");
+
+    portfolioTextContent[centerIndex].classList.add("hide-caption");
+    prevIndex = currentIndex;
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    centerIndex = (centerIndex - 1 + totalImages) % totalImages;
+
+
+    portfolioImageList.style.transform = `translateX(-${imageWidth}px)`;
+    portfolioImageList.insertBefore(portfolioImageItems[currentIndex], portfolioImageList.firstChild);
+
+    setTimeout(() => {
+      portfolioImageList.style.transform = "";
+      portfolioImageList.classList.add("sliding-transition");
+
+  }, 10);
+
+  setTimeout(() => {
+    portfolioImageList.classList.remove("sliding-transition");
+    portfolioTextContent[centerIndex].classList.remove("hide-caption");
+    portfolioImageItems[centerIndex].classList.add("center-image");
+
+  }, 490);
+ 
+  }
+  )
+
+
+  rightArrow?.addEventListener("click", () => {
+    portfolioImageItems[centerIndex].classList.remove("center-image");
+    portfolioTextContent[centerIndex].classList.add("hide-caption");
+    prevIndex = currentIndex;
+    portfolioImageList.classList.add("sliding-transition");
+    currentIndex = (currentIndex + 1) % totalImages;
+    centerIndex = (centerIndex + 1 + totalImages) % totalImages;
+
+    portfolioImageList.style.transform = `translateX(-${imageWidth}px)`;
+
+    setTimeout(() => { 
+      portfolioImageList.appendChild(portfolioImageItems[prevIndex]);
+      portfolioImageList.classList.remove("sliding-transition");
+      portfolioTextContent[centerIndex].classList.remove("hide-caption");
+      portfolioImageItems[centerIndex].classList.add("center-image");
+
+      portfolioImageList.style.transform = "";
+    }, 500);
+  } 
+  )
+}
+
+</script>
+  
