@@ -1,21 +1,21 @@
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_eNhWOrt-.mjs';
+import { manifest } from './manifest_C7VIo-k8.mjs';
 import * as serverEntrypointModule from '@astrojs/netlify/ssr-function.js';
 import { onRequest } from './_noop-middleware.mjs';
 
 const _page0 = () => import('./chunks/generic_CZOmGRGg.mjs');
-const _page1 = () => import('./chunks/404_BZluvamu.mjs');
-const _page2 = () => import('./chunks/about_BC7nZWcD.mjs');
-const _page3 = () => import('./chunks/blog_Dvy7kTfV.mjs');
-const _page4 = () => import('./chunks/_.._DCVYpGh1.mjs');
-const _page5 = () => import('./chunks/contact_Dj5rSfLg.mjs');
+const _page1 = () => import('./chunks/404_Cso_eWZh.mjs');
+const _page2 = () => import('./chunks/about_B_cFXa3c.mjs');
+const _page3 = () => import('./chunks/blog_CZHy-tPh.mjs');
+const _page4 = () => import('./chunks/_.._Dq0gKzYQ.mjs');
+const _page5 = () => import('./chunks/contact_gOpRFb36.mjs');
 const _page6 = () => import('./chunks/fraserway_C8Yyl-bN.mjs');
-const _page7 = () => import('./chunks/my-experiences_CjH2UQmX.mjs');
-const _page8 = () => import('./chunks/password_CMCdYA1O.mjs');
-const _page9 = () => import('./chunks/_.._BBnm25HM.mjs');
-const _page10 = () => import('./chunks/services_BmHCtNsm.mjs');
-const _page11 = () => import('./chunks/_.._CWym2PsA.mjs');
-const _page12 = () => import('./chunks/index_DTmVO6Fe.mjs');
+const _page7 = () => import('./chunks/my-experiences_BGs1aI7-.mjs');
+const _page8 = () => import('./chunks/password_BBSP-D3e.mjs');
+const _page9 = () => import('./chunks/_.._B4o92Xgo.mjs');
+const _page10 = () => import('./chunks/services_CoNjXi9J.mjs');
+const _page11 = () => import('./chunks/_.._Bf11pOGS.mjs');
+const _page12 = () => import('./chunks/index_DmNeter1.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/404.astro", _page1],
@@ -38,7 +38,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "3d8b89e2-56cf-4ba0-a722-4f017a99976b"
+    "middlewareSecret": "61c9f4c5-0809-4aca-9248-a2026fca6f8d"
 };
 const _exports = serverEntrypointModule.createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
