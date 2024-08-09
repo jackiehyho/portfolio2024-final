@@ -15,16 +15,16 @@ let allWork = await getCollection("portfolio", ({ data }) => {
 allWork.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate));
 
 
-const jackieSpecialty = [
-  { header: "Experience Design", 
-    description: "Making sure that the customer is heard", 
-    list: ["Wireframing","Persona Development","Customer Journey Maps","Service blueprint","User Research","User Testing"]},
-  { header: "Front-End Engineer", 
-    description: "I love building websites that are blazing fast and outperform your competition.", 
-    list: ["HTML, CSS & JS","Web Performance Tracking","Service blueprint","User Research","User Testing"]},
-  { header: "Digital Marketing", 
-    description: "I specialize in helping implement marketing technologies and strategies that drive growth and engagement.", 
-    list: ["Video Marketing","Content Strategy", "Technical SEO","Product Marketing Strategy","Analytics","Custom Tracking"]}]
+// const jackieSpecialty = [
+//   { header: "Experience Design", 
+//     description: "Making sure that the customer is heard", 
+//     list: ["Wireframing","Persona Development","Customer Journey Maps","Service blueprint","User Research","User Testing"]},
+//   { header: "Front-End Engineer", 
+//     description: "I love building websites that are blazing fast and outperform your competition.", 
+//     list: ["HTML, CSS & JS","Web Performance Tracking","Service blueprint","User Research","User Testing"]},
+//   { header: "Digital Marketing", 
+//     description: "I specialize in helping implement marketing technologies and strategies that drive growth and engagement.", 
+//     list: ["Video Marketing","Content Strategy", "Technical SEO","Product Marketing Strategy","Analytics","Custom Tracking"]}]a
 ---
 
 <Layout

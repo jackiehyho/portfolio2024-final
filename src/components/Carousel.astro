@@ -1,12 +1,12 @@
 ---
 interface Props {
+  
   images: Array<{ src: string, alt: string }>;
   header: string;
 }
 
-const {  images, header, ...rest } = Astro.props;
+const { images, header} = Astro.props;
 
-import { Image } from 'astro:assets';
 
 ---
 <section class="container">
@@ -19,7 +19,8 @@ import { Image } from 'astro:assets';
           <div class="portfolio-content">
   
             <div class="image-container"  >
-            <Image class="portfolio-image" loading="eager" src={image.src} alt={image.alt} /></div>
+            <img class="portfolio-image" src={image.src} alt={image.alt} />
+            </div>
           <div class="text-container hide-caption">
               {/* <p class="portfolio-caption"><em>{image.alt}</em></p> */}
             </div>
@@ -216,7 +217,7 @@ let centerIndex = Math.floor(totalImages / 2); // index 2
 
 let currentIndex = 0;
 let prevIndex: number;
-let imageWidth = images[currentIndex].width;
+let imageWidth = images[currentIndex].getBoundingClientRect().width;
 
 portfolioImageItems[centerIndex].classList.add("center-image");
 if(portfolioTextContent[centerIndex].classList.contains("hide-caption")){

@@ -99,12 +99,19 @@ import ColumnTextBlock from '../../components/ColumnTextBlock.astro';
           </div>
           </div>
         </section>
-          <ProcessOverview processes={entry.data.processes} />
+          <ProcessOverview processes={entry.data.processes.map(process => ({
+            src: process.src.src,
+            header: process.header,
+            activities: process.activities.map((activity: string) => ({
+              src: activity,
+              alt: ""
+            }))
+          }))} />
 
-          <Carousel images={entry.data.carousel} header="Screenshots" client:visible />
+          <Carousel images={entry.data.carousel.map(image => ({ src: image.src.src, alt: image.alt }))} header="Screenshots" client:visible />
           {entry.data.impact && (
             <>
-            <ColumnTextBlock className="ProductImpact" header="Product Impact" subtext="" content={entry.data.impact} />
+            <ColumnTextBlock header="Product Impact"  content={entry.data.impact.map(item => ({ header: item.header, description: item.description, list: item.list || [] }))} />
             </>
                                    
                                    )}
