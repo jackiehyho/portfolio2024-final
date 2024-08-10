@@ -1,13 +1,9 @@
 ---
 interface Props {
-  
-  images: Array<{ src: string, alt: string }>;
+  images: Array<{ src: string}>;
   header: string;
 }
-
 const { images, header} = Astro.props;
-
-
 ---
 <section class="container">
   <h2 class="carousel-header portfolio-subheaders">{header}</h2>
@@ -19,7 +15,7 @@ const { images, header} = Astro.props;
           <div class="portfolio-content">
   
             <div class="image-container"  >
-            <img class="portfolio-image" src={image.src} alt={image.alt} />
+            <img class="portfolio-image" src={image.src}  />
             </div>
           
 
@@ -202,8 +198,6 @@ const leftArrow = document.querySelector(".button-left");
 const rightArrow = document.querySelector(".button-right");
 
 const portfolioImageItems = document.querySelectorAll(".portfolio-image-item");
-const portfolioTextContent = document.querySelectorAll(".text-container");
-
 const images = document.querySelectorAll(".portfolio-image");
 
 const totalImages = Object.keys(portfolioImageItems).length;

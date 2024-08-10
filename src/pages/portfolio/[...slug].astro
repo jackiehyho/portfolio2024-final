@@ -104,11 +104,15 @@ import ColumnTextBlock from '../../components/ColumnTextBlock.astro';
             header: process.header,
             activities: process.activities.map((activity: string) => ({
               src: activity,
-              alt: ""
+              alt: '' // Add the alt property here
             }))
           }))} />
-
-          <Carousel images={entry.data.carousel.map(image => ({ src: image.src.src, alt: image.alt }))} header="Screenshots" client:visible />
+          <Carousel header="Screenshots" 
+          images={entry.data.carousel.map(image => ({ 
+            src: image.src.src, 
+            }))} 
+             />
+       
           {entry.data.impact && (
             <>
             <ColumnTextBlock header="Product Impact"  content={entry.data.impact.map(item => ({ header: item.header, description: item.description, list: item.list || [] }))} />

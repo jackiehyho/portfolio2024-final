@@ -43,9 +43,7 @@ const portfolioCollection = defineCollection({
     cta: z.string(),
     deliverables: z.array(z.string()),
     carousel: z.array(z.object({
-      src: image(),
-      alt: z.string(),
-      active: z.boolean().optional()
+      src: image()
     })),
     hero: image(),
     introduction: z.string(),

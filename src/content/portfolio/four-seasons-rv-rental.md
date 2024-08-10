@@ -35,7 +35,7 @@ processes: [
         header: "User & Systems Testing",
         activities: ["User Acceptance Testing", "Smoke Testing"]
     },
-        {
+    {
         src: "../../images/portfolio/process/marketing.svg",
         header: "Go-to-Market Strategy",
         activities: ["Google Tag Manager Setup","Google Analytics Setup", "Custom Events"]
@@ -49,19 +49,9 @@ isLocked: false
 cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
-    { 
-        src:  "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", 
-        alt: "Family Persona",
-        active: true
-    },   
-    { 
-        src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", 
-        alt: "Initial Website"
-    },   
-    { 
-        src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", 
-        alt: "Young Couple Persona"
-    }
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg"},   
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png"},   
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
 introduction: "Four Seasons RV Rentals is the economy RV rental division of Fraserway RV LP. This website serves as an informational hub for prospective rv renters to showcase the product and service offerings. The intention of this website is serve as stage 1 before the eventual merging with the Fraserway Rental System SPA."
