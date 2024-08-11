@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 import myImage from "../images/Hero.png";
 ---
 
-<section class="container-fullscreen">
+<section id="hero-section" class="container-fullscreen">
   <div class="container-content">
     <div class="container-text">
       <h1 class="content-title">{header}</h1>
@@ -86,7 +86,7 @@ import myImage from "../images/Hero.png";
     align-self: end;
     background: rgb(2, 170, 176, 0.1);
     border-radius: 50%;
-    box-shadow: 0px 0px 25px 25px rgb(2, 170, 176, 0.1);
+    box-shadow: 0px 0px 8px 8px rgb(2, 170, 176, 0.1);
     &:after {
     position: absolute;
     content:"";
@@ -144,8 +144,9 @@ import myImage from "../images/Hero.png";
     padding: 0;
     margin: 0;
     font-weight: 100;
-    font-size: 1rem;
-    grid-column: 1 / 5;
+    font-size: 1.25rem;
+    width: 100%;
+    grid-column: 1 / 7;
     grid-row: 2 / 7;
     justify-self: center;
     align-self: center;

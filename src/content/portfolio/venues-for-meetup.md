@@ -1,17 +1,17 @@
 ---
 title: Venues by Meetup
 pubDate: 2024-06-01
-projectDuration: 8 Weeks (Jun 2024 - July 2024) 
+projectDuration: 8 Weeks
 isDraft: false
 description: Helping event planners and venue hosts connect! 
-roles: ["Product Manager, UX Designer, Web Developer & Product Marketing Manager"]
+roleSummary: "For this project, I worked by myself and took on the following roles."
+roles: ["Product Manager", "UX Designer", "Web Developer","Product Marketing Manager"]
 processes: [
     {
         src: "../../images/portfolio/process/discover.svg",
         header: "Product Strategy",
         activities: ["Interviews", "Competitor Research", "Web Research", "Product Strategy", "Problem Space", "Problem Statement"]
     },
-    
     {
         src: "../../images/portfolio/process/design.svg",
         header: "UX & UI Design",
@@ -28,7 +28,7 @@ processes: [
         activities: ["Product Positioning","Product Launch Plan", "Marketing Plan"]
     }
 ]
-category: [App]
+category: [Mobile App]
 thumbnail: "../../images/portfolio/venues/venues_main.jpg"
 alt: Meetup App
 technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
@@ -49,7 +49,7 @@ carousel: [
     {src: "../../images/portfolio/venues/11-problem-statement.jpg"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: "Venues is a conceptual product that was conceived during my Product Management course from BrainStation. The recommendation was to select an existing company to enhance a feature or to create a new product."
+introduction: ["Venues is a conceptual two-way marketplace that connects venue owners with event hosts","This project was conceived during my Product Management course from BrainStation Vancouver and as a recommendation to select an existing company to enhance an existing product or create a new product.", "For this project, I've selected Meetup as my company to address a problem space that still exist today."]
 projectGoal: ["To make event planning easier"]
 productVision: "To connect venue owners and event planners"
 

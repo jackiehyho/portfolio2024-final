@@ -21,7 +21,7 @@
       <a id="nav-blog-url" class="nav-list-link" href="/services" aria-label="Link to Blog">Services</a>
     </li> -->
     <li class="nav-list-item">
-      <a id="nav-linkedin-url" class="nav-list-link" href="#contact"
+      <a id="nav-contact-url" class="nav-list-link" href="#contact"
         >Open for Opportunities</a>
     </li>
   </ul>
@@ -111,6 +111,8 @@
     justify-content: center;
     padding: 0;
     margin: 0;
+
+ 
   }
 
   .nav-list-item {
@@ -127,6 +129,10 @@
     &:visited {
       color: white;
     }
+  }
+
+  #nav-contact-url{
+    display:none;
   }
 
   @media only screen and (min-width: 768px) {
@@ -150,9 +156,12 @@
     .nav-list-item {
       color: var(--primaryTextColour);
       background-color: transparent;
+      &:first-child {
+      padding-left:0;
+    }
       &:last-child {
         color: white;
-        padding: 1rem;
+        padding-right: 0;
         border-radius: 2rem;
         .nav-list-link {
           background-image: linear-gradient(
@@ -196,5 +205,9 @@
         transition: all 0.25s ease-in;
       }
     }
+
+  #nav-contact-url{
+    display:initial;
+  }
   }
 </style>

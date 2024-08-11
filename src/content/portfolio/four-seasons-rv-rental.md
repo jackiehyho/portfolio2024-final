@@ -1,10 +1,11 @@
 ---
-title: Four Seasons RV Rentals
+title: Four Seasons RV Rentals By Fraserway RV
 pubDate: 2020-06-01
-projectDuration: 8 Weeks (Jan 2019 - Feb 2019) 
+projectDuration: 8 Weeks 
 isDraft: false
 description: Reimagination of Four Seasons RV Rental 
-roles: ["Due to limited resources, I took on various roles as product manager, art director, product designer, web developer and digital marketer to ensure that the product is complete and delivered on time."]
+roleSummary: "For this project, due to limited resources, I wore many hats and took on the following roles in order to deliver the project on time."
+roles: ["Product Manager", "Art Director", "Product Designer", "Wordpress Developer", "Digital Marketer"]
 team: [ {
         name: Phoenix Maclaren,
         position: Project Manager & Content Writer
@@ -19,7 +20,6 @@ processes: [
         header: "Research & Discovery",
         activities: ["Stakeholder Interviews", "Competitor Research", "Platform Research","Product Strategy"]
     },
-    
     {
         src: "../../images/portfolio/process/design.svg",
         header: "UX & UI Design",
@@ -54,7 +54,7 @@ carousel: [
     {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: "Four Seasons RV Rentals is the economy RV rental division of Fraserway RV LP. This website serves as an informational hub for prospective rv renters to showcase the product and service offerings. The intention of this website is serve as stage 1 before the eventual merging with the Fraserway Rental System SPA."
+introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada.", "This website serves as an informational hub for prospective RV renters and to showcase their products and service offerings.","An opportunity was presented to rework the brand and modernize the platform to better serve customers and have it ready for the new camping season."]
 projectGoal: ["To provide a modern mobile-first experience for our customers.", "To implement a content management system to increase productivity and provide a better user experience for internal staff.", "To create a new unified Four Seasons RV rental brand with Fraseway RV"]
 productVision: "To provide a seamless booking experience for RV renters."
 impact: [{header: "OVER 25,000 USERS", description: "from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20 PT", description: "Increase across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance report."}, {header: "500%", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]

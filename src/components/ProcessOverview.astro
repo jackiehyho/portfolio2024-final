@@ -1,9 +1,13 @@
 ---
 interface Props {
-  processes: Array<{ src: string, header: string, activities: Array<{ src: string, alt: string }> }>;
+  processes: Array<{ 
+    src: string, 
+    header: string, 
+    activities: Array<string> 
+    }>;
 }
 
-const { processes} = Astro.props;
+const {processes} = Astro.props;
 
 ---
 <section class="container">

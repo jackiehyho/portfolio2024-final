@@ -24,6 +24,7 @@ const portfolioCollection = defineCollection({
     pubDate: z.date().transform((str) => new Date(str).toDateString()),
     projectDuration: z.string(),
     description: z.string(),
+    roleSummary: z.string(),
     roles: z.array(z.string()),
     team: z.array(z.object({
       name: z.string(),
@@ -46,9 +47,12 @@ const portfolioCollection = defineCollection({
       src: image()
     })),
     hero: image(),
-    introduction: z.string(),
+    introduction: z.array(z.string()),
     projectGoal: z.array(z.string()),
     productVision: z.string().optional(),
+    challenge: z.string().optional(),
+    solution: z.string().optional(),
+    results: z.string().optional(),
     impact: z.array(z.object({
       header: z.string(),
       description: z.string(),
