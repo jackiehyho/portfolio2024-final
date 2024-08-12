@@ -1,4 +1,4 @@
-import { t as AstroUserError } from './chunks/astro_CsBaaMGY.mjs';
+import { v as AstroUserError } from './chunks/astro_xL2yxiN_.mjs';
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
 

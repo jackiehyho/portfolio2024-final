@@ -50,9 +50,10 @@ const portfolioCollection = defineCollection({
     introduction: z.array(z.string()),
     projectGoal: z.array(z.string()),
     productVision: z.string().optional(),
-    challenge: z.string().optional(),
-    solution: z.string().optional(),
-    results: z.string().optional(),
+    challenges: z.array(z.string()).optional(),
+    solutions: z.array(z.string()).optional(),
+    results: z.array(z.string()).optional(),
+    threeDModel: z.string().optional(),
     impact: z.array(z.object({
       header: z.string(),
       description: z.string(),

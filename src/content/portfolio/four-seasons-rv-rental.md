@@ -54,11 +54,14 @@ carousel: [
     {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada.", "This website serves as an informational hub for prospective RV renters and to showcase their products and service offerings.","An opportunity was presented to rework the brand and modernize the platform to better serve customers and have it ready for the new camping season."]
-projectGoal: ["To provide a modern mobile-first experience for our customers.", "To implement a content management system to increase productivity and provide a better user experience for internal staff.", "To create a new unified Four Seasons RV rental brand with Fraseway RV"]
+introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada.", "This website serves as an informational hub for prospective RV renters and to showcase their products and service offerings.","An opportunity was presented to rework the brand and modernize the platform to better serve RV rental customers."]
+projectGoal: ["To provide a modern mobile-first experience for our customers.", "To implement a content management system to increase productivity for staff", "To unify the Four Seasons RV Rental brand closer to Fraseway RV"]
 productVision: "To provide a seamless booking experience for RV renters."
 impact: [{header: "OVER 25,000 USERS", description: "from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20 PT", description: "Increase across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance report."}, {header: "500%", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
-
+challenges: ["To provide a modern mobile-first experience for our customers.", "To implement a content management system to increase productivity for staff.", "To unify the Four Seasons RV Rental brand closer to Fraseway RV.", "To develop this in-house with no additional resources.", "To be ready to deploy with Fraserway's Booking Engine in two months for the new camping season."]
+solutions: ["Our marketing department created a brand strategy and create to help visualize the fun and whimsicle atmosphere of RV rentals for Four Seasons RV Rental. We created a design system of using faceless vector art to allow the style to be flexible and juxtaposed it with real RV images.","For this website, due to time and budget constraints, we opted to purchase a theme to speed up development and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
+results: ["Overall the website was considered a success and was launched on time.","The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
+threeDModel: "https://prod.spline.design/q54sAvqvSUTdt20c/scene.splinecode"
 
 ---
 
