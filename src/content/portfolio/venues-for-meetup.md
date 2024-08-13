@@ -5,7 +5,7 @@ projectDuration: 8 Weeks
 isDraft: false
 description: Helping event planners and venue hosts connect! 
 roleSummary: "For this project, I worked by myself and took on the following roles."
-roles: ["Product Manager", "UX Designer", "Web Developer","Product Marketing Manager"]
+roles: ["Product Manager", "UX Designer", "Web Developer"]
 processes: [
     {
         src: "../../images/portfolio/process/discover.svg",
@@ -36,21 +36,22 @@ isLocked: false
 cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
+        {src: "../../images/portfolio/venues/7-event-successful.jpg"},
+    {src: "../../images/portfolio/venues/8-succesful-event.jpg"},
+    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg"},
+    {src: "../../images/portfolio/venues/10-problems-facing.jpg"},
+    {src: "../../images/portfolio/venues/11-problem-statement.jpg"},
     {src: "../../images/portfolio/venues/1-meetup.jpg"},   
     {src: "../../images/portfolio/venues/2-what-is-meetup.jpg"},   
     {src: "../../images/portfolio/venues/3-what-is-meetup.jpg"},
     {src: "../../images/portfolio/venues/4-user-metrics.jpg"},
     {src: "../../images/portfolio/venues/5-revenue-streams.jpg"},
-    {src: "../../images/portfolio/venues/6-mission.png"},
-    {src: "../../images/portfolio/venues/7-event-successful.jpg"},
-    {src: "../../images/portfolio/venues/8-succesful-event.jpg"},
-    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg"},
-    {src: "../../images/portfolio/venues/10-problems-facing.jpg"},
-    {src: "../../images/portfolio/venues/11-problem-statement.jpg"}
+    {src: "../../images/portfolio/venues/6-mission.png"}
+
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
 introduction: ["Venues is a conceptual two-way marketplace that connects venue owners with event hosts","This project was conceived during my Product Management course from BrainStation Vancouver and as a recommendation to select an existing company to enhance an existing product or create a new product.", "For this project, I've selected Meetup as my company to address a problem space that still exist today."]
-projectGoal: ["To make event planning easier"]
+projectGoals: ["To make event planning easier"]
 productVision: "To connect venue owners and event planners"
 
 ---

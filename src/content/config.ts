@@ -48,7 +48,7 @@ const portfolioCollection = defineCollection({
     })),
     hero: image(),
     introduction: z.array(z.string()),
-    projectGoal: z.array(z.string()),
+    projectGoals: z.array(z.string()),
     productVision: z.string().optional(),
     challenges: z.array(z.string()).optional(),
     solutions: z.array(z.string()).optional(),

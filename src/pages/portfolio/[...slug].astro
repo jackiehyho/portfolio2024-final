@@ -1,10 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 import Carousel from '../../components/Carousel.astro';
 import ProcessOverview from '../../components/ProcessOverview.astro';
-import ColumnTextBlock from '../../components/ColumnTextBlock.astro';
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
@@ -20,8 +18,9 @@ export async function getStaticPaths() {
 ---
 <Layout title={entry.data.title} description={entry.data.description}>
 	<main class="main portfolio-main" slot="main">
-    
+   
     <div class="portfolio-text-content">
+      
       <div id="portfolio-category-container">
         {entry.data.category.map((item) => (
         <span class="portfolio-category">{item}</span>
@@ -31,35 +30,63 @@ export async function getStaticPaths() {
         <h1 class="portfolio-name">{entry.data.title}</h1>
       </div>
     </div>
-    <section id="portfolio-intro-section">
-
-        <div id="portfolio-intro-container">
-          {entry.data.threeDModel && (
-          <div id="portfolio-thumbnail-container" class="portfolio-image-container">
-           
-              <>
-              <script is:inline type="module" src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"></script>
-              <spline-viewer url={entry.data.threeDModel}></spline-viewer>
-              </>
-              <small style="text-align:center; width: 100%;">Click Screen to Play</small>
-
-          </div>
-     )}
-          
-          <div id="portfolio-intro-content" class="portfolio-sub-section">
+    {entry.data.threeDModel && (
+      <div id="portfolio-thumbnail-container" class="portfolio-image-container">
        
-          
+          <>
+          <script is:raw type="module" src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"></script>
+          <spline-viewer url={entry.data.threeDModel}></spline-viewer>
+          </>
+
+      </div>
+ )}
+    <section id="portfolio-intro-section">
+        <div id="portfolio-intro-container">
+          <div id="portfolio-intro-content" class="portfolio-sub-section">
               <h2 class="portfolio-subsection-headers">Introduction</h2>
               {entry.data.introduction.map((copy) => (
 
               <p class="portfolio-intro-text">{copy}</p>
               ))}
             </div>
-            
 
-         
-        </div> 
+          <div id="portfolio-time-content" class="portfolio-sub-section">
+             
+              <h3>Project Duration</h3>
+              <p>{entry.data.projectDuration}</p>
+            </div>
+            <div id="portfolio-objective-content" class="portfolio-sub-section">
+              <h3>Objective</h3>
+              {entry.data.projectGoals.map((goal) => (
 
+              <p>{goal}</p>
+              ))}
+            </div>
+
+            <div id="portfolio-role-content" class="portfolio-sub-section">
+             
+              <h3>My Role</h3>
+              <ul>
+              {entry.data.roles.map((role) => (
+
+                <li class="portfolio-intro-text">{role}</li>
+                ))}
+                </ul>
+            </div>
+
+            {entry.data.team && (
+              <>
+            <div id="portfolio-team-content" class="portfolio-sub-section">
+             
+              <h3>Team Members</h3>
+                <ul>
+                  {entry.data.team?.map((member) => (
+                    <li>{member.name} - {member.position}</li>
+                  ))}
+                  </ul>
+            </div>
+            </>
+            )}
       </div> 
 
          
@@ -67,12 +94,12 @@ export async function getStaticPaths() {
      
     </section>
     <section>
-      <h2 class="portfolio-subsection-headers">Project Overview</h2>
+      <h2 class="portfolio-subsection-headers">Product Overview</h2>
 
       <div id="portfolio-overview">
 
       <div id="portfolio-challenge" class="portfolio-sub-section">
-          <img class="portfolio-icons" src="/src/images/portfolio/challenge.svg"/>
+          <img class="portfolio-icons" src="/images/portfolio/challenge.svg"/>
           <h2 class="portfolio-subheaders">Challenge</h2>
           
           <ul>
@@ -83,7 +110,7 @@ export async function getStaticPaths() {
       </div> 
 
       <div id="portfolio-solution" class="portfolio-sub-section">
-        <img class="portfolio-icons" src="/src/images/portfolio/solution.svg"/>
+        <img class="portfolio-icons" src="/images/portfolio/solution.svg"/>
         <h2 class="portfolio-subheaders">Solution</h2>
         
     
@@ -93,29 +120,34 @@ export async function getStaticPaths() {
       </div> 
 
       <div id="portfolio-results" class="portfolio-sub-section">
-        <img class="portfolio-icons" src="/src/images/portfolio/results.svg"/>
-        <h2 class="portfolio-subheaders">Results</h2>
-        
-
+        <img class="portfolio-icons" src="/images/portfolio/results.svg"/>
+        <h2 class="portfolio-subheaders portfolio-results-header">Results</h2>
           {entry.data.results?.map((result) => (
             <p>{result}</p>
+          ))}
+
+          {entry.data.impact?.map((item) => (
+          <div class="portfolio-impact">
+            <h3 class="portfolio-impact-header">{item.header} </h3>
+            <p class="portfolio-impact-description">{item.description}</p>
+          </div>
           ))}
 
       </div> 
     </div>
       
     </section>
-    <!-- <ProcessOverview processes={entry.data.processes.map(process => ({ 
+    <ProcessOverview processes={entry.data.processes.map(process => ({ 
             src: process.src.src,
             header: process.header,
             activities: process.activities
 
-            }))}  /> -->
-          <!-- <Carousel header="Screenshots" 
+            }))}  />
+          <Carousel header="Screenshots" 
           images={entry.data.carousel.map(image => ({ 
             src: image.src.src, 
             }))} 
-             /> -->
+             />
        
           <!-- {entry.data.impact && (
             <>
@@ -131,6 +163,15 @@ export async function getStaticPaths() {
 	</main>
 </Layout>
 <style lang="scss">
+
+  section{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
 
   .portfolio-icons{
     max-height: 64px;
@@ -191,12 +232,21 @@ export async function getStaticPaths() {
   .portfolio-sub-section{
     padding: 0;
     margin: 0;
-    background:rgba(2,170,176,0.1);
+    background:white;
     border-radius: 1rem;
     margin-top: 1rem;
   }
 
   @media only screen and (min-width: 768px) {
+    #portfolio-thumbnail-container{
+      width: 100%;
+      small {
+        display:block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
     .portfolio-image-container {
 
 
@@ -208,7 +258,26 @@ export async function getStaticPaths() {
 
     }
   }
-    
+
+  .portfolio-impact{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+  }
+    .portfolio-impact-header{
+      display:inline;
+      width: 40%;
+
+      padding: 1rem;
+      text-align: center;
+    }
+    .portfolio-impact-description{
+      display:inline;
+      width: 60%;
+      padding: 1rem;
+    }
+
 
     .portfolio-text-content{
   }
@@ -223,6 +292,8 @@ export async function getStaticPaths() {
     .portfolio-sub-section{
     margin-top: 0rem;
     padding: 1.5rem ;
+    box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+
 
   }
 
@@ -231,51 +302,33 @@ export async function getStaticPaths() {
     #portfolio-intro-container{
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 1fr 1fr auto;
+      grid-template-rows: 50% 50%;
       gap: 2rem;
-      max-width: 1440px;
-      padding: 2rem;
-      border-radius: 2rem;
+      padding-bottom: 4rem;
       h2{
         text-align: left;
       }
     
     }
 
-    #portfolio-title-container{
-      grid-column: 1 / 7;
-      grid-row: 2 / 3;
+    
+    #portfolio-intro-content{
+      grid-column: 1 / 4;
+      grid-row: 1 / 4;
+      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
-    }
-
-    #portfolio-thumbnail-container{
-      grid-column: 1 / 5;
-      grid-row: 1 / 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
-      align-items: stretch;
-    }
-      
-    
-    #portfolio-intro-content{
-      grid-column: 5 / 7;
-      grid-row: 1 / 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: start;
       background: white;
-      height: 500px;
 
     }
 
-    #portfolio-team{
-      grid-column: 3 / 5;
-      grid-row: 2 / 3;
+    #portfolio-team-content{
+      grid-column: 5 / 7;
+      grid-row: 2 / 3;    
+
       display: flex;
       flex-direction:  column;
       justify-content: start;
@@ -283,20 +336,43 @@ export async function getStaticPaths() {
  
     }
 
-    #portfolio-role{
-      grid-column: 1 / 3;
-      grid-row: 2 / 4;
- display: flex;
- flex-direction:  column;
- justify-content: space-around;
- align-items: start;
+    #portfolio-role-content{
+      grid-column: 4 / 5;
+      grid-row: 2 / 3;
+      display: flex;
+      flex-direction:  column;
+      justify-content: start;
+      align-items: start;
 
 }
+
+
+#portfolio-time-content{
+      grid-column: 6 / 7;
+      grid-row: 1 / 2;
+      display: flex;
+      flex-direction:  column;
+      justify-content: start;
+      align-items: start;
+
+}
+
+#portfolio-objective-content{
+      grid-column: 4 / 6;
+      grid-row: 1 / 2;
+      display: flex;
+      flex-direction:  column;
+      justify-content: start;
+      align-items: start;
+
+}
+
 
 #portfolio-overview{
   display:flex;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   h2 {
     text-align: center;
     width: 100%;
@@ -324,7 +400,7 @@ export async function getStaticPaths() {
       background: white;
       padding: 2rem;
       width: 33.3%;
-      
+      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
       h2{
         color:black;
         text-align:center;
@@ -352,7 +428,7 @@ export async function getStaticPaths() {
 
     .portfolio-subsection-headers{
       font-size: 2rem;
-      font-weight: 800;
+      font-weight: 300;
       text-transform: uppercase;
       width: 100%;
       text-align: center;
@@ -365,9 +441,10 @@ export async function getStaticPaths() {
       flex-direction: column;
       justify-content: start;
       align-items: center;
-      background: white;
+      background-color: white;
       padding: 2rem;
       width: 33.3%;
+      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
 
       
       h2{
@@ -396,6 +473,7 @@ export async function getStaticPaths() {
       background: white;
       padding: 2rem;
       width: 33.3%;
+      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
 
       
       h2{
