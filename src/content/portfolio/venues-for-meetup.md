@@ -36,17 +36,17 @@ isLocked: false
 cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
-        {src: "../../images/portfolio/venues/7-event-successful.jpg"},
-    {src: "../../images/portfolio/venues/8-succesful-event.jpg"},
-    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg"},
-    {src: "../../images/portfolio/venues/10-problems-facing.jpg"},
-    {src: "../../images/portfolio/venues/11-problem-statement.jpg"},
-    {src: "../../images/portfolio/venues/1-meetup.jpg"},   
-    {src: "../../images/portfolio/venues/2-what-is-meetup.jpg"},   
-    {src: "../../images/portfolio/venues/3-what-is-meetup.jpg"},
-    {src: "../../images/portfolio/venues/4-user-metrics.jpg"},
-    {src: "../../images/portfolio/venues/5-revenue-streams.jpg"},
-    {src: "../../images/portfolio/venues/6-mission.png"}
+        {src: "../../images/portfolio/venues/7-event-successful.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/8-succesful-event.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/10-problems-facing.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/11-problem-statement.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/1-meetup.jpg", caption: "hello"},   
+    {src: "../../images/portfolio/venues/2-what-is-meetup.jpg", caption: "hello"},    
+    {src: "../../images/portfolio/venues/3-what-is-meetup.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/4-user-metrics.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/5-revenue-streams.jpg", caption: "hello"}, 
+    {src: "../../images/portfolio/venues/6-mission.png", caption: "hello"} 
 
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"

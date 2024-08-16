@@ -1,15 +1,16 @@
 ---
 interface Props {
-  images: Array<{ src: string }>;
+  images: Array<{ src: string,  caption: string; }>;
   header: string;
+ 
 }
-const { images, header } = Astro.props;
+const { images, header, caption } = Astro.props;
 ---
 
 <section id="carousel-section"class='container'>
   <h2 class='carousel-header portfolio-subheaders'>{header}</h2>
   <div class='carousel-gallery'>
-    <button class='button-left arrow'>&leftarrow;</button>
+    <button onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
     <div class='carousel-image-list'>
       {
         images.map((image) => (
@@ -17,13 +18,14 @@ const { images, header } = Astro.props;
             <div class='carousel-content'>
               <div class='image-container'>
                 <img class='carousel-image' src={image.src} />
+                <p class="carousel-caption">{image.caption}</p>
               </div>
             </div>
           </div>
         ))
       }
     </div>
-    <button class='button-right arrow'>&rightarrow;</button>
+    <button onclick="this.disabled=true;" class='button-right arrow'>&rightarrow;</button>
   </div>
 </section>
 <style lang='scss'>
@@ -61,6 +63,10 @@ const { images, header } = Astro.props;
   }
 
   .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;;
+
   }
   .text-container {
     padding: 1rem;
@@ -70,7 +76,7 @@ const { images, header } = Astro.props;
   .carousel-caption {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .button-left {
@@ -95,7 +101,7 @@ const { images, header } = Astro.props;
     cursor: pointer;
     background: #333;
     width: 48px;
-    font-size: 28px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,6 +121,10 @@ const { images, header } = Astro.props;
     &:hover {
       width: 1200px;
       transition: all 0.5s ease-in-out;
+
+      .carousel-caption{
+        display: block;
+      }
     }
   }
   @media only screen and (min-width: 768px) {
@@ -241,9 +251,11 @@ const { images, header } = Astro.props;
 
       setTimeout(() => {
         portfolioImageList.classList.remove("sliding-transition");
-        // portfolioTextContent[centerIndex].classList.remove("hide-caption");
         portfolioImageItems[centerIndex].classList.add("center-image");
+        leftArrow.removeAttribute('disabled');
+        // portfolioTextContent[centerIndex].classList.remove("hide-caption");
       }, 490);
+
     });
 
     rightArrow?.addEventListener("click", () => {
@@ -262,8 +274,11 @@ const { images, header } = Astro.props;
         // portfolioTextContent[centerIndex].classList.remove("hide-caption");
         portfolioImageItems[centerIndex].classList.add("center-image");
 
+rightArrow.removeAttribute('disabled');
         portfolioImageList.style.transform = "";
       }, 500);
+   
+
     });
   }
 </script>

@@ -48,6 +48,12 @@ export async function getStaticPaths() {
 
               <p class="portfolio-intro-text">{copy}</p>
               ))}
+            {entry.data.website && (
+              <>
+              <a class="button primary-button" href={entry.data.website}>View Website</a>
+              </>
+              )}
+          
             </div>
 
           <div id="portfolio-time-content" class="portfolio-sub-section">
@@ -102,9 +108,9 @@ export async function getStaticPaths() {
           <img class="portfolio-icons" src="/images/portfolio/challenge.svg"/>
           <h2 class="portfolio-subheaders">Challenge</h2>
           
-          <ul>
+          <ul class="portfolio-list">
             {entry.data.challenges?.map((challenge) => (
-              <li><input type="checkbox" disabled="disabled" />{challenge}</li>
+              <li><input type="checkbox" disabled="disabled" /> {challenge}</li>
             ))}
           </ul>
       </div> 
@@ -144,10 +150,11 @@ export async function getStaticPaths() {
 
             }))}  />
           <Carousel header="Screenshots" 
-          images={entry.data.carousel.map(image => ({ 
-            src: image.src.src, 
+            images={entry.data.carousel.map(image => ({ 
+              src: image.src.src, 
+              caption: image.caption || ''
             }))} 
-             />
+          />
        
           <!-- {entry.data.impact && (
             <>
@@ -164,6 +171,13 @@ export async function getStaticPaths() {
 </Layout>
 <style lang="scss">
 
+  .primary-button{
+    color:white;
+    text-decoration: none;
+    &:hover{
+      color:white;
+    }
+  }
   section{
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -206,6 +220,7 @@ export async function getStaticPaths() {
 
   .portfolio-list{
     list-style-type: none;
+    padding: 0;
 
   }
 
@@ -235,7 +250,92 @@ export async function getStaticPaths() {
     background:white;
     border-radius: 1rem;
     margin-top: 1rem;
+
+    padding: 1.5rem ;
+    box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
   }
+
+
+  #portfolio-challenge{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      background: white;
+      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+      h2{
+        color:black;
+        text-align:center;
+      }
+      li{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 1rem;
+
+        vertical-align: middle;
+      }
+
+      ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+    }
+
+    #portfolio-solution{
+
+      
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+background-color: white;
+box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+
+
+h2{
+  color:black;
+  text-align:center;
+}
+li{
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding: 1rem;
+}
+}
+
+#portfolio-results{
+
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: center;
+background: white;
+box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+
+
+h2{
+  color:black;
+  text-align:center;
+}
+li{
+  padding: 0;
+  margin: 0;
+}
+}
+
+
 
   @media only screen and (min-width: 768px) {
     #portfolio-thumbnail-container{
@@ -289,14 +389,6 @@ export async function getStaticPaths() {
     .portfolio-name{
       font-size: 4rem;
     }
-    .portfolio-sub-section{
-    margin-top: 0rem;
-    padding: 1.5rem ;
-    box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
-
-
-  }
-
   
 
     #portfolio-intro-container{
@@ -393,34 +485,13 @@ export async function getStaticPaths() {
 }
 
     #portfolio-challenge{
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      background: white;
+    
       padding: 2rem;
       width: 33.3%;
-      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
-      h2{
-        color:black;
-        text-align:center;
-      }
-      li{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 1rem;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 1rem;
 
-        vertical-align: middle;
-      }
 
       ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+
         padding: 1rem;
       }
       
