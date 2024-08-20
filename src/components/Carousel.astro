@@ -65,7 +65,8 @@ const { images, header, caption } = Astro.props;
   .image-container {
     display: flex;
     flex-direction: column;
-    justify-self: center;;
+    justify-self: center;
+    text-align: center;
 
   }
   .text-container {
@@ -127,6 +128,14 @@ const { images, header, caption } = Astro.props;
       }
     }
   }
+
+  .carousel-image {
+      width: 100svw;
+    }
+
+    .carousel-caption {
+      font-size: 1.25rem;
+    }
   @media only screen and (min-width: 768px) {
     .carousel-header {
       font-weight: 300;
@@ -156,11 +165,9 @@ const { images, header, caption } = Astro.props;
     .hide-caption {
       display: none;
     }
-    .carousel-caption {
-      font-size: 1.25rem;
-    }
+
     .image-container {
-      width: 200%;
+      width: 100%;
     }
     .carousel-image-list {
       display: flex;
@@ -177,6 +184,8 @@ const { images, header, caption } = Astro.props;
       position: relative;
       overflow-x: hidden;
     }
+
+
 
     .carousel-image-item {
       display: flex;
