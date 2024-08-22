@@ -131,8 +131,10 @@ export async function getStaticPaths() {
         />
       </div>
       <div id='portfolio-overview'>
+        <div class="button-container">
         <button id="bt1" onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
         <button id="bt2" onclick="this.disabled=true;"class='button-right arrow'>&rightarrow;</button>
+      </div>
         <div id='portfolio-goal' class="product-overview-subsection current-slide">
           <img class='portfolio-icons' src='/images/portfolio/goal.svg' />
           <h2 class='portfolio-subheaders'>Goal</h2>
@@ -218,7 +220,7 @@ export async function getStaticPaths() {
     padding: 2rem;
   }
 .product-overview-subsection{
-  padding: 2rem;
+  padding: 1rem;
 }
   .portfolio-list {
     padding: 0;
@@ -336,13 +338,18 @@ export async function getStaticPaths() {
   }
 
   #portfolio-overview {
-    max-width: 75%;
-    position: relative;
+    position:relative;
     padding: 1rem;
+    display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      box-shadow: 0 0 1rem 1rem rgba(128, 128, 128, 0.1);
+      background: white;
+      
 
   }
   #portfolio-challenge {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -369,7 +376,7 @@ export async function getStaticPaths() {
   }
 
   #portfolio-solution {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -392,11 +399,10 @@ export async function getStaticPaths() {
   }
 
   #portfolio-results {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    text-align: left;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .image-container {
       width: 20%;
     }
@@ -411,18 +417,96 @@ export async function getStaticPaths() {
   }
 
 
-  .button-left {
-    z-index: 10;
-    right: 5rem;
-    position:absolute;
-    top: 1rem;
+ 
+  .arrow {
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    background: #333;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+
+    &:hover, &:active{
+        background:#02aab0;
+        transition: all 0.5s ease-in-out;
+      }
   }
-  .button-right {
-    z-index: 10;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
+
+
+  #portfolio-overview-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .button-container{
+      top: -1.5rem;
+      position:absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+      width: 100%;
+      left: 0.25rem;
+    }
+    .portfolio-impact {
+      display: flex;
+      text-align:center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+    }
+    .portfolio-impact-header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-size: 3rem;
+      padding: 1rem;
+      margin: 0;
+      text-align: center;
+      color: #02aab0;
+    }
+
+    .portfolio-impact-subheader {
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+      color: black;
+    }
+    .portfolio-impact-description {
+      display: inline;
+      width: 100%;
+      padding: 1rem;
+      text-align: left;
+    }
+
+  @media only screen and (min-width: 768px) {
+
+    .product-overview-subsection{
+  padding: 1rem;
+}
+    .button-container{
+      position:absolute;
+      right: 1rem;
+      top: 1rem;
+      display:inline-flex;
+      height: 3rem;
+      justify-content: right;
+    }
 
   .arrow {
     transition: all 0.5s ease-in-out;
@@ -449,10 +533,6 @@ export async function getStaticPaths() {
         transition: all 0.5s ease-in-out;
       }
   }
-
-
-  @media only screen and (min-width: 768px) {
-
     #portfolio-overview-section {
       display: flex;
       flex-direction: row;
@@ -626,6 +706,7 @@ export async function getStaticPaths() {
     }
 
     #portfolio-overview {
+      position:relative;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
