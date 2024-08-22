@@ -2,6 +2,7 @@
 title: Four Seasons RV Rentals By Fraserway RV
 pubDate: 2020-06-01
 projectDuration: 8 Weeks 
+projectYear: 2019
 isDraft: false
 description: Reimagination of Four Seasons RV Rental 
 roleSummary: "For this project, due to limited resources, I wore many hats and took on the following roles in order to deliver the project on time."
@@ -23,7 +24,7 @@ processes: [
     {
         src: "../../images/portfolio/process/discover.svg",
         header: "Research & Discovery",
-        activities: ["Stakeholder Interviews", "Competitor Research", "Platform Research","Product Strategy"]
+        activities: ["Stakeholder Interviews", "Competitor Research", "Heuristic Evaluation", "Platform Research", "Product Strategy"]
     },
     {
         src: "../../images/portfolio/process/design.svg",
@@ -38,12 +39,12 @@ processes: [
     {
         src: "../../images/portfolio/process/testing.svg",
         header: "User & Systems Testing",
-        activities: ["User Acceptance Testing", "Smoke Testing"]
+        activities: [QA Testing, "User Acceptance Testing", "Smoke Testing"]
     },
     {
         src: "../../images/portfolio/process/marketing.svg",
         header: "Go-to-Market Strategy",
-        activities: ["Google Tag Manager Setup","Google Analytics Setup", "Custom Events"]
+        activities: ["Brand Positioning","Content Generation", "Google Tag Manager Setup","Google Analytics Setup", "Custom Events"]
     }
 ]
 category: [Website]
@@ -54,18 +55,20 @@ isLocked: false
 cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", caption: "Persona"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", caption: "hello"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "hello"}
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", caption: "Persona 2"},   
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", caption: "Original Site"},   
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "Persona 1"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada.", "This website serves as an informational website for prospective RV renters and to showcase their products and service offerings.","This project was an opportunity to rework the brand and modernize the platform to better serve RV rental customers."]
-projectGoals: ["To modernized the brand and web experiences of Four Seasons RV Rental."]
+introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada. This website serves as an informational website where they can showcase their rv rental products and service offerings for prospective RV renters.", "This project served as an opportunity to push my creativity and skills, rework the brand and modernize the platform to better serve RV rental customers."]
+objectives: ["To modernized the brand and web experiences of Four Seasons RV Rental for both staff and customers."]
 productVision: "To provide a seamless booking experience for RV renters."
-impact: [{header: "10%⬆ Growth", description: "Visitors from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20%⬆ Performance", description: "across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance report."}, {header: "5x Productivity", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
-challenges: ["To provide a modern mobile-first experience for our customers.", "To implement a content management system to increase productivity for staff.", "To unify the Four Seasons RV Rental brand closer to Fraseway RV.", "To develop this in-house with no additional resources.", "To be ready to deploy with Fraserway's Booking Engine in two months for the new camping season."]
+impact: [{header: "10%⬆", subheader: "in User Growth", description: "Visitors from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20%⬆", subheader: "in Site Performance", description: "Mobile first development and increases across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance reports."}, {header: "500%⬆", subheader: "in Staff Productivity", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
+problems: ["Not mobile responsive","Required FTP access to update content", "No existing analytics","Brand is being consolidated"]
+goals: ["To provide a modern mobile friendly experience for customers.", "To implement a content management system to increase productivity for staff.", "To unify the Four Seasons RV Rental brand closer to Fraseway RV.", ]
+challenges: ["The primary challenge for this product was time and resources.","The project needed to be completed before the start of the season and needed to be done in-house.", "The rental booking engine was an initiative that was started separate of the information site"]
 solutions: ["Our marketing department created a brand strategy and create to help visualize the fun and whimsicle atmosphere of RV rentals for Four Seasons RV Rental. We created a design system of using faceless vector art to allow the style to be flexible and juxtaposed it with real RV images.","For this website, due to time and budget constraints, we opted to purchase a theme to speed up development and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
-results: ["Overall the website was considered a success and was launched on time.","The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
+results: ["Overall the website was considered a success and was launched on time. The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
 threeDModel: "https://prod.spline.design/q54sAvqvSUTdt20c/scene.splinecode"
 website: "https://fourseasonsrvrentals.ca/"
 ---

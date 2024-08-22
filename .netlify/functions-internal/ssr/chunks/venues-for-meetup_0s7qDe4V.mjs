@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./venues-for-meetup_RoC_bvsa.mjs');
+						return import('./venues-for-meetup_DEhXDtXJ.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

@@ -1,205 +1,259 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Carousel from '../../components/Carousel.astro';
-import ProcessOverview from '../../components/ProcessOverview.astro';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Carousel from "../../components/Carousel.astro";
+import ProcessOverview from "../../components/ProcessOverview.astro";
 
 const { entry } = Astro.props;
 // const { Content } = await entry.render();
 
 export async function getStaticPaths() {
-  const portfolioEntries = await getCollection('portfolio');
-  return  portfolioEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+  const portfolioEntries = await getCollection("portfolio");
+  return portfolioEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
   }));
 }
-
-
 ---
+
 <Layout title={entry.data.title} description={entry.data.description}>
-	<main class="main portfolio-main" slot="main">
-   
-    <div class="portfolio-text-content">
-      
-      <div id="portfolio-category-container">
-        {entry.data.category.map((item) => (
-        <span class="portfolio-category">{item}</span>
-        ))}
+  <main class='main portfolio-main' slot='main'>
+    <div class='portfolio-text-content'>
+      <div id='portfolio-category-container'>
+        {
+          entry.data.category.map((item) => (
+            <span class='portfolio-category'>{item}</span>
+          ))
+        }
       </div>
-      <div id="portfolio-name-container">
-        <h1 class="portfolio-name">{entry.data.title}</h1>
+      <div id='portfolio-name-container'>
+        <h1 class='portfolio-name'>{entry.data.title}</h1>
       </div>
     </div>
-    {entry.data.threeDModel && (
-      <div id="portfolio-thumbnail-container" class="portfolio-image-container">
-       
+    {
+      entry.data.threeDModel && (
+        <div
+          id='portfolio-thumbnail-container'
+          class='portfolio-image-container'
+        >
           <>
-          <script is:raw type="module" src="https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js"></script>
-          <spline-viewer url={entry.data.threeDModel}></spline-viewer>
+            <script
+              is:raw
+              type='module'
+              src='https://unpkg.com/@splinetool/viewer@1.9.6/build/spline-viewer.js'
+            />
+            <spline-viewer url={entry.data.threeDModel} />
           </>
+        </div>
+      )
+    }
+    <section id='portfolio-intro-section'>
+      <div id='portfolio-intro-container'>
+        <div id='portfolio-intro-content' class='portfolio-sub-section'>
+          <h2 class='portfolio-subsection-headers'>Introduction</h2>
+          {
+            entry.data.introduction.map((copy) => (
+              <p class='portfolio-intro-text'>{copy}</p>
+            ))
+          }
 
-      </div>
- )}
-    <section id="portfolio-intro-section">
-        <div id="portfolio-intro-container">
-          <div id="portfolio-intro-content" class="portfolio-sub-section">
-              <h2 class="portfolio-subsection-headers">Introduction</h2>
-              {entry.data.introduction.map((copy) => (
-
-              <p class="portfolio-intro-text">{copy}</p>
-              ))}
-            {entry.data.website && (
+          {
+            entry.data.website && (
               <>
-              <a class="button primary-button" href={entry.data.website}>View Website</a>
+                <a class='button primary-button' href={entry.data.website}>
+                  View Website
+                </a>
               </>
-              )}
-          
-            </div>
+            )
+          }
+        </div>
 
-          <div id="portfolio-time-content" class="portfolio-sub-section">
-             
-              <h3>Project Duration</h3>
-              <p>{entry.data.projectDuration}</p>
-            </div>
-            <div id="portfolio-objective-content" class="portfolio-sub-section">
-              <h3>Objective</h3>
-              {entry.data.projectGoals.map((goal) => (
+        <div id='portfolio-time-content' class='portfolio-sub-section'>
+          <h3>Project Duration</h3>
+          <p>{entry.data.projectDuration}</p>
+        </div>
+        <div id='portfolio-year-content' class='portfolio-sub-section'>
+          <h3>Year</h3>
+          <p>{entry.data.projectYear}</p>
+        </div>
+        <div id='portfolio-objective-content' class='portfolio-sub-section'>
+          <h3>Objective</h3>
+          {entry.data.objectives.map((objective) => <p>{objective}</p>)}
+        </div>
 
-              <p>{goal}</p>
-              ))}
-            </div>
+        <div id='portfolio-opportunities-content' class='portfolio-sub-section'>
+          <h3>Key Opportunities</h3>
 
-            <div id="portfolio-role-content" class="portfolio-sub-section">
-             
-              <h3>My Role</h3>
-              <ul>
-              {entry.data.roles.map((role) => (
+          <ul>
+            {
+              entry.data.problems?.map((problem) => (
+                <li class='portfolio-list-item'>{problem}</li>
+              ))
+            }
+          </ul>
+        </div>
 
-                <li class="portfolio-intro-text">{role}</li>
-                ))}
-                </ul>
-            </div>
+        <div id='portfolio-role-content' class='portfolio-sub-section'>
+          <h3>My Role</h3>
+          <ul>
+            {
+              entry.data.roles.map((role) => (
+                <li class='portfolio-list-item'>{role}</li>
+              ))
+            }
+          </ul>
+        </div>
 
-            {entry.data.team && (
-              <>
-            <div id="portfolio-team-content" class="portfolio-sub-section">
-             
-              <h3>Team Members</h3>
+        {
+          entry.data.team && (
+            <>
+              <div id='portfolio-team-content' class='portfolio-sub-section'>
+                <h3>Team Members</h3>
                 <ul>
                   {entry.data.team?.map((member) => (
-                    <li>{member.name} - {member.position}</li>
+                    <li class='portfolio-list-item'>
+                      {member.name} - {member.position}
+                    </li>
                   ))}
-                  </ul>
-            </div>
+                </ul>
+              </div>
             </>
-            )}
-      </div> 
-
-         
-
-     
+          )
+        }
+      </div>
     </section>
-    <section>
-      <h2 class="portfolio-subsection-headers">Product Overview</h2>
-
-      <div id="portfolio-overview">
-
-      <div id="portfolio-challenge" class="portfolio-sub-section">
-          <img class="portfolio-icons" src="/images/portfolio/challenge.svg"/>
-          <h2 class="portfolio-subheaders">Challenge</h2>
-          
-          <ul class="portfolio-list">
-            {entry.data.challenges?.map((challenge) => (
-              <li><input type="checkbox" disabled="disabled" /> {challenge}</li>
-            ))}
+    <section id='portfolio-overview-section'>
+      <h2 class='portfolio-subsection-headers'>Product Overview</h2>
+      <div id='portfolio-overview-image-container'>
+        <img
+          id='portfolio-overview-image'
+          src='https://placehold.co/800x1600?text=Image+1'
+        />
+      </div>
+      <div id='portfolio-overview'>
+        <button id="bt1" onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
+        <button id="bt2" onclick="this.disabled=true;"class='button-right arrow'>&rightarrow;</button>
+        <div id='portfolio-goal' class="product-overview-subsection current-slide">
+          <img class='portfolio-icons' src='/images/portfolio/goal.svg' />
+          <h2 class='portfolio-subheaders'>Goal</h2>
+          <ul class='portfolio-list'>
+            {
+              entry.data.goals?.map((goal) => (
+                <li class='portfolio-list-item'>
+                  <input type='checkbox' disabled='disabled' /> {goal}
+                </li>
+              ))
+            }
           </ul>
-      </div> 
+        </div>
+        <div id="portfolio-challenge" class="product-overview-subsection">          <img class='portfolio-icons' src='/images/portfolio/challenge.svg' />
+          <h2 class='portfolio-subheaders'>Challenge</h2>
 
-      <div id="portfolio-solution" class="portfolio-sub-section">
-        <img class="portfolio-icons" src="/images/portfolio/solution.svg"/>
-        <h2 class="portfolio-subheaders">Solution</h2>
-        
-    
-          {entry.data.solutions?.map((solution) => (
-            <p>{solution}</p>
-          ))}
-      </div> 
+          {entry.data.challenges?.map((challenge) => <p>{challenge}</p>)}
+        </div>
 
-      <div id="portfolio-results" class="portfolio-sub-section">
-        <img class="portfolio-icons" src="/images/portfolio/results.svg"/>
-        <h2 class="portfolio-subheaders portfolio-results-header">Results</h2>
-          {entry.data.results?.map((result) => (
-            <p>{result}</p>
-          ))}
+        <div id='portfolio-solution' class="product-overview-subsection">
+          <img class='portfolio-icons' src='/images/portfolio/solution.svg' />
+          <h2 class='portfolio-subheaders'>Solution</h2>
 
-          {entry.data.impact?.map((item) => (
-          <div class="portfolio-impact">
-            <h3 class="portfolio-impact-header">{item.header} </h3>
-            <p class="portfolio-impact-description">{item.description}</p>
-          </div>
-          ))}
-
-      </div> 
-    </div>
-      
+          {entry.data.solutions?.map((solution) => <p>{solution}</p>)}
+        </div>
+        <div id='portfolio-results' class="product-overview-subsection">
+            <img class='portfolio-icons' src='/images/portfolio/results.svg' />
+          <h2 class='portfolio-subheaders portfolio-results-header'>Results</h2>
+          {entry.data.results?.map((result) => <p>{result}</p>)}
+          {
+            entry.data.impact && (
+              <>
+                <div class='portfolio-impact-section'>
+                  {entry.data.impact?.map((item) => (
+                    <div class='portfolio-impact'>
+                      <h3 class='portfolio-impact-header'>
+                        {item.header}
+                        <br />
+                        <span class='portfolio-impact-subheader'>
+                          {item.subheader}
+                        </span>
+                      </h3>
+                      <p class='portfolio-impact-description'>
+                        {item.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )
+          }
+        </div>
+      </div>
     </section>
-    <ProcessOverview processes={entry.data.processes.map(process => ({ 
-            src: process.src.src,
-            header: process.header,
-            activities: process.activities
+    <Carousel
+      header='Screenshots'
+      images={entry.data.carousel.map((image) => ({
+        src: image.src.src,
+        caption: image.caption || "",
+      }))}
+    />
+    <ProcessOverview
+      processes={entry.data.processes.map((process) => ({
+        src: process.src.src,
+        header: process.header,
+        activities: process.activities,
+      }))}
+    />
 
-            }))}  />
-          <Carousel header="Screenshots" 
-            images={entry.data.carousel.map(image => ({ 
-              src: image.src.src, 
-              caption: image.caption || ''
-            }))} 
-          />
-       
-          <!-- {entry.data.impact && (
+    <!-- {entry.data.impact && (
             <>
             <ColumnTextBlock header="Product Impact"  content={entry.data.impact.map(item => ({ header: item.header, description: item.description, list: item.list || [] }))} />
             </>
                                    
                                    )} -->
 
-          
-          <!-- <Content /> -->
-      
-          </div>
-	</main>
+    <!-- <Content /> -->
+  </main>
 </Layout>
-<style lang="scss">
 
-#portfolio-intro-container{
-      padding:2rem;
-    
-    }
-
-  .primary-button{
-    color:white;
+<style lang='scss'>
+  #portfolio-intro-container {
+    padding: 2rem;
+  }
+.product-overview-subsection{
+  padding: 2rem;
+}
+  .portfolio-list {
+    padding: 0;
+    margin: 0;
+    padding-left: 2rem;
+  }
+  .portfolio-list-item {
+    line-height: 150%;
+  }
+  .primary-button {
+    color: white;
     text-decoration: none;
-    &:hover{
-      color:white;
+    &:hover {
+      color: white;
     }
   }
-  section{
+  section {
     margin-top: 4rem;
     margin-bottom: 4rem;
 
-    &:first-child{
+    &:first-child {
       margin-top: 0;
     }
   }
-
-  .portfolio-icons{
+  .image-container {
+    width: 100%;
+    text-align: center;
+  }
+  .portfolio-icons {
     max-height: 64px;
     padding: 1rem;
-    
   }
-  .portfolio-category{
+  .portfolio-category {
     background: #333;
-    color:white;
+    color: white;
     text-transform: uppercase;
     padding: 0.25rem 0.5rem;
     border-radius: 1rem;
@@ -210,23 +264,17 @@ export async function getStaticPaths() {
     margin-right: 0.5rem;
   }
 
-  .portfolio-name{
-      padding-top:1rem;
-      padding-bottom: 2rem;
-    }
-
-  .portfolio-header {
-      font-size: 1.75rem;
-      margin: 0;
-      padding: 0;
-      padding: 1rem 0;
-      text-transform: uppercase;
+  .portfolio-name {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
 
-  .portfolio-list{
-    list-style-type: none;
+  .portfolio-header {
+    font-size: 1.75rem;
+    margin: 0;
     padding: 0;
-
+    padding: 1rem 0;
+    text-transform: uppercase;
   }
 
   .portfolio-image-container {
@@ -239,301 +287,418 @@ export async function getStaticPaths() {
       height: auto;
       width: 100%;
       border-radius: 1rem;
-
     }
   }
 
-  .portfolio-text-content{
-    padding:0;
+  .portfolio-text-content {
+    padding: 0;
     margin: 0;
     padding: 1rem;
   }
 
-  .portfolio-sub-section{
+  .portfolio-sub-section {
     padding: 0;
     margin: 0;
-    background:white;
+    background: white;
     border-radius: 1rem;
     margin-top: 1rem;
 
-    padding: 1.5rem ;
-    box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+    padding: 1.5rem;
+    box-shadow: 0 0 1rem 1rem rgba(128, 128, 128, 0.1);
+  }
+
+  #portfolio-goal {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    li {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 1rem;
+
+      vertical-align: middle;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  #portfolio-overview {
+    max-width: 75%;
+    position: relative;
+    padding: 1rem;
+
+  }
+  #portfolio-challenge {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    li {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 1rem;
+      vertical-align: middle;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  #portfolio-solution {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding: 1rem;
+    }
+  }
+
+  #portfolio-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+    .image-container {
+      width: 20%;
+    }
+    h2 {
+      color: black;
+      text-align: center;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+    }
   }
 
 
-  #portfolio-challenge{
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      background: white;
-      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
-      h2{
-        color:black;
-        text-align:center;
+  .button-left {
+    z-index: 10;
+    right: 5rem;
+    position:absolute;
+    top: 1rem;
+  }
+  .button-right {
+    z-index: 10;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .arrow {
+    transition: all 0.5s ease-in-out;
+
+    padding: 0;
+    color: #fff;
+    cursor: pointer;
+    background: #333;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+
+    &:hover{
+        background:#02aab0;
+        transition: all 0.5s ease-in-out;
       }
-      li{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 1rem;
-        padding: 0;
-        margin: 0;
-        padding-bottom: 1rem;
-
-        vertical-align: middle;
-      }
-
-      ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-      
-    }
-
-    #portfolio-solution{
-
-      
-display: flex;
-flex-direction: column;
-justify-content: start;
-align-items: center;
-background-color: white;
-box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
-
-
-h2{
-  color:black;
-  text-align:center;
-}
-li{
-  padding: 0;
-  margin: 0;
-}
-
-ul{
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  padding: 1rem;
-}
-}
-
-#portfolio-results{
-
-display: flex;
-flex-direction: column;
-justify-content: start;
-align-items: center;
-background: white;
-box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
-
-
-h2{
-  color:black;
-  text-align:center;
-}
-li{
-  padding: 0;
-  margin: 0;
-}
-}
-
+  }
 
 
   @media only screen and (min-width: 768px) {
-    #portfolio-thumbnail-container{
+
+    #portfolio-overview-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding-top: 4rem;
+      max-width: 1440px;
+
+      .portfolio-subsection-headers {
+        padding-bottom: 4rem;
+      }
+    }
+
+    #portfolio-overview-image-container {
+      max-width: 40%;
+      padding:0;
+      margin: 0;
+      img{
+        box-shadow: 0 0 1rem 1rem rgba(128, 128, 128, 0.1);
+
+      }
+
+    }
+
+    #portfolio-overview-image {
+      width: 100%;
+      height: auto;
+    }
+    #portfolio-thumbnail-container {
       width: 100%;
       small {
-        display:block;
+        display: block;
         text-align: center;
         width: 100%;
       }
     }
 
     .portfolio-image-container {
-
-
-    img {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      border-radius: 1rem;
-
+      img {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 1rem;
+      }
     }
-  }
 
-  .portfolio-impact{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-  }
-    .portfolio-impact-header{
-      display:inline;
-      width: 40%;
-
+    .portfolio-sub-section {
+      margin-top: 0rem;
+    }
+    .portfolio-impact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      max-width: 768px;
       padding: 1rem;
-      text-align: center;
     }
-    .portfolio-impact-description{
-      display:inline;
+    .portfolio-impact-header {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      font-size: 4rem;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      color: #02aab0;
+    }
+
+    .portfolio-impact-subheader {
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+      color: black;
+    }
+    .portfolio-impact-description {
+      display: inline;
       width: 60%;
       padding: 1rem;
+      text-align: left;
     }
 
+    .portfolio-text-content {
+    }
 
-    .portfolio-text-content{
-  }
-
-  .portfolio-subheaders{
-    font-size: 1.25rem;
-    width: 100%;
-  }
-    .portfolio-name{
+    .portfolio-subheaders {
+      font-size: 1.25rem;
+      width: 100%;
+    }
+    .portfolio-name {
       font-size: 4rem;
     }
-  
 
-    #portfolio-intro-container{
+    #portfolio-intro-container {
       padding: 0;
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: 50% 50%;
+      grid-template-rows: 33.3% 33.3% 33.3%;
       gap: 2rem;
       padding-bottom: 4rem;
-      h2{
+      h2 {
         text-align: left;
       }
-    
     }
 
-    
-    #portfolio-intro-content{
+    #portfolio-intro-content {
       grid-column: 1 / 4;
       grid-row: 1 / 4;
-      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
+      box-shadow: 0 0 1rem 1rem rgba(128, 128, 128, 0.1);
 
       display: flex;
       flex-direction: column;
       justify-content: start;
       align-items: start;
       background: white;
-
     }
 
-    #portfolio-team-content{
+    #portfolio-team-content {
       grid-column: 5 / 7;
-      grid-row: 2 / 3;    
+      grid-row: 3 / 4;
 
       display: flex;
-      flex-direction:  column;
+      flex-direction: column;
       justify-content: start;
       align-items: start;
- 
     }
 
-    #portfolio-role-content{
+    #portfolio-role-content {
       grid-column: 4 / 5;
-      grid-row: 2 / 3;
+      grid-row: 3 / 4;
       display: flex;
-      flex-direction:  column;
+      flex-direction: column;
       justify-content: start;
       align-items: start;
+    }
 
-}
-
-
-#portfolio-time-content{
+    #portfolio-time-content {
       grid-column: 6 / 7;
       grid-row: 1 / 2;
       display: flex;
-      flex-direction:  column;
+      flex-direction: column;
       justify-content: start;
       align-items: start;
+    }
 
-}
+    #portfolio-time-content {
+      grid-column: 6 / 7;
+      grid-row: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
 
-#portfolio-objective-content{
+    #portfolio-objective-content {
       grid-column: 4 / 6;
       grid-row: 1 / 2;
       display: flex;
-      flex-direction:  column;
+      flex-direction: column;
       justify-content: start;
       align-items: start;
-
-}
-
-
-#portfolio-overview{
-  display:flex;
-  gap: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  h2 {
-    text-align: center;
-    width: 100%;
-  }
-}
-
-#portfolio-time{
-  height: 50%;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  text-align:center;
-  font-size: 2rem;
- display: flex;
- flex-direction:  column;
- justify-content: space-around;
- align-items: start;
-
-}
-
-    #portfolio-challenge{
-    
-      padding: 2rem;
-      width: 33.3%;
-
-
-      ul{
-
-        padding: 1rem;
-      }
-      
     }
 
-    .portfolio-subsection-headers{
+    #portfolio-opportunities-content {
+      grid-column: 4 / 6;
+      grid-row: 2 / 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+    }
+
+    #portfolio-overview {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      box-shadow: 0 0 1rem 1rem rgba(128, 128, 128, 0.1);
+      background: white;
+      width: 60%;
+      padding:0;
+      margin: 0;
+      left: -2rem;
+      min-height: 825px;
+      h2 {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    #portfolio-time {
+      height: 50%;
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      text-align: center;
       font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+    }
+
+    #portfolio-goal {
+      padding: 1rem;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+
+
+      ul {
+        padding: 1rem;
+      }
+    }
+    #portfolio-challenge {
+      padding: 1rem;
+      display: none;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      opacity: 1;
+      ul {
+        padding: 1rem;
+      }
+    }
+
+    .portfolio-subsection-headers {
+      font-size: 3rem;
       font-weight: 300;
       text-transform: uppercase;
       width: 100%;
       text-align: center;
     }
 
-    #portfolio-solution{
+    #portfolio-solution {
+      display:none;
+      transition: all 0.5s ease-in-out;
+      opacity: 1;
 
-      
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      background-color: white;
-      padding: 2rem;
-      width: 33.3%;
-      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
 
-      
-      h2{
-        color:black;
-        text-align:center;
+      h2 {
+        color: black;
+        text-align: center;
       }
-      li{
+      li {
         padding: 0;
         margin: 0;
       }
 
-      ul{
+      ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -541,239 +706,113 @@ li{
       }
     }
 
-    #portfolio-results{
-
-      display: flex;
+    #portfolio-results {
+      display: none;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
       flex-direction: column;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
-      background: white;
-      padding: 2rem;
-      width: 33.3%;
-      box-shadow: 0 0 1rem 1rem rgba(128,128,128,0.1);
 
-      
-      h2{
-        color:black;
-        text-align:center;
+      h2 {
+        color: black;
+        text-align: center;
       }
-      li{
+      li {
         padding: 0;
         margin: 0;
       }
     }
-
   }
+  .current-slide {
+  display: flex !important;
+  transition: opacity 0.5s ease-in-out !important;
+  opacity: 1 !important;
+
+}
 </style>
 
-<!-- <style lang="scss" is:global>
 
-.main {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100svw;
-  }
+<script is:inline>
+
+let currentSection = 'goal';
+const leftButton1 = document.getElementById('bt1');
+const rightButton1 = document.getElementById('bt2');
+const portfolioGoal = document.getElementById('portfolio-goal');
+const portfolioChallenge = document.getElementById('portfolio-challenge');
+const portfolioSolution = document.getElementById('portfolio-solution');
+const portfolioResults = document.getElementById('portfolio-results');
 
 
-  .portfolio-content {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    
-  
-  }
-  
-  .portfolio-image-container {
-    border-radius: 2rem;  
-    padding:0;
-    margin: 0;
-    
-    &:first-child {
-      margin-right:1rem;
-    }
-    &:last-child {
-      margin-left:1rem;
-    }
+leftButton1.addEventListener('click', () => {
+  handleButtonClick('left');
 
-  img {
-  border-radius: 2rem;  
-  margin: 0;
-  padding: 0;
-  height: auto;
-  width: 100%;
+  setTimeout(() => {
+    leftButton1.removeAttribute('disabled');  }, 500);
 
+
+
+});
+
+rightButton1.addEventListener('click', () => {
+    handleButtonClick('right');
+    setTimeout(() => {
+    rightButton1.removeAttribute('disabled');  }, 500);
+
+});
+
+function handleRightButtonClick() {
+
+  if (currentSection === 'goal') {
+    portfolioGoal.style.transition = "all 0.5s ease-in-out";
+
+    portfolioGoal.classList.remove('current-slide');
+    currentSection = 'challenge';
+    portfolioChallenge.style.transition = "all 0.5s ease-in-out";
+    portfolioChallenge.classList.add('current-slide');
+
+  } else if (currentSection === 'challenge') {
+    portfolioChallenge.classList.remove('current-slide');
+    currentSection = 'solution';
+    portfolioSolution.classList.add('current-slide');
+  } else if (currentSection === 'solution') {
+    portfolioSolution.classList.remove('current-slide');
+    currentSection = 'results';
+    portfolioResults.classList.add('current-slide');
+  } else if (currentSection === 'results') {
+    portfolioResults.classList.remove('current-slide');
+    currentSection = 'goal';
+    portfolioGoal.classList.add('current-slide');
   }
 }
 
-.portfolio-image-list{
-  width: 100svw;
-  overflow-x: hidden;
+function handleLeftButtonClick() {
+
+  if (currentSection === 'goal') {
+    portfolioGoal.classList.remove('current-slide');
+    currentSection = 'results';
+    portfolioResults.classList.add('current-slide');
+  } else if (currentSection === 'challenge') {
+    portfolioChallenge.classList.remove('current-slide');
+    currentSection = 'goal';
+    portfolioGoal.classList.add('current-slide');
+  } else if (currentSection === 'solution') {
+    portfolioSolution.classList.remove('current-slide');
+    currentSection = 'challenge';
+    portfolioChallenge.classList.add('current-slide');
+  } else if (currentSection === 'results') {
+    portfolioResults.classList.remove('current-slide');
+    currentSection = 'solution';
+    portfolioSolution.classList.add('current-slide');
+  }
 }
 
-  .portfolio-intro-text{
-    font-size: 1.25rem;
-    line-height: 150%;
-  }
-  .main-image {
-    width: 100svw;
-    height: 100%;
+const handleButtonClick = (direction) => {
+  if (direction === 'right') {
+    handleRightButtonClick();
+  } else if (direction === 'left') {
+    handleLeftButtonClick();
   }
 
-  .thumbnail-image{
-    width: 100%;
-    height: auto;
-    border-radius: 1rem 1rem 0 0;
-  }
-  
-
-  
-
-  .portfolio-category{
-    background: #333;
-    color:white;
-    text-transform: uppercase;
-    padding: 0.25rem 0.5rem;
-    border-radius: 1rem;
-    margin: 0;
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin-bottom: 2rem;
-    margin-right: 0.5rem;
-  }
-  .portfolio-title {
-    font-size: 1.75rem;
-    margin: 0;
-    padding: 0;
-    padding:  1rem 0;
-    text-transform: uppercase;
-  }
-
-  .portfolio-gallery{
-    position:relative;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 100%;
-    width: 100%;
-  }
-
-  .problem-statement{
-    background: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
-    padding: 1rem;
-    color: white;
-  }
- 
-  @media only screen and (min-width: 768px) {
-
-    .portfolio-content {
-    padding: 1rem;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    p{
-      font-size: 1.2rem;
-    }
-    li{
-      line-height: 150%;
-      font-size: 1.2rem;
-    }
-  }
-  
-    .portfolio-category-container{
-      padding-top:1rem;
-      padding-bottom: 1rem;
-    }
-    .portfolio-subheaders{
-      font-size: 1.25rem;
-      font-weight: 800;
-      text-transform: uppercase;
-    }
-  .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  
-  .portfolio-intro-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2rem;
-    padding-top: 2rem;
-  }
-
-  .portfolio-title {
-    font-size: 2rem;
-  }
-.portfolio-intro {
-  display: inline-block;
-  width: 40%;
-  background:white;
-  padding: 2rem;
-  border-radius: 2rem;
-
-}
-.portfolio-objectives {
-  display:inline-block;
-  width: 60%;
-
-}
-
-.portfolio-image-container {
-  border-radius: 2rem;  
-  padding:0;
-  margin: 0;
-  width: 100%;
-
-  
-  &:first-child {
-    margin-right:1rem;
-  }
-  &:last-child {
-    margin-left:1rem;
-  }
-
-}
-.portfolio-image-container img {
-  border-radius: 2rem;  
-  margin: 0;
-  width: 100%;
-  height: auto;
-
-
-}
-.portfolio-text-content {
-  margin: 0;
-  background:white;
-  padding: 2rem;
-  margin-top:2rem;
-  border-radius: 2rem;  
-}
-
-.portfolio-image-section{
-  width: 100%;
-  display: flex;
-  border-radius: 2rem;  
-  padding: 0;
-  margin: 0;
-  flex-direction:row;
-
-
-}
-
-  .portfolio-deliverables {
-  border-radius: 2rem;  
-  width: 100%;
-}
-
- 
-}
-</style> -->
-
-<script>
-  
+};
 </script>

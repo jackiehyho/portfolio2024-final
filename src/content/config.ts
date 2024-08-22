@@ -23,6 +23,7 @@ const portfolioCollection = defineCollection({
     isDraft: z.boolean(),
     pubDate: z.date().transform((str) => new Date(str).toDateString()),
     projectDuration: z.string(),
+    projectYear: z.number().optional(),
     description: z.string(),
     roleSummary: z.string(),
     roles: z.array(z.string()),
@@ -49,16 +50,18 @@ const portfolioCollection = defineCollection({
     })),
     hero: image(),
     introduction: z.array(z.string()),
-    projectGoals: z.array(z.string()),
+    objectives: z.array(z.string().optional()),
     productVision: z.string().optional(),
+    problems: z.array(z.string()).optional(),
+    goals: z.array(z.string()).optional(),
     challenges: z.array(z.string()).optional(),
     solutions: z.array(z.string()).optional(),
     results: z.array(z.string()).optional(),
     threeDModel: z.string().optional(),
     impact: z.array(z.object({
       header: z.string(),
-      description: z.string(),
-      list: z.array(z.string()).optional()
+      subheader: z.string(),
+      description: z.string()
     })).optional(),
     website: z.string().optional()
   })

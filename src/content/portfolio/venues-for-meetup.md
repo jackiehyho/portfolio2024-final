@@ -51,7 +51,7 @@ carousel: [
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
 introduction: ["Venues is a conceptual two-way marketplace that connects venue owners with event hosts","This project was conceived during my Product Management course from BrainStation Vancouver and as a recommendation to select an existing company to enhance an existing product or create a new product.", "For this project, I've selected Meetup as my company to address a problem space that still exist today."]
-projectGoals: ["To make event planning easier"]
+objectives: ["To make event planning easier"]
 productVision: "To connect venue owners and event planners"
 
 ---

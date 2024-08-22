@@ -10,7 +10,7 @@ const { images, header } = Astro.props;
 <section id="carousel-section"class='container'>
   <h2 class='carousel-header portfolio-subheaders'>{header}</h2>
   <div class='carousel-gallery'>
-    <button onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
+    <button id="carousel-button-left" onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
     <div class='carousel-image-list'>
       {
         images.map((image) => (
@@ -25,7 +25,7 @@ const { images, header } = Astro.props;
         ))
       }
     </div>
-    <button onclick="this.disabled=true;" class='button-right arrow'>&rightarrow;</button>
+    <button id="carousel-button-right" onclick="this.disabled=true;" class='button-right arrow'>&rightarrow;</button>
   </div>
 </section>
 <style lang='scss'>
@@ -137,6 +137,10 @@ const { images, header } = Astro.props;
       font-size: 1.25rem;
     }
   @media only screen and (min-width: 768px) {
+    #carousel-section{
+      margin-top:4rem;
+      margin-bottom: 4rem;
+    }
     .carousel-header {
       font-weight: 300;
       text-transform: uppercase;
@@ -219,8 +223,8 @@ const { images, header } = Astro.props;
   const portfolioImageList = document.querySelector(
     ".carousel-image-list"
   ) as HTMLElement;
-  const leftArrow = document.querySelector(".button-left");
-  const rightArrow = document.querySelector(".button-right");
+  const leftArrow = document.querySelector("#carousel-button-left");
+  const rightArrow = document.querySelector("#carousel-button-right");
 
   const portfolioImageItems = document.querySelectorAll(".carousel-image-item"
   );
