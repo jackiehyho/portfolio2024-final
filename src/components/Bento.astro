@@ -64,7 +64,7 @@
     </div>
     <div class='bento-item bento-7 archived'>
       <div class='bento-text'>
-        <h3 class='bento-header'>PAST PROJECTS</h3>
+        <h3 class='bento-header'>PAST WORK</h3>
         <input type='checkbox' id='bar' class='archive-projects' />
         <label for='bar' class='labels' style='opacity: 1;'
           >Bar Perry Pet Photography</label
@@ -76,6 +76,8 @@
         <input type='checkbox' id='boogaloo' class='archive-projects' />
         <label for='boogaloo' class='labels'>Boogaloo Academy</label>
         <input type='checkbox' id='logos' class='archive-projects' />
+        <label for='jeha' class='labels'>Richard Jeha</label>
+        <input type='checkbox' id='jeha' class='archive-projects' />
         <label for='logos' class='labels'>Logos</label>
       </div>
     </div>
@@ -463,6 +465,7 @@
   let bredy = document.querySelector("#bredy");
   let boogaloo = document.querySelector("#boogaloo");
   let nom = document.querySelector("#nom");
+  let jeha = document.querySelector("#jeha")
   let labels = document.querySelectorAll("label");
   let inputs = document.querySelectorAll("input");
   let previousCheckedItem = null;
@@ -565,6 +568,16 @@
       imageDisplay.style.background = "black center center";
       imageDisplay.style.background =
         'url("/images/portfolio/604nomnom/604nomnom.jpg") center center no-repeat';
+      imageDisplay.style.backgroundSize = "cover";
+    }
+  });
+
+  jeha.addEventListener("change", function () {
+    if (jeha.checked) {
+      imageDisplay.style.transition = "background-image 0.5s";
+      imageDisplay.style.background = "black center center";
+      imageDisplay.style.background =
+        'url("/images/portfolio/richard-jeha/richard-jeha.jpg") center center no-repeat';
       imageDisplay.style.backgroundSize = "cover";
     }
   });

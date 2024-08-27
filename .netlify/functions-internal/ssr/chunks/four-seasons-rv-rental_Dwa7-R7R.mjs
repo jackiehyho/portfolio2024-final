@@ -1,5 +1,5 @@
 async function getMod() {
-						return import('./four-seasons-rv-rental_Bf6eWMNN.mjs');
+						return import('./four-seasons-rv-rental_W56C422B.mjs');
 					}
 					const collectedLinks = [];
 					const collectedStyles = [];

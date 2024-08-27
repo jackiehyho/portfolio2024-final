@@ -2,6 +2,7 @@
 title: Venues by Meetup
 pubDate: 2024-06-01
 projectDuration: 8 Weeks
+projectYear: 2024
 isDraft: false
 description: Helping event planners and venue hosts connect! 
 roleSummary: "For this project, I worked by myself and took on the following roles."
@@ -36,24 +37,24 @@ isLocked: false
 cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
-        {src: "../../images/portfolio/venues/7-event-successful.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/8-succesful-event.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/10-problems-facing.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/11-problem-statement.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/1-meetup.jpg", caption: "hello"},   
-    {src: "../../images/portfolio/venues/2-what-is-meetup.jpg", caption: "hello"},    
-    {src: "../../images/portfolio/venues/3-what-is-meetup.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/4-user-metrics.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/5-revenue-streams.jpg", caption: "hello"}, 
-    {src: "../../images/portfolio/venues/6-mission.png", caption: "hello"} 
+        {src: "../../images/portfolio/venues/7-event-successful.jpg", caption: "What makes an Event Successful"}, 
+    {src: "../../images/portfolio/venues/8-succesful-event.jpg", caption: "Attributes of a Successful Event"}, 
+    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg", caption: "Event planner To do List"}, 
+    {src: "../../images/portfolio/venues/10-problems-facing.jpg", caption: "Problems Organizers are facing"}, 
+    {src: "../../images/portfolio/venues/11-problem-statement.jpg", caption: "Problem Statement"}, 
+    {src: "../../images/portfolio/venues/1-meetup.jpg", caption: "Title Slide"},   
+    {src: "../../images/portfolio/venues/2-what-is-meetup.jpg", caption: "What is Meetup?"},    
+    {src: "../../images/portfolio/venues/3-what-is-meetup.jpg", caption: "Meetup Explaination"}, 
+    {src: "../../images/portfolio/venues/4-user-metrics.jpg", caption: "Current Meetup User Metrics"}, 
+    {src: "../../images/portfolio/venues/5-revenue-streams.jpg", caption: "Revenue Streams"}, 
+    {src: "../../images/portfolio/venues/6-mission.png", caption: "Meetup's Mission Statement"} 
 
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
 introduction: ["Venues is a conceptual two-way marketplace that connects venue owners with event hosts","This project was conceived during my Product Management course from BrainStation Vancouver and as a recommendation to select an existing company to enhance an existing product or create a new product.", "For this project, I've selected Meetup as my company to address a problem space that still exist today."]
-objectives: ["To make event planning easier"]
+objectives: ["Event Organizers spend a lot of time searching & securing consistent venues for their groups."]
 productVision: "To connect venue owners and event planners"
-
+problems: ["Spending a lot of time searching for venues."]
 ---
 
 

@@ -60,17 +60,18 @@ carousel: [
     {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "Persona 1"}
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: ["Four Seasons RV Rentals is the economy RV rental division of Fraserway RV with various rental depots across Canada. This website serves as an informational website where they can showcase their rv rental products and service offerings for prospective RV renters.", "This project served as an opportunity to push my creativity and skills, rework the brand and modernize the platform to better serve RV rental customers."]
-objectives: ["To modernized the brand and web experiences of Four Seasons RV Rental for both staff and customers."]
+introduction: ["Four Seasons RV Rentals is a RV rental division of Fraserway RV with various rental depots across Canada. This website serves as an informational website where they can showcase their rv rental products and service offerings for prospective RV renters.","The original website had outlived it's product lifecycle and needed a refresh in both updating the platform and modernizing the code.", "This project served as an opportunity to push my creativity and skills, rework the brand and modernize the platform to better serve RV rental customers."]
+objectives: ["To modernized the brand and web experiences of Four Seasons RV Rental for both staff and customers so customers can make an informed decision before they book an RV."]
 productVision: "To provide a seamless booking experience for RV renters."
-impact: [{header: "10%⬆", subheader: "in User Growth", description: "Visitors from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20%⬆", subheader: "in Site Performance", description: "Mobile first development and increases across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance reports."}, {header: "500%⬆", subheader: "in Staff Productivity", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
+impact: [{header: "10%⬆", subheader: "in User Growth YoY", description: "Visitors from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20%⬆", subheader: "in Site Performance", description: "Mobile first development and increases across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance reports."}, {header: "500%⬆", subheader: "in Staff Productivity", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
 problems: ["Not mobile responsive","Required FTP access to update content", "No existing analytics","Brand is being consolidated"]
-goals: ["To provide a modern mobile friendly experience for customers.", "To implement a content management system to increase productivity for staff.", "To unify the Four Seasons RV Rental brand closer to Fraseway RV.", ]
-challenges: ["The primary challenge for this product was time and resources.","The project needed to be completed before the start of the season and needed to be done in-house.", "The rental booking engine was an initiative that was started separate of the information site"]
-solutions: ["Our marketing department created a brand strategy and create to help visualize the fun and whimsicle atmosphere of RV rentals for Four Seasons RV Rental. We created a design system of using faceless vector art to allow the style to be flexible and juxtaposed it with real RV images.","For this website, due to time and budget constraints, we opted to purchase a theme to speed up development and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
+goals: ["To unify the Four Seasons RV Rental brand closer to Fraseway RV.", "To provide a modern mobile-friendly experience for customers.", "To implement a content management system to increase productivity for staff.", "To add in analytics via GTM and Google Universal Analytics." ]
+challenges: ["The primary challenge for this product was time and resources. In addition to the product needing to be completed before the start of the camping season. We were also tasked to consolidate the brand closer to Fraserway RV.","Since this product was being created in-house with very little budget, the team huddled and came up with the following solution."]
+solutions: ["Our first task was to identify the brand positioning that we wanted to take with Four Seasons. The decision was to remove the economy portion and introduce the tie in the Fraserway instead. We then took a look at the logo to see how we may take elements from the Fraserway logo to help bring it closer to Fraserway's logo.", "The department wanted the brand to capture the fun atmosphere of renting RVs and the rental department, so I created 3 different art directions to help visualize the look. We ultimately went with the current brand elements of faceless vector art to allow the style to be flexible and have it juxtaposed it with real RV images. We took apart the design inside adobe cc library and created a design system to quickly compose new designs.","For the website, we opted to purchase a starter theme to reduce development time and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
 results: ["Overall the website was considered a success and was launched on time. The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
 threeDModel: "https://prod.spline.design/q54sAvqvSUTdt20c/scene.splinecode"
 website: "https://fourseasonsrvrentals.ca/"
+homepage: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRV.png"
 ---
 
 
@@ -80,28 +81,6 @@ website: "https://fourseasonsrvrentals.ca/"
 <span class="portfolio-case-study-header">Case Study Details</span>
 </section>
 
-<section class="container">
-<h2 class="container-header">Challenges</h2>
-<div class="container-content">
-<div class="container-item">
-<img class="container-image" src="https://placehold.co/300x300?text=challenges">
-<h4 class="container-subheader">Custom Static generating PHP</h4>
-<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
-
-</div>
-<div class="container-item">
-<img class="container-image" src="https://placehold.co/300x300?text=challenges 2">
-<h4 class="container-subheader">Limited time & resources</h4>
-<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
-</div>
-</div>
-<div class="container-item">
-<img class="container-image" src="https://placehold.co/300x300?text=challenges 2">
-<h4 class="container-subheader">Limited time & resources</h4>
-<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
-</div>
-</div>
-</section>
 <section class="container">
 <h3 class="container-header">Problem Statement C</h3>
 <h4 class="problem-statement">Updates to the websites are very slow and limited to only a few who know how to change content.
