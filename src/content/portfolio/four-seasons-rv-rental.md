@@ -56,8 +56,10 @@ cta: Learn more
 deliverables: [Art Direction, Web Development, UX]
 carousel: [
     {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", caption: "Persona 2"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", caption: "Original Site"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "Persona 1"}
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-information-architecture.jpg", caption: "Information Architecture"},       
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", caption: "Original Website in PHP"},   
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "Persona 1"},
+    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", caption: "Persona 2"}     
 ]
 hero: "../../images/portfolio/placeholder/1440x400.svg"
 introduction: ["Four Seasons RV Rentals is a RV rental division of Fraserway RV with various rental depots across Canada. This website serves as an informational website where they can showcase their rv rental products and service offerings for prospective RV renters.","The original website had outlived it's product lifecycle and needed a refresh in both updating the platform and modernizing the code.", "This project served as an opportunity to push my creativity and skills, rework the brand and modernize the platform to better serve RV rental customers."]

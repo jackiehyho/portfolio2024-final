@@ -122,6 +122,9 @@ export async function getStaticPaths() {
         }
       </div>
     </section>
+    {
+      entry.data.challenges && (
+        <>
     <section id='portfolio-overview-section'>
       <h2 class='portfolio-subsection-headers'>Product Overview</h2>
       <div id='portfolio-overview-image-container'>
@@ -189,8 +192,11 @@ export async function getStaticPaths() {
         </div>
       </div>
     </section>
+    </>
+            )
+          }
     <Carousel
-      header='Screenshots'
+      header='Visuals'
       images={entry.data.carousel.map((image) => ({
         src: image.src.src,
         caption: image.caption || "",

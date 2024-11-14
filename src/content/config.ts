@@ -16,6 +16,20 @@ const blogCollection = defineCollection({
     })
 });
 
+const bookCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    isDraft: z.boolean(),
+    pubDate: z.date().transform((str) => new Date(str).toDateString()),
+    description: z.string(),
+    author: z.string(),
+    thumbnail: image(),
+    alt: z.string(),
+    category: z.string()
+  })
+});
+
 const portfolioCollection = defineCollection({
   type: 'content',
   schema: ({ image }) => z.object({
