@@ -62,7 +62,30 @@
         </div>
       </a>
     </div>
-    <div class='bento-item bento-7 archived'>
+    <!-- <div class='bento-item bento-7 portfolio-item'>
+      <a class='bento-link' href='../portfolio/venues-for-meetup/'>
+        <div class='bento-text'>
+          <h3 class='bento-header'>Tech Hive</h3>
+          <small>Concept Web App</small>
+        </div>
+      </a>
+    </div>
+    <div class='bento-item bento-8 portfolio-item'>
+      <a class='bento-link' href='../portfolio/venues-for-meetup/'>
+        <div class='bento-text'>
+          <h3 class='bento-header'>Venues by Meetup</h3>
+          <small>Concept Web App</small>
+        </div>
+      </a>
+    </div>
+    <div class='bento-item bento-9 portfolio-item'>
+      <div class='bento-text'>
+        <h3 class='bento-header'>
+          Software Applications
+        </h3>
+      </div>
+    </div> -->
+    <div class='bento-item bento-10 archived'>
       <div class='bento-text'>
         <h3 class='bento-header'>PAST WORK</h3>
         <input type='checkbox' id='bar' class='archive-projects' />
@@ -81,7 +104,7 @@
         <label for='logos' class='labels'>Logos</label>
       </div>
     </div>
-    <div class='bento-item archived bento-8'></div>
+    <div class='bento-item archived bento-11'></div>
   </div>
 </section>
 
@@ -178,6 +201,18 @@
     }
   }
   .bento-6 {
+
+    order: 5;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url("/images/portfolio/venues/venues.jpg") center center;
+  }
+  .bento-7 {
+
     order: 6;
     background:
       linear-gradient(
@@ -187,14 +222,33 @@
       ),
       url("/images/portfolio/venues/venues.jpg") center center;
   }
+  .bento-8 {
+    display: none;
 
-  .bento-7 {
+    order: 7;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      ),
+      url("/images/portfolio/venues/venues.jpg") center center;
+  }
+  .bento-9 {
     order: 8;
+    background: rgb(2, 170, 176, 0.1);
+    h3 {
+      color: black;
+    }
+  }
+
+  .bento-10 {
+    order: 9;
     background: black;
     border-radius: 0 0 1rem 1rem;
   }
 
-  .bento-8 {
+  .bento-11 {
     order: 7;
     margin-bottom: 0;
 
@@ -415,18 +469,103 @@
     }
 
     .bento-7 {
+            display: none;
+
       grid-column: 1 / 2;
       grid-row: 4 / 5;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 75%,
+          rgba(0, 0, 0, 0.5) 85%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        url("/images/portfolio/venues/venues.jpg")
+          center center;
+      .bento-text {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+        h3,
+        small {
+          color: white;
+        }
+      }
+      &:hover {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+
+        .bento-text {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 1s ease-in-out;
+        }
+      }
+    }
+    .bento-8 {
+      display: none;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 75%,
+          rgba(0, 0, 0, 0.5) 85%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        url("/images/portfolio/venues/venues.jpg")
+          center center;
+      .bento-text {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-in-out;
+        h3,
+        small {
+          color: white;
+        }
+      }
+      &:hover {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+
+        .bento-text {
+          opacity: 1;
+          transform: translateY(0);
+          transition: all 1s ease-in-out;
+        }
+      }
+    }
+    .bento-9 {
+      display: none;
+
+      grid-column: 3 / 4;
+      grid-row: 4 / 5;
+      h3 {
+      color: black;
+    }
+    }
+    .bento-10 {
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
     }
 
-    .bento-8 {
+    .bento-10 {
+      height: 600px;
+      background-size: cover;
+      background-repeat: none;
+      transition: background-color 0.5s ease-in-out;
+
+      grid-column: 1 / 2;
+      grid-row: 5 / 6;
+    }
+    .bento-11 {
       height: 600px;
       background-size: cover;
       background-repeat: none;
       transition: background-color 0.5s ease-in-out;
 
       grid-column: 2 / 4;
-      grid-row: 4 / 5;
+      grid-row: 5 / 6;
     }
 
     label {
@@ -459,7 +598,7 @@
 </style>
 
 <script is:inline>
-  let imageDisplay = document.querySelector(".bento-8");
+  let imageDisplay = document.querySelector(".bento-11");
   let logos = document.querySelector("#logos");
   let bar = document.querySelector("#bar");
   let bredy = document.querySelector("#bredy");

@@ -1,5 +1,5 @@
 ---
-title: Storytelling
+title: Neuroscience behind stories.
 pubDate: 2024-01-09
 isDraft: false
 description: Creating a better experience through storytelling.
@@ -9,9 +9,9 @@ thumbnail: "../../images/blogs/astro-as-a-front-end-framework/astro.png"
 alt: storytelling
 ---
 
+## WHY ARE STORIES IMPORTANT?
+Humans are story-telling animals 
 
-
-## KEY TAKEAWAYS
 
 ### Storytelling
 - All storytelling follows the following a three-act structure
@@ -40,6 +40,7 @@ alt: storytelling
 #### Conclusion / Resolution / Ketsu
 
 ### Story & Plot
+## KEY TAKEAWAYS
 
 
 ## Monomyth
