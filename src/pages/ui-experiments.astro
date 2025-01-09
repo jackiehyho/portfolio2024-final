@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro'; 
+import { getCollection } from "astro:content";
+import ExperimentItem from "../components/ExperimentItem.astro";
+const allExperiments = await getCollection('experiments', ({ data }) => {
+  return data.isDraft !== true;
+})
+allExperiments.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate))
+
+---
+
+<Layout title="UI Experiements by Jackie Ho" description="This is the description of the page" >
+	<main slot="main">
+        <h1>UI Experiments</h1>
+        <p>A collection of UI elements and interactions that are interesting to me. A GIF showcase coded in HTML/CSS/JS</p>
+        <div class="icon-container">
+        <div class="">
+<ul id="button-list" class="filter-buttons">
+          <button  class="filter-button active" onclick="filterPortfolio('All')">All Experiments</button>
+          {
+    
+            allExperiments
+              .map((blog) => blog.data.category)
+              .filter((category, index, self) => self.indexOf(category) === index)
+              .sort()
+              .map((category) => (
+                <button class="filter-button" onclick={`filterPortfolio('${category}')`}>{category}</button>
+              ))
+          }
+        </ul>   
+      </div>
+     <section id="experiments" class="experiment-section">
+        
+        <ul class="experiment-list"> 
+            {
+              allExperiments.map((blog) => (
+              <ExperimentItem 
+              url={`/experiments/${blog.slug}/`} 
+              title={blog.data.title} 
+              category={blog.data.category} 
+              description={blog.data.description} 
+              image={blog.data.thumbnail} 
+              imageGIF={blog.data.GIFthumbnail}
+              alt={blog.data.alt} />
+              ))
+            }
+          </ul>
+	</main>
+</Layout>
+<script is:inline>
+      function filterPortfolio(category) {
+        // Logic to filter portfolio based on category
+        let blogItems = document.querySelectorAll('.experiment-list-item'); 
+        let blogCategory = document.querySelectorAll('.experiment-category'); 
+        reset();
+        for (let i = 0; i < blogItems.length; i++) {
+          let item = blogItems[i];
+          let cat = blogCategory[i];
+          console.log(cat);
+
+          if (category === cat.textContent)  {
+            console.log(category)
+            console.log(cat.textContent);
+          }
+
+          else if (category === "All") {
+            item.style.display = "block";
+          } 
+
+          else {
+            item.style.display = "none";
+          }
+        }
+      }
+
+      function reset() {
+        let blogItems = document.querySelectorAll('.experiment-list-item'); 
+        for (let i = 0; i < blogItems.length; i++) {
+          let item = blogItems[i];
+          item.style.display = "block";
+        }
+      }
+
+
+
+   // Get the container element
+var btnContainer = document.getElementById("button-list");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("filter-button");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<style>
+
+  .active {
+    background-color: #333;
+    color:white;
+  }
+main {
+	width: 100%;
+}
+
+.experiment-list {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+.icon-lightbulb {
+    width: 64px;
+    height: 64px;
+
+}
+.filter-button{
+  margin: 0 0.25rem;
+}
+</style>

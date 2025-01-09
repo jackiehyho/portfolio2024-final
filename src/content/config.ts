@@ -16,6 +16,25 @@ const blogCollection = defineCollection({
     })
 });
 
+const experimentCollection = defineCollection({
+  type: 'content',
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    isDraft: z.boolean(),
+    pubDate: z.date().transform((str) => new Date(str).toDateString()),
+    description: z.string(),
+    author: z.string(),
+    GIFthumbnail: image(),
+    thumbnail: image(),
+    alt: z.string(),
+    category: z.string(),
+    meta: z.array(z.object({
+      type: z.string(),
+      experiment: z.string()
+    })).optional(),
+  })
+});
+
 const bookCollection = defineCollection({
   type: 'content',
   schema: ({ image }) => z.object({
@@ -86,4 +105,6 @@ const portfolioCollection = defineCollection({
 export const collections = {
     blogs: blogCollection,
     portfolio: portfolioCollection,
+    experiments: experimentCollection,
+    books: bookCollection
   };
