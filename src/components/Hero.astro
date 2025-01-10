@@ -2,6 +2,8 @@
 interface Props {
   primaryCTA: string;
   primaryLink: string;
+  secondaryCTA: string;
+  secondaryLink: string;
   header: string;
   subtext: string;
   title: string;
@@ -9,7 +11,7 @@ interface Props {
 
 }
 
-const { primaryCTA, primaryLink, header, subtext, title, location } = Astro.props;
+const { primaryCTA, primaryLink, secondaryCTA, secondaryLink,header, subtext, title, location } = Astro.props;
 import Button from "../components/Button.astro";
 // import Arrow from "../images/arrow-with-scribble.svg";
 import { Image } from "astro:assets";
@@ -23,14 +25,21 @@ import myImage from "../images/Hero.png";
       <h2 class="content-header">
         {subtext}
       </h2>
+      
       <div class="container-CTA">
         <Button
           className="primary-button"
           buttonCTA={primaryCTA}
           buttonLink={primaryLink}
         />
- 
+        <Button
+        className="secondary-button"
+        buttonCTA={secondaryCTA}
+        buttonLink={secondaryLink}
+      />
+
       </div>
+ 
     </div>
     <div class="hero-container">
       <picture>
@@ -277,7 +286,7 @@ import myImage from "../images/Hero.png";
       padding: 0;
       line-height: 125%;
       margin: 0;
-      font-size: 3rem;
+      font-size: 2rem;
       grid-column: 4 / 7;
       grid-row: 4 / 7;
       justify-self: center;

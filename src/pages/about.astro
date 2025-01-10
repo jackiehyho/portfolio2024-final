@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import MiniCarousel from "../../components/MiniCarousel.astro";
 ---
 
 <Layout
@@ -7,7 +8,50 @@ import Layout from "../layouts/Layout.astro";
   description="A digital product designer from Vancouver, BC"
 >
   <main slot="main">
-    <h2 class="timeline-header">My Story</h2>
+
+    <section class="about-intro">
+      <div class="hero-text-container">
+      <h1 class="hero-header">Hi, my name is Jackie Ho</h1>
+    </div>
+      <p></p>
+    </section>
+    <section class="about-container">
+      <div class="row">
+      <div class="half-container">
+        <img src="https://placehold.co/600x600/333/FFFFFF"/>
+      </div>
+      <div class="half-container">
+        <div class="half-height">
+          <img src="https://placehold.co/600x292/333/FFFFFF"/>
+        </div>
+        <div class="half-height">
+          <img src="https://placehold.co/600x292/333/FFFFFF"/>
+        </div>  
+      </div>
+      
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="third-container">
+        <div class="quick-facts"><h2>Quick Facts</h2></div>
+      </div>
+      <div class="two-third-container">
+        <div class="">
+          <ul>
+            <li class="quick-fact"><img src="https://placehold.co/32x32/ccc/31343C"><p>Fact 1</p></li>
+            <li class="quick-fact"><img src="https://placehold.co/32x32/ccc/31343C"><p>Fact 2</p></li>
+            <li class="quick-fact"><img src="https://placehold.co/32x32/ccc/31343C"><p>Fact 3</p></li>
+            <li class="quick-fact"><img src="https://placehold.co/32x32/ccc/31343C"><p>Fact 4</p></li>
+            <li class="quick-fact"><img src="https://placehold.co/32x32/ccc/31343C"><p>Fact 5</p></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    <!-- <h2 class="timeline-header">My Story</h2>
     <p>Growing up, I was always a little bit different than everyone else, more on that later. My curiosity and obession with learning started off with an expensive set of encyclopedias that my mother had purchased for the family to use. I would flip through these pages in my spare time learning about the world. My father had owned a bag factory that I hope to inherit along with my brother but our lives had dramatically changed when he was forced to close down due to the economic conditions at the time.</p>
         
     <p>Feeling a bit lost during high school, I took food studies at school perhaps out of necessity, as my mother was not good at cooking. The background music of my room would often be playing shows from the food network, while I play flash games and spend time on the internet.</p> 
@@ -20,13 +64,429 @@ import Layout from "../layouts/Layout.astro";
         
     <p>I decided to work for a small business </p>
 
-    <p>It was only recently that I've learned that I was neuro-divergent and why I was able to predict </p>
+    <p>It was only recently that I've learned that I was neuro-divergent and why I was able to predict </p> -->
+    <section id="carousel-section"class='container'>
+      <div class='carousel-gallery'>
+        <button id="carousel-button-left" onclick="this.disabled=true;"class='button-left arrow'>&leftarrow;</button>
+        <div class='carousel-image-list'>
 
+              <div class='carousel-image-item'>
+                <div class='carousel-content'>
+                  <div class='image-container'>
+                    <img class='carousel-image' src="https://placehold.co/400x300/EEE/31343C" />
+                    <p class="carousel-caption"><small>Image 4</small></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class='carousel-image-item'>
+                <div class='carousel-content'>
+                  <div class='image-container'>
+                    <img class='carousel-image' src="https://placehold.co/400x300/EEE/31343C" />
+                    <p class="carousel-caption"><small>Image 5</small></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class='carousel-image-item'>
+                <div class='carousel-content'>
+                  <div class='image-container'>
+                    <img class='carousel-image' src="../../images/portfolio/wong-fu/wong-fu.jpeg" />
+                    <p class="carousel-caption"><small>Wong Fu</small></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class='carousel-image-item'>
+                <div class='carousel-content'>
+                  <div class='image-container'>
+                    <img class='carousel-image' src="https://placehold.co/400x300/EEE/31343C" />
+                    <p class="carousel-caption"><small>Images 2</small></p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class='carousel-image-item'>
+                <div class='carousel-content'>
+                  <div class='image-container'>
+                    <img class='carousel-image' src="https://placehold.co/400x300/EEE/31343C" />
+                    <p class="carousel-caption"><small>Images 3</small></p>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        <button id="carousel-button-right" onclick="this.disabled=true;" class='button-right arrow'>&rightarrow;</button>
+      </div>
+    </section>
   </main>
-
 
 </Layout>
 
-<style lang="scss">
   
+
+<style lang='scss'>
+
+  .quick-fact{
+    display: flex;
+    gap: 1rem;
+  }
+  .about-intro{
+    padding: 6rem 0;
+  }
+  .hero-header{
+    text-align: center;
+    width: 50%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .row{
+    padding-bottom: 1rem;
+    max-width: 100%;
+  }
+  .quick-facts{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    h2{
+      color:white;
+      font-size: 4rem;
+
+    }
+  }
+  .content{
+    width: 66.6%;
+    height: 300px;
+  }
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+
+
+  }
+  .half-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-height: 600px;
+    border-radius: 2rem;
+    img{
+      border-radius: 2rem;
+
+    }
+
+  }
+  .third-container{
+    height: 300px;
+    width: 400px;
+    background: #333;
+    max-width: 400px;
+    border-radius: 2rem;
+
+  }
+  .two-third-container{
+    height: 300px;
+    width: 800px;
+    max-width: 66.6%;
+  }
+  .half-height{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    &:first-child{
+    }
+  }
+  .image-1{
+    background-image: url('https://placehold.co/600x600/333/31343C');
+  }
+  .image-2{
+    background-image: url('https://placehold.co/600x600/333/FFFFFF');
+    height: 292px;
+    width: 300px;
+  }
+  .image-3{
+    background-image: url('https://placehold.co/600x600/333/FFFFFF');
+    height: 292px;
+    width: 300px;
+  }
+  #carousel-section{
+    padding-top:2rem;
+    width: 100%;
+  }
+  .carousel-header {
+    text-align: center;
+    padding-bottom:1rem;
+    padding-top:1rem;
+  }
+  .carousel-image-list {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-gallery {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+  }
+ 
+  .carousel-image-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .carousel-image {
+
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+
+  }
+  .text-container {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .carousel-caption {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+
+  .button-left {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    z-index: 10;
+  }
+  .button-right {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    z-index: 10;
+  }
+
+  .arrow {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+    background: #333;
+    width: 48px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    -webkit-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px -2px rgba(0, 0, 0, 0.5);
+  }
+
+  .sliding-transition {
+    transition: all 0.5s ease-in-out;
+  }
+  .center-image img {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      width: 1000px;
+      transition: all 0.5s ease-in-out;
+
+      .carousel-caption{
+        display: block;
+      }
+    }
+  }
+
+  .carousel-image {
+      width: 100svw;
+    }
+
+    .carousel-caption {
+      font-size: 1.25rem;
+    }
+  @media only screen and (min-width: 768px) {
+    #carousel-section{
+      margin-top:4rem;
+      margin-bottom: 4rem;
+    }
+    .carousel-header {
+      font-weight: 300;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      padding-bottom: 2rem;
+    }
+    .carousel-image {
+      padding-bottom: 1rem;
+    }
+    .text-container,
+    .padding-caption {
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-image {
+      width: 600px;
+      &:not(:first-child):not(:last-child) {
+        &:hover {
+          width: initial;
+        }
+      }
+    }
+    .hide-caption {
+      display: none;
+    }
+
+    .image-container {
+      width: 100%;
+    }
+    .carousel-image-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    .carousel-content {
+      padding: 0;
+      margin: 0;
+    }
+    .carousel-gallery {
+      position: relative;
+      overflow-x: hidden;
+    }
+
+
+
+    .carousel-image-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .button-left {
+      left: 0.25rem;
+      transition: all 0.5s ease-in-out;
+
+      &:hover{
+        background:#02aab0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .button-right {
+      right: 0.25rem;
+
+      transition: all 0.5s ease-in-out;
+
+&:hover{
+  background:#02aab0;
+  transition: all 0.5s ease-in-out;
+}
+    }
+  }
 </style>
+
+
+<script>
+  const portfolioImageList = document.querySelector(
+    ".carousel-image-list"
+  ) as HTMLElement;
+  const leftArrow = document.querySelector("#carousel-button-left");
+  const rightArrow = document.querySelector("#carousel-button-right");
+
+  const portfolioImageItems = document.querySelectorAll(".carousel-image-item"
+  );
+  const images = document.querySelectorAll(".carousel-image");
+
+  const totalImages = Object.keys(portfolioImageItems).length;
+  let centerIndex = Math.floor(totalImages / 2); // index 2
+
+  let currentIndex = 0;
+  let prevIndex: number;
+  let imageWidth = images[currentIndex].getBoundingClientRect().width;
+
+  portfolioImageItems[centerIndex].classList.add("center-image");
+  // if(portfolioTextContent[centerIndex].classList.contains("hide-caption")){
+  //   portfolioTextContent[centerIndex].classList.remove("hide-caption");
+  //   }
+
+  if (portfolioImageList) {
+    leftArrow?.addEventListener("click", () => {
+      portfolioImageItems[centerIndex].classList.remove("center-image");
+
+      // portfolioTextContent[centerIndex].classList.add("hide-caption");
+      prevIndex = currentIndex;
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      centerIndex = (centerIndex - 1 + totalImages) % totalImages;
+
+      portfolioImageList.style.transform = `translateX(-${imageWidth}px)`;
+      portfolioImageList.insertBefore(
+        portfolioImageItems[currentIndex],
+        portfolioImageList.firstChild
+      );
+
+      setTimeout(() => {
+        portfolioImageList.style.transform = "";
+        portfolioImageList.classList.add("sliding-transition");
+      }, 10);
+
+      setTimeout(() => {
+        portfolioImageList.classList.remove("sliding-transition");
+        portfolioImageItems[centerIndex].classList.add("center-image");
+        leftArrow.removeAttribute('disabled');
+        // portfolioTextContent[centerIndex].classList.remove("hide-caption");
+      }, 490);
+
+    });
+
+    rightArrow?.addEventListener("click", () => {
+      portfolioImageItems[centerIndex].classList.remove("center-image");
+      // portfolioTextContent[centerIndex].classList.add("hide-caption");
+      prevIndex = currentIndex;
+      portfolioImageList.classList.add("sliding-transition");
+      currentIndex = (currentIndex + 1) % totalImages;
+      centerIndex = (centerIndex + 1 + totalImages) % totalImages;
+
+      portfolioImageList.style.transform = `translateX(-${imageWidth}px)`;
+
+      setTimeout(() => {
+        portfolioImageList.appendChild(portfolioImageItems[prevIndex]);
+        portfolioImageList.classList.remove("sliding-transition");
+        // portfolioTextContent[centerIndex].classList.remove("hide-caption");
+        portfolioImageItems[centerIndex].classList.add("center-image");
+
+rightArrow.removeAttribute('disabled');
+        portfolioImageList.style.transform = "";
+      }, 500);
+   
+
+    });
+  }
+</script>

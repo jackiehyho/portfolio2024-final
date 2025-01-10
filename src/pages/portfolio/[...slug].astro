@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Carousel from "../../components/Carousel.astro";
 import ProcessOverview from "../../components/ProcessOverview.astro";
-
+import Comparison from "../../components/Comparison.astro";
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     <section id='portfolio-intro-section'>
       <div id='portfolio-intro-container'>
         <div id='portfolio-intro-content' class='portfolio-sub-section'>
-          <h2 class='portfolio-subsection-headers'>Summary</h2>
+          <h2 class='portfolio-title-section-headers'>Summary</h2>
           {
             entry.data.introduction.map((copy) => (
               <p class='portfolio-intro-text'>{copy}</p>
@@ -151,6 +151,7 @@ export async function getStaticPaths() {
             }
           </ul>
         </div>
+
         <div id="portfolio-challenge" class="portfolio-challenge product-overview-subsection">          <img class='portfolio-icons' src='/images/portfolio/challenge.svg' />
           <h2 class='portfolio-subheaders'>Challenge</h2>
 
@@ -209,6 +210,14 @@ export async function getStaticPaths() {
         activities: process.activities,
       }))}
     />
+
+    <Comparison 
+    processes={entry.data.processes.map((mockups) => ({
+      src: process.src.src,
+      header: process.header,
+      activities: process.activities,
+    />
+
 <!-- 
     {entry.data.impact && (
             <>
@@ -555,6 +564,7 @@ export async function getStaticPaths() {
       align-items: center;
       padding-top: 4rem;
       max-width: 1440px;
+      padding: 1rem;
 
       .portfolio-subsection-headers {
         padding-bottom: 4rem;
@@ -738,6 +748,11 @@ export async function getStaticPaths() {
       }
     }
 
+    #portfolio-overview-image-container{
+      left: 2rem;
+      position:relative;
+    }
+
     #portfolio-time {
       height: 50%;
       grid-column: 3 / 4;
@@ -770,6 +785,14 @@ export async function getStaticPaths() {
       ul {
         padding: 1rem;
       }
+    }
+
+    .portfolio-title-section-headers {
+      font-size: 3rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
     }
 
     .portfolio-subsection-headers {

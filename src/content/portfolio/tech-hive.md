@@ -1,12 +1,65 @@
 ---
-title: Four Seasons RV Rentals By Fraserway RV
-pubDate: 2020-06-01
-projectDuration: 8 Weeks 
-projectYear: 2019
+title: Tech Hive
+pubDate: 2024-09-12
+projectDuration: 1 Day
+projectYear: 2024
 isDraft: false
-description: Reimagination of Four Seasons RV Rental 
-roleSummary: "For this project, due to limited resources, I wore many hats and took on the following roles in order to deliver the project on time."
-roles: ["Product Manager", "Art Director", "Product Designer", "Web Developer", "Digital Marketer"]
+description: Helping event planners and venue hosts connect! 
+roleSummary: "For this project, I worked by myself and took on the following roles."
+roles: ["Product Manager", "UX Designer"]
+processes: [
+    {
+        src: "../../images/portfolio/process/discover.svg",
+        header: "Product Strategy",
+        activities: ["Interviews", "Competitor Research", "Web Research", "Product Strategy", "Problem Space", "Problem Statement"]
+    },
+    {
+        src: "../../images/portfolio/process/design.svg",
+        header: "UX & UI Design",
+        activities: ["Information Architecture","Wireframes","High-Fidelity Mock-ups"]
+    },
+    {
+        src: "../../images/portfolio/process/development.svg",
+        header: "MVP",
+        activities: ["Explainer Video","Website","Email List"]
+    },
+        {
+        src: "../../images/portfolio/process/marketing.svg",
+        header: "Go-to-Market Strategy",
+        activities: ["Product Positioning","Product Launch Plan", "Marketing Plan"]
+    }
+]
+category: [Mobile App]
+thumbnail: "../../images/portfolio/venues/venues_main.jpg"
+alt: Meetup App
+technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
+isLocked: false
+cta: Learn more
+deliverables: [Art Direction, Web Development, UX]
+carousel: [
+        {src: "../../images/portfolio/venues/7-event-successful.jpg", caption: "What makes an Event Successful"}, 
+    {src: "../../images/portfolio/venues/8-succesful-event.jpg", caption: "Attributes of a Successful Event"}, 
+    {src: "../../images/portfolio/venues/9-behind-the-scenes.jpg", caption: "Event planner To do List"}, 
+    {src: "../../images/portfolio/venues/10-problems-facing.jpg", caption: "Problems Organizers are facing"}, 
+    {src: "../../images/portfolio/venues/11-problem-statement.jpg", caption: "Problem Statement"}, 
+    {src: "../../images/portfolio/venues/1-meetup.jpg", caption: "Title Slide"},   
+    {src: "../../images/portfolio/venues/2-what-is-meetup.jpg", caption: "What is Meetup?"},    
+    {src: "../../images/portfolio/venues/3-what-is-meetup.jpg", caption: "Meetup Explaination"}, 
+    {src: "../../images/portfolio/venues/4-user-metrics.jpg", caption: "Current Meetup User Metrics"}, 
+    {src: "../../images/portfolio/venues/5-revenue-streams.jpg", caption: "Revenue Streams"}, 
+    {src: "../../images/portfolio/venues/6-mission.png", caption: "Meetup's Mission Statement"} 
+
+]
+hero: "../../images/portfolio/placeholder/1440x400.svg"
+introduction: ["Tech Hive is a conceptual data aggregation site that pulls tech related data all into one space.","This project was conceived at a hackathon during Vancouver Tech Week.", "Our team of 4 quickly "]
+objectives: [""]
+productVision: "To connect venue owners and event planners"
+problems: ["Spending a lot of time searching for venues."]
+threeDModel: https://prod.spline.design/28fJo6lfIKN8Tned/scene.splinecode
+goals: ["To unify the Four Seasons RV Rental brand closer to Fraseway RV.", "To provide a modern mobile-friendly experience for customers.", "To implement a content management system to increase productivity for staff.", "To add in analytics via GTM and Google Universal Analytics." ]
+challenges: ["The primary challenge for this product was time and resources. In addition to the product needing to be completed before the start of the camping season. We were also tasked to consolidate the brand closer to Fraserway RV.","Since this product was being created in-house with very little budget, the team huddled and came up with the following solution."]
+solutions: ["Our first task was to identify the brand positioning that we wanted to take with Four Seasons. The decision was to remove the economy portion and introduce the tie in the Fraserway instead. We then took a look at the logo to see how we may take elements from the Fraserway logo to help bring it closer to Fraserway's logo.", "The department wanted the brand to capture the fun atmosphere of renting RVs and the rental department, so I created 3 different art directions to help visualize the look. We ultimately went with the current brand elements of faceless vector art to allow the style to be flexible and have it juxtaposed it with real RV images. We took apart the design inside adobe cc library and created a design system to quickly compose new designs.","For the website, we opted to purchase a starter theme to reduce development time and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
+results: ["Overall the website was considered a success and was launched on time. The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
 team: [ 
     {
         name: Amanda Henschell,
@@ -20,81 +73,42 @@ team: [
         name: Gurjant Sekhon,
         position: Graphic Designer
     }]
-processes: [
-    {
-        src: "../../images/portfolio/process/discover.svg",
-        header: "Research & Discovery",
-        activities: ["Stakeholder Interviews", "Competitor Research", "Heuristic Evaluation", "Platform Research", "Product Strategy"]
-    },
-    {
-        src: "../../images/portfolio/process/design.svg",
-        header: "UX & UI Design",
-        activities: ["Persona Development", "Information Architecture", "Wireframes", "High-Fidelity Mock-ups"]
-    },
-    {
-        src: "../../images/portfolio/process/development.svg",
-        header: "Web Development",
-        activities: ["WordPress Setup","Custom Development"]
-    },
-    {
-        src: "../../images/portfolio/process/testing.svg",
-        header: "User & Systems Testing",
-        activities: [QA Testing, "User Acceptance Testing", "Smoke Testing"]
-    },
-    {
-        src: "../../images/portfolio/process/marketing.svg",
-        header: "Go-to-Market Strategy",
-        activities: ["Brand Positioning","Content Generation", "Google Tag Manager Setup","Google Analytics Setup", "Custom Events"]
-    }
-]
-category: [Website]
-thumbnail: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals_Landing.jpg"
-alt: Four Seasons RV Rental by Fraserway
-technology: Adobe Illustrator, Adobe Photoshop, WordPress, Sketch, DrawIO, Google Tag Manager, 
-isLocked: false
-cta: Learn more
-deliverables: [Art Direction, Web Development, UX]
-carousel: [
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-PDP.png", caption: "Example Product Detail Page"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-information-architecture.jpg", caption: "Information Architecture"},       
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonRVRentals-original.png", caption: "Original Website in PHP"},   
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-1.jpg", caption: "Persona 1"},
-    {src: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRVRentals-persona-2.jpg", caption: "Persona 2"}     
-]
-hero: "../../images/portfolio/placeholder/1440x400.svg"
-introduction: ["
-Four Seasons RV Rentals is the budget-friendly rental divison of Fraserway RV. The purpose of the website is to share information about their RVs and services so people can learn about renting an RV.","The previous website was outdated and required a makeover. It had been migrated from PHP to WordPress to make it more accessible to other members of the team.", "Overall the website was considered a success and was launched on time. The art direction was well-recieved and additional assets such as tire covers, physical signage continue to be utilized and expanded by the rental department today."]
-objectives: ["To modernized the brand and web experiences of Four Seasons RV Rental for both staff and customers so customers can make an informed decision before they book an RV."]
-productVision: "To provide a seamless booking experience for RV renters."
-impact: [{header: "10%⬆", subheader: "in User Growth YoY", description: "Visitors from all over the world have visited and browsed the website before going through the booking engine."}, {header: "20%⬆", subheader: "in Site Performance", description: "Mobile first development and increases across the board in Performance, Accessibility, Best Practices & SEO based on lighthouse performance reports."}, {header: "5x⬆", subheader: "in Staff Productivity", description: "Successfully re-platformed to WordPress enabling others to update content and removing the need to manually update through FTP."}]
-problems: ["Not mobile responsive","Required FTP access to update content", "No existing analytics","Brand is being consolidated"]
-goals: ["To unify the Four Seasons RV Rental brand closer to Fraseway RV.", "To provide a modern mobile-friendly experience for customers.", "To implement a content management system to make it accessible for other employees.", "To add in analytics via GTM and Google Universal Analytics." ]
-challenges: ["The primary challenge for this product was time and resources. In addition to the product needing to be completed before the start of the camping season. We were also tasked to consolidate the brand closer to Fraserway RV.","Another challenge was the creation of a separte booking engine outside of this product. This made it difficult to create a seamless experience as customers would be on separate site with unsynced content","Since this product was being created in-house with very little budget, the team huddled and came up with the following solution."]
-solutions: ["Our first task was to identify the brand positioning that we wanted to take with Four Seasons. The decision was to remove the economy portion and introduce the tie in the Fraserway instead. We then took a look at the logo to see how we may take elements from the Fraserway logo to help bring it closer to Fraserway's logo.", "The department wanted the brand to capture the fun atmosphere of renting RVs and the rental department, so I created 3 different art directions to help visualize the look. We ultimately went with the current brand elements of faceless vector art to allow the style to be flexible and have it juxtaposed it with real RV images. We took apart the design inside adobe cc library and created a design system to quickly compose new designs.","For the website, we opted to purchase a starter theme to reduce development time and modified it with some custom development. To satisfy specific business requirements, we used plug-in combinations such as custom post type and advanced custom fields to create custom data fields to make it easier for staff to populate the content."]
-results: []
-threeDModel: "https://prod.spline.design/q54sAvqvSUTdt20c/scene.splinecode"
-website: "https://fourseasonsrvrentals.ca/"
-homepage: "../../images/portfolio/four-seasons-rv-rental/FourSeasonsRV.png"
-mockup: ["../../images/portfolio/four-seasons-rv-rental/FourSeasonsRV.png","../../images/portfolio/four-seasons-rv-rental/FourSeasonsRV.png"]
 ---
-<style>
-    .container{
-        padding-top: 3rem;
-    }
-    .portfolio-subsection-headers {
-      font-size: 3rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      width: 100%;
-      text-align: center;
-    }
-</style>
 
 
+
+<!-- 
+<section class="container">
+<span class="portfolio-case-study-header">Case Study Details</span>
+</section>
 
 <section class="container">
-<h2 class="portfolio-subsection-headers">Case Study Details</h2>
+<h2 class="container-header">Challenges</h2>
+<div class="container-content">
+<div class="container-item">
+<img class="container-image" src="https://placehold.co/300x300?text=challenges">
+<h4 class="container-subheader">Custom Static generating PHP</h4>
+<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
+
+</div>
+<div class="container-item">
+<img class="container-image" src="https://placehold.co/300x300?text=challenges 2">
+<h4 class="container-subheader">Limited time & resources</h4>
+<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
+</div>
+</div>
+<div class="container-item">
+<img class="container-image" src="https://placehold.co/300x300?text=challenges 2">
+<h4 class="container-subheader">Limited time & resources</h4>
+<p>The content management system that it is on is not user-friendly and is very difficult to update for non-technical staff members.</p>
+</div>
+</div>
 </section>
+<section class="container">
+<h3 class="container-header">Problem Statement C</h3>
+<h4 class="problem-statement">Updates to the websites are very slow and limited to only a few who know how to change content.
+</h4>
+</section> -->
 
 
 <!--

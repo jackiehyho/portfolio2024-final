@@ -97,7 +97,8 @@ const portfolioCollection = defineCollection({
       description: z.string()
     })).optional(),
     website: z.string().optional(),
-    homepage: z.string().optional()
+    homepage: z.string().optional(),
+    mockups: z.array(image(), image()).optional()
   })
 });
 
