@@ -67,6 +67,8 @@ const { images, header } = Astro.props;
     flex-direction: column;
     justify-self: center;
     text-align: center;
+    padding: 1rem;
+    background-color:white;
 
   }
   .text-container {
@@ -160,6 +162,7 @@ const { images, header } = Astro.props;
 
     .carousel-image {
       width: 800px;
+      
       &:not(:first-child):not(:last-child) {
         &:hover {
           width: initial;
@@ -172,6 +175,8 @@ const { images, header } = Astro.props;
 
     .image-container {
       width: 100%;
+      padding: 1rem;
+      background-color:white;
     }
     .carousel-image-list {
       display: flex;
